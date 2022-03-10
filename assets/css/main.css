@@ -1,0 +1,14 @@
+.flow-button {
+    background-color: #c34271;
+    color:aliceblue;
+    font-size: 16px;
+    padding: 14px x 24px; /* not sure if this is needed? Doesn't change anything*/
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+.flow-button:hover {
+background-color:#f070a1
+}
+
+/* colours used: #f070a1, #c34271, #16ffbd - mint green, #12c998 - slightly darker green, #439f76 neutral green 
