@@ -9,6 +9,9 @@ h1 {
     color: #12c998;
     text-align: center;
     font-size: 90; /*this is not having any effect*/
+    width: 33%;
+    margin: 0 auto;
+
 }
 
 #introduction {
@@ -27,7 +30,7 @@ h1 {
     background-color: #f070a1;
     color:#12c998;
     text-align: center;
-}
+    }
 
 .flow-button {
     background-color: #c34271;
