@@ -30,6 +30,8 @@ p {
     color:#12c998;
     text-align: center;
     padding: 30px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #results {
@@ -37,6 +39,8 @@ p {
     color:#12c998;
     text-align: center;
     padding: 30px;
+    width: 80%;
+    margin: 0 auto;
     }
 
 .flow-button {
