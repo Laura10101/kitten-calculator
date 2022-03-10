@@ -5,6 +5,12 @@ h1 {
     font-size: 90; /*this is not having any effect*/
 }
 
+#introduction {
+    background-color: #ffffff;
+    color: #12c998;
+    text-align: center;
+}
+
 .flow-button {
     background-color: #c34271;
     color:aliceblue;
