@@ -17,15 +17,7 @@ p {
     font-size: 24px;
 }
 
-#introduction {
-    background-color: #ffffff;
-    color: #12c998;
-    text-align: center;
-    padding: 10px;
-    border: 30px;
-    }
-
-#questions {
+section {
     background-color: #444444;
     color:#12c998;
     text-align: center;
@@ -38,18 +30,13 @@ p {
     border-radius: 5px;
 }
 
-#results {
-    background-color: #444444;
-    color:#12c998;
+#introduction {
+    background-color: #ffffff;
+    color: #12c998;
     text-align: center;
-    padding: 30px;
-    width: 80%;
-    margin: 0 auto;
-    border-color:#f070a1;
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 5px;
-    }
+    padding: 10px;
+    border: 30px;
+}
 
 .flow-button {
     background-color: #c34271;
