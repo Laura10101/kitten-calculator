@@ -17,6 +17,12 @@ h1 {
     text-align: center;
 }
 
+#results {
+    background-color: #f070a1;
+    color:#12c998;
+    text-align: center;
+}
+
 .flow-button {
     background-color: #c34271;
     color:aliceblue;
