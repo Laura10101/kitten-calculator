@@ -8,7 +8,7 @@ h1 {
     background-color: #444444;
     color: #12c998;
     text-align: center;
-    font-size: 40px; /*this is not having any effect*/
+    font-size: 40px; 
     width: 33%;
     margin: 0 auto;
 }
@@ -21,18 +21,22 @@ p {
     background-color: #ffffff;
     color: #12c998;
     text-align: center;
-      }
+    padding: 10px;
+    border: 30px;
+    }
 
 #questions {
     background-color: #444444;
     color:#12c998;
     text-align: center;
+    padding: 30px;
 }
 
 #results {
     background-color: #444444;
     color:#12c998;
     text-align: center;
+    padding: 30px;
     }
 
 .flow-button {
@@ -46,7 +50,7 @@ p {
 }
 
 .flow-button:hover {
-background-color:#f070a1
+    background-color:#f070a1
 }
 
 /* colours used: #f070a1, #c34271, #16ffbd - mint green, #12c998 - slightly darker green, #439f76 neutral green 
