@@ -5,7 +5,7 @@ h1, h2, p {
 }
 
 h1 {
-    background-color: #f070a1;
+    background-color: #444444;
     color: #12c998;
     text-align: center;
     font-size: 90; /*this is not having any effect*/
@@ -21,13 +21,13 @@ h1 {
 }
 
 #questions {
-    background-color: #f070a1;
+    background-color: #444444;
     color:#12c998;
     text-align: center;
 }
 
 #results {
-    background-color: #f070a1;
+    background-color: #444444;
     color:#12c998;
     text-align: center;
     }
