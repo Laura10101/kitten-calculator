@@ -45,6 +45,10 @@ p {
     padding: 30px;
     width: 80%;
     margin: 0 auto;
+    border-color:#f070a1;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
     }
 
 .flow-button {
