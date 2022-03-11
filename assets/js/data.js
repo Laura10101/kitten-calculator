@@ -75,3 +75,5 @@ function getQuestions() {
         'preconditions' : [ { 'questionIndex' : 5, 'validAnswerIndices' : [ 0 ] } ]
     }]
 }
+
+export {getQuestions}
