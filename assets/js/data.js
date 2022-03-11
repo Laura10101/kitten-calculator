@@ -76,4 +76,3 @@ function getQuestions() {
     }]
 }
 
-export {getQuestions}
