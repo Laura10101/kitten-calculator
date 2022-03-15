@@ -27,8 +27,6 @@ initialiseCalculator();
  */
 // Create function to pull questions in, to keep ui.js smaller and more focused: single reponsibility principle
 function initialiseCalculator() {
-    currentParent = 0;
-    currentQuestion = 0;
     model = initialiseModel();
     showIntroSection();
 }
@@ -47,7 +45,10 @@ function showIntroSection() {
 function showQuestionsSection() {
     currentSection = 1;
     showCurrentSection();
-    showCurrentQuestion();
+
+    currentParent = 0;
+    currentQuestion = -1;
+    showNextQuestion();
 } 
 
 function showResultsSection() {
