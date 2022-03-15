@@ -21,7 +21,7 @@
                 <div id="intro-container">
                     <p>This will explain how the calculator works and some of the basics of feline genetics</p>
                     <p>Read more about feline genetics here</p>
-                    <button class="flow-button">Start</button>
+                    <button class="flow-button" onclick="showQuestionsSection()">Start</button>
                 </div>
             </section>
 
@@ -37,8 +37,8 @@
                             <p id="answer-description-template"></p>
                         </button>
                     </div>
-                    <button id="previous-question-button" class="flow-button">Previous Step</button>
-                    <button id="next-question-button" class="flow-button">Next Step</button>
+                    <button id="previous-question-button" class="flow-button" onclick="showPreviousQuestion()">Previous Step</button>
+                    <button id="next-question-button" class="flow-button" onclick="showNextQuestion()">Next Step</button>
                 </div>
             </section>
             
