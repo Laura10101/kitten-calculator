@@ -19,7 +19,6 @@ const nextQuestionButton = document.getElementById('next-question-button');
 const calculateKittensButton = document.getElementById('calculate-kittens-button');
 
 //Initialise calculator
-let model = initialiseModel();
 initialiseCalculator();
 
 /*
@@ -27,10 +26,9 @@ initialiseCalculator();
  */
 // Create function to pull questions in, to keep ui.js smaller and more focused: single reponsibility principle
 function initialiseCalculator() {
+    currentParent = 'mum';
     currentQuestion = 0;
-    
-    maternalAnswers = [];
-    paternalAnswers = [];
+    model = initialiseModel();
     showIntroSection();
 }
 
@@ -96,12 +94,13 @@ function showCurrentQuestion() {
         let answerImage = answerButton.querySelector('#answer-image-template');
 
         //Create an id for the answer
-        answerId = 'q' + currentQuestion + '-' + answers[i].text.replace('  ', ' ').replace(' ', '-');
+        let answerDescriptor = 'q' + currentQuestion + '-' + answers[i].text.replace('  ', ' ').replace(' ', '-');
+        let answerId = 'q' + currentQuestion + '-a-' + i;
         //Set answer description 
         answerText.innerText = answers[i].text; 
         
         //Set answer image
-        imagePath = imgs + answerId + imgExt;
+        imagePath = imgs + answerDescriptor + imgExt;
         answerImage.src = imagePath;
         
         //Set answer button ID
@@ -160,25 +159,46 @@ function selectAnswer(buttonId) {
         }
     }
     answerContainer.querySelector('#' + buttonId).classList.add('selected');
+    //Now the buttons are correctly set, update the selected answers in the model
+    updateSelectedAnswers();
 }
 
 /*
  *  MANAGE MODEL
  */
 function initialiseModel() {
-    let model = {
+    let initModel = {
         'mum' : initialiseAnswersModel(),
         'dad' : initialiseAnswersModel()
     };
-    return model;
+    return initModel;
 }
 
 function initialiseAnswersModel() {
-    let model = {};
+    let answerModel = {};
     for (let i = 0; i < questions.length; i++) {
-        model[i] = [];
+        answerModel[i] = [];
     }
-    return model;
+    return answerModel;
+}
+
+function updateSelectedAnswers() {
+    //Clear answers for the current question onwards
+    //This is because the validity of subsequent answers may be contingent on
+    //previous answers
+    for (let i = currentQuestion; i < questions.length; i++) {
+        model[currentParent][i] = [];
+    }
+
+    //Iterate through the answer container
+    for (let i = 0; i < answerContainer.children.length; i++) {
+        let answer = answerContainer.children[i];
+        if (answer.classList.contains('selected')) {
+            //Get the answer index from the answer button's id. It is sandwhiched between q-{question index}-a- and -answer-button
+            let answerId = parseInt(answer.id.substring(answer.id.indexOf('-a-') + 3, answer.id.indexOf('-answer-button')));
+            model[currentParent][currentQuestion].push(answerId);
+        }
+    }
 }
 
 /*
