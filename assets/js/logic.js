@@ -1,0 +1,3 @@
+function calculateKittens(answers) {
+    
+}
