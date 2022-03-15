@@ -16,6 +16,7 @@ const answerContainer = document.getElementById('answer-container');
 const answerTemplate = document.getElementById('answer-template');
 const previousQuestionButton = document.getElementById('previous-question-button');
 const nextQuestionButton = document.getElementById('next-question-button');
+const calculateKittensButton = document.getElementById('calculate-kittens-button');
 
 //Initialise calculator
 initialiseCalculator();
@@ -113,13 +114,16 @@ function controlFlowButtons() {
     //Enable or disable the previous and next buttons, depending on which question we are on
     if (currentQuestion == 0) {
         disableButton(previousQuestionButton);
+        disableButton(calculateKittensButton);
     }
     else if (currentQuestion == questions.length - 1) {
         disableButton(nextQuestionButton);
+        enableButton(calculateKittensButton);
     }
     else {
         enableButton(previousQuestionButton);
         enableButton(nextQuestionButton);
+        disableButton(calculateKittensButton);
     }
 }
 
