@@ -75,12 +75,14 @@ function showCurrentQuestion() {
     let answers = question.answers;
     //Show question
     questionText.innerText = question.text;
+    //Clear answers from the answer container
+    answerContainer.innerHTML = "";
     //Display question answers
     for (let i = 0; i < answers.length; i++) {
         //Duplicate answer template
         let answerButton = answerTemplate.cloneNode(true);
-        let answerText = answerButton.getElementById('answer-description-template');
-        let answerImage = answerButton.getElementById('answer-image-template');
+        let answerText = answerButton.querySelector('#answer-description-template');
+        let answerImage = answerButton.querySelector('#answer-image-template');
 
         //Create an id for the answer
         answerId = 'q' + currentQuestion + '-' + answers[i].text.replace('  ', ' ').replace(' ', '-');
@@ -101,7 +103,7 @@ function showCurrentQuestion() {
         answerText.id = answerId + 'answer-description';
         
         //Add the new answer button to the DOM
-        answerContainer.childNodes.add(answerButton);
+        answerContainer.appendChild(answerButton);
     }
     //Enable or disable the previous and next buttons, depending on which question we are on
 
