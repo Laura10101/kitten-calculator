@@ -40,6 +40,7 @@ function showIntroSection() {
 function showQuestionsSection() {
     currentSection = 1;
     showCurrentSection();
+    showCurrentQuestion();
 } 
 
 function showResultsSection() {
