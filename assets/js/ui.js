@@ -1,5 +1,6 @@
 //Get application data
 const questions = getQuestions();
+const parents = ['dad', 'mum'];
 
 //Paths
 const imgs = 'assets/img/';
@@ -26,7 +27,7 @@ initialiseCalculator();
  */
 // Create function to pull questions in, to keep ui.js smaller and more focused: single reponsibility principle
 function initialiseCalculator() {
-    currentParent = 'mum';
+    currentParent = 0;
     currentQuestion = 0;
     model = initialiseModel();
     showIntroSection();
@@ -69,13 +70,23 @@ function showCurrentSection() {
  */
 //These functions traverse through the different questions 
 function showNextQuestion() {
-    currentQuestion = currentQuestion + 1;
+    if (currentParent == 0 && currentQuestion == questions.length - 1) {
+        currentParent = 1;
+        currentQuestion = 0;
+    }
+    else currentQuestion = currentQuestion + 1;
     showCurrentQuestion();
+    controlFlowButtons();
 }
 
 function showPreviousQuestion() {
-    currentQuestion = currentQuestion - 1;
+    if (currentParent == 1 && currentQuestion == 0) {
+        currentParent = 0;
+        currentQuestion = 0;
+    }
+    else currentQuestion = currentQuestion - 1;
     showCurrentQuestion();
+    controlFlowButtons();
 }
 
 function showCurrentQuestion() {
@@ -118,24 +129,22 @@ function showCurrentQuestion() {
         //Add the new answer button to the DOM
         answerContainer.appendChild(answerButton);
     }
-    controlFlowButtons();
 }
 
 //Enable or disable buttons
 function controlFlowButtons() {
     //Enable or disable the previous and next buttons, depending on which question we are on
-    if (currentQuestion == 0) {
+    disableButton(calculateKittensButton);
+    if (currentParent == 0 && currentQuestion == 0) {
         disableButton(previousQuestionButton);
-        disableButton(calculateKittensButton);
     }
-    else if (currentQuestion == questions.length - 1) {
+    else if (currentParent == 1 && currentQuestion == questions.length - 1) {
         disableButton(nextQuestionButton);
         enableButton(calculateKittensButton);
     }
     else {
         enableButton(previousQuestionButton);
         enableButton(nextQuestionButton);
-        disableButton(calculateKittensButton);
     }
 }
 
@@ -187,7 +196,7 @@ function updateSelectedAnswers() {
     //This is because the validity of subsequent answers may be contingent on
     //previous answers
     for (let i = currentQuestion; i < questions.length; i++) {
-        model[currentParent][i] = [];
+        model[parents[currentParent]][i] = [];
     }
 
     //Iterate through the answer container
@@ -196,7 +205,7 @@ function updateSelectedAnswers() {
         if (answer.classList.contains('selected')) {
             //Get the answer index from the answer button's id. It is sandwhiched between q-{question index}-a- and -answer-button
             let answerId = parseInt(answer.id.substring(answer.id.indexOf('-a-') + 3, answer.id.indexOf('-answer-button')));
-            model[currentParent][currentQuestion].push(answerId);
+            model[parents[currentParent]][currentQuestion].push(answerId);
         }
     }
 }
