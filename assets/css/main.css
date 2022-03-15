@@ -43,6 +43,25 @@ section {
     visibility: hidden;
 }
 
+.answer {
+    border-color:#f070a1;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    width: 150px;
+    margin: 10px
+}
+
+.answer:hover {
+    color: #444444;
+    background-color: #12c998;
+}
+
+.selected {
+    color: #444444;
+    background-color: #f070a1;
+}
+
 .flow-button {
     background-color: #c34271;
     color:aliceblue;
