@@ -105,6 +105,28 @@ function showCurrentQuestion() {
         //Add the new answer button to the DOM
         answerContainer.appendChild(answerButton);
     }
-    //Enable or disable the previous and next buttons, depending on which question we are on
+    controlFlowButtons();
+}
 
+//Enable or disable buttons
+function controlFlowButtons() {
+    //Enable or disable the previous and next buttons, depending on which question we are on
+    if (currentQuestion == 0) {
+        disableButton(previousQuestionButton);
+    }
+    else if (currentQuestion == questions.length - 1) {
+        disableButton(nextQuestionButton);
+    }
+    else {
+        enableButton(previousQuestionButton);
+        enableButton(nextQuestionButton);
+    }
+}
+
+function enableButton(button) {
+    button.classList.remove("disabled-button");
+}
+
+function disableButton(button) {
+    button.classList.add("disabled-button");
 }
