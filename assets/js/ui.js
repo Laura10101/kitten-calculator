@@ -19,8 +19,12 @@ const nextQuestionButton = document.getElementById('next-question-button');
 const calculateKittensButton = document.getElementById('calculate-kittens-button');
 
 //Initialise calculator
+let model = initialiseModel();
 initialiseCalculator();
 
+/*
+ *  INITIALISATION
+ */
 // Create function to pull questions in, to keep ui.js smaller and more focused: single reponsibility principle
 function initialiseCalculator() {
     currentQuestion = 0;
@@ -30,6 +34,9 @@ function initialiseCalculator() {
     showIntroSection();
 }
 
+/*
+ *  CONTROL SECTION FLOW
+ */
 //These 3 functions control the display of the different sections 
 //Used 3 functions to reduce the chance of errors caused by incrementing current section too many times 
 
@@ -59,6 +66,9 @@ function showCurrentSection() {
     sections[currentSection].classList.add("current-section")
 }
 
+/*
+ *  CONTROL QUESTION FLOW
+ */
 //These functions traverse through the different questions 
 function showNextQuestion() {
     currentQuestion = currentQuestion + 1;
@@ -96,6 +106,9 @@ function showCurrentQuestion() {
         
         //Set answer button ID
         answerButton.id = answerId + '-answer-button';
+
+        //Set the onclick event handler for the answer
+        answerButton.onclick = function() { selectAnswer(answerButton.id); }
         
         //Set the answer image ID
         answerImage.id = answerId + '-answer-image';
@@ -133,4 +146,44 @@ function enableButton(button) {
 
 function disableButton(button) {
     button.classList.add("disabled-button");
+}
+
+/*
+ *  CONTROL ANSWER BUTTONS
+ */
+
+function selectAnswer(buttonId) {
+    //Clear current selection if question is not multiselect
+    if (!questions[currentQuestion].multiselect) {
+        for (let i = 0; i < answerContainer.children.length; i++) {
+            answerContainer.children[i].classList.remove('selected');
+        }
+    }
+    answerContainer.querySelector('#' + buttonId).classList.add('selected');
+}
+
+/*
+ *  MANAGE MODEL
+ */
+function initialiseModel() {
+    let model = {
+        'mum' : initialiseAnswersModel(),
+        'dad' : initialiseAnswersModel()
+    };
+    return model;
+}
+
+function initialiseAnswersModel() {
+    let model = {};
+    for (let i = 0; i < questions.length; i++) {
+        model[i] = [];
+    }
+    return model;
+}
+
+/*
+ *  DISPLAY RESULTS
+ */
+function displayResults() {
+    results = calculateKittens();
 }
