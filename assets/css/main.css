@@ -39,6 +39,10 @@ section {
     background-color: #ffffff;
 }
 
+#answer-template {
+    visibility: hidden;
+}
+
 .flow-button {
     background-color: #c34271;
     color:aliceblue;
