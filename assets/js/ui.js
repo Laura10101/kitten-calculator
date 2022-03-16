@@ -79,7 +79,7 @@ function showNextQuestion() {
         else {
             currentQuestion = currentQuestion + 1;
         }
-    } while (!isValidQuestion(currentQuestion));
+    } while (!isValidQuestion(currentQuestion) || !hasValidAnswers(currentQuestion));
     showCurrentQuestion();
     controlFlowButtons();
 }
@@ -91,7 +91,7 @@ function showPreviousQuestion() {
             currentQuestion = 0;
         }
         else currentQuestion = currentQuestion - 1;
-    } while (!isValidQuestion(currentQuestion));
+    } while (!isValidQuestion(currentQuestion) || !hasValidAnswers(currentQuestion));
     showCurrentQuestion();
     controlFlowButtons();
 }
@@ -145,6 +145,17 @@ function showCurrentQuestion() {
 function isValidQuestion(q) {
     let preconditions = questions[q].preconditions;
     return preconditionsSatisfied(preconditions);
+}
+
+function hasValidAnswers(q) {
+    let validAnswerExists = false;
+    for (let a = 0; a < questions[q].answers.length; a++) {
+        if (isValidAnswer(q, a)) {
+            validAnswerExists = true;
+            break;
+        }
+    }
+    return validAnswerExists;
 }
 
 function isValidAnswer(q, a) {
