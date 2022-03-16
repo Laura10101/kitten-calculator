@@ -71,6 +71,7 @@ function showCurrentSection() {
  */
 //These functions traverse through the different questions 
 function showNextQuestion() {
+    let isValid = false;
     do {
         if (currentParent == 0 && currentQuestion == questions.length - 1) {
             currentParent = 1;
@@ -79,8 +80,9 @@ function showNextQuestion() {
         else {
             currentQuestion = currentQuestion + 1;
         }
-    } while (!isValidQuestion(currentQuestion) || !hasValidAnswers(currentQuestion));
-    showCurrentQuestion();
+        isValid = isValidQuestion(currentQuestion) && hasValidAnswers(currentQuestion);
+    } while (currentQuestion < questions.length - 1 && !isValid);
+    if (isValid) showCurrentQuestion();
     controlFlowButtons();
 }
 
@@ -92,7 +94,7 @@ function showPreviousQuestion() {
         }
         else currentQuestion = currentQuestion - 1;
     } while (!isValidQuestion(currentQuestion) || !hasValidAnswers(currentQuestion));
-    showCurrentQuestion();
+    if (currentQuestion >= 0) showCurrentQuestion();
     controlFlowButtons();
 }
 
@@ -193,7 +195,7 @@ function controlFlowButtons() {
     if (currentParent == 0 && currentQuestion == 0) {
         disableButton(previousQuestionButton);
     }
-    else if (currentParent == 1 && currentQuestion == questions.length - 1) {
+    else if (currentParent == 1 && currentQuestion >= questions.length - 1) {
         disableButton(nextQuestionButton);
         enableButton(calculateKittensButton);
     }
