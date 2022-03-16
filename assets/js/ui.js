@@ -100,36 +100,73 @@ function showCurrentQuestion() {
     answerContainer.innerHTML = "";
     //Display question answers
     for (let i = 0; i < answers.length; i++) {
-        //Duplicate answer template
-        let answerButton = answerTemplate.cloneNode(true);
-        let answerText = answerButton.querySelector('#answer-description-template');
-        let answerImage = answerButton.querySelector('#answer-image-template');
+        if (isValidAnswer(currentQuestion, i)) {
+            //Duplicate answer template
+            let answerButton = answerTemplate.cloneNode(true);
+            let answerText = answerButton.querySelector('#answer-description-template');
+            let answerImage = answerButton.querySelector('#answer-image-template');
 
-        //Create an id for the answer
-        let answerDescriptor = 'q' + currentQuestion + '-' + answers[i].text.replace('  ', ' ').replace(' ', '-');
-        let answerId = 'q' + currentQuestion + '-a-' + i;
-        //Set answer description 
-        answerText.innerText = answers[i].text; 
-        
-        //Set answer image
-        imagePath = imgs + answerDescriptor + imgExt;
-        answerImage.src = imagePath;
-        
-        //Set answer button ID
-        answerButton.id = answerId + '-answer-button';
+            //Create an id for the answer
+            let answerDescriptor = 'q' + currentQuestion + '-' + answers[i].text.replace('  ', ' ').replace(' ', '-');
+            let answerId = 'q' + currentQuestion + '-a-' + i;
+            //Set answer description 
+            answerText.innerText = answers[i].text; 
+            
+            //Set answer image
+            imagePath = imgs + answerDescriptor + imgExt;
+            answerImage.src = imagePath;
+            
+            //Set answer button ID
+            answerButton.id = answerId + '-answer-button';
 
-        //Set the onclick event handler for the answer
-        answerButton.onclick = function() { selectAnswer(answerButton.id); }
-        
-        //Set the answer image ID
-        answerImage.id = answerId + '-answer-image';
-        
-        //Set the answer text ID
-        answerText.id = answerId + 'answer-description';
-        
-        //Add the new answer button to the DOM
-        answerContainer.appendChild(answerButton);
+            //Set the onclick event handler for the answer
+            answerButton.onclick = function() { selectAnswer(answerButton.id); }
+            
+            //Set the answer image ID
+            answerImage.id = answerId + '-answer-image';
+            
+            //Set the answer text ID
+            answerText.id = answerId + 'answer-description';
+            
+            //Add the new answer button to the DOM
+            answerContainer.appendChild(answerButton);
+        }
     }
+}
+
+//Check whether questions and answers are valid based on their preconditions and
+//the answers given to previous questions
+function isValidQuestion(q) {
+    let preconditions = questions[q].preconditions;
+    return preconditionsSatisfied(preconditions);
+}
+
+function isValidAnswer(q, a) {
+    let preconditions = questions[q].answers[a].preconditions;
+    return preconditionsSatisfied(preconditions);
+}
+
+//A precondition is satisfied if one of the answers actually given for the associated question
+//is one of the valid answers for the precondition. A list of preconditions is satisfied if
+//all preconditions in the list are satisifed.
+function preconditionsSatisfied(preconditions) {
+    let preconditionsSatisfied = true;
+    for (let i = 0; i < preconditions.length; i++) {
+        let validAnswers = preconditions[i].validAnswerIndices;
+        let answers = model[parents[currentParent]][preconditions[i].questionIndex];
+        let preconditionSatisfied = false;
+        for (let a = 0; a < answers.length; a++) {
+            if (validAnswers.includes(answers[a])) {
+                preconditionSatisfied = true;
+                break;
+            }
+        }
+        if (!preconditionSatisfied) {
+            preconditionsSatisfied = false;
+            break;
+        }
+    }
+    return preconditionsSatisfied;
 }
 
 //Enable or disable buttons
