@@ -71,21 +71,27 @@ function showCurrentSection() {
  */
 //These functions traverse through the different questions 
 function showNextQuestion() {
-    if (currentParent == 0 && currentQuestion == questions.length - 1) {
-        currentParent = 1;
-        currentQuestion = 0;
-    }
-    else currentQuestion = currentQuestion + 1;
+    do {
+        if (currentParent == 0 && currentQuestion == questions.length - 1) {
+            currentParent = 1;
+            currentQuestion = 0;
+        }
+        else {
+            currentQuestion = currentQuestion + 1;
+        }
+    } while (!isValidQuestion(currentQuestion));
     showCurrentQuestion();
     controlFlowButtons();
 }
 
 function showPreviousQuestion() {
-    if (currentParent == 1 && currentQuestion == 0) {
-        currentParent = 0;
-        currentQuestion = 0;
-    }
-    else currentQuestion = currentQuestion - 1;
+    do {
+        if (currentParent == 1 && currentQuestion == 0) {
+            currentParent = 0;
+            currentQuestion = 0;
+        }
+        else currentQuestion = currentQuestion - 1;
+    } while (!isValidQuestion(currentQuestion));
     showCurrentQuestion();
     controlFlowButtons();
 }
