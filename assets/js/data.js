@@ -76,3 +76,6 @@ function getQuestions() {
     }]
 }
 
+function getGenes() {
+    return ['colour', 'dilute', 'tabby', 'colourpoint', 'whiteSpotting']
+}
