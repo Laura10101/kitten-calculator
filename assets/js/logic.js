@@ -102,5 +102,25 @@ function determineWhitespotting(ws1, ws2) {
 }
 
 function calculateProbabilities(possiblePhenotypes) {
-    
+    let phenotypeProbabilities = {}
+
+    //Get the distinct phenotypes
+    let phenotypes = [...new Set(possiblePhenotypes)];
+
+    //For each distinct phenotype, calculate the probability that it occurs in the list of possible phenotypes
+    //Set the probability in the object
+    for (let i = 0; i < phenotypes.length; i++) {
+        let frequency = getPhenotypeFrequency(possiblePhenotypes, phenotypes[i]);
+        let probability = (frequency / possiblePhenotypes.length) * 100;
+        phenotypeProbabilities[phenotypes[i]] = probability;
+    }
+    return phenotypeProbabilities;
+}
+
+function getPhenotypeFrequency(possiblePhenotypes, phenotype) {
+    let count = 0;
+    for (let i = 0; i < possiblePhenotypes.length; i++) {
+        if (possiblePhenotypes[i] == phenotype) count++;
+    }
+    return count;
 }
