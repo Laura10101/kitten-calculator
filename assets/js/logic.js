@@ -53,7 +53,52 @@ function calculateGenePermutations(maternalGenotype, paternalGenotype, gene) {
 }
 
 function determinePhenotypes(possibleGenotypes) {
+    let phenotypes = []
+    for (let i = 0; i < possibleGenotypes.length; i++) {
+        phenotypes.push(determinePhenotype(possibleGenotypes[i]));
+    }
+    return phenotypes;
+}
 
+function determinePhenotype(genotype) {
+    let phenotype = determineColour(genotype[0]['colour'], genotype[0]['dilute'], genotype[1]['colour'], genotype[1]['dilute']);
+
+    phenotype += " " + determineTabby(genotype[0]['tabby'], genotype[1]['tabby']);
+    phenotype += " " + determineColourpoint(genotype[0]['colourpoint'], genotype[1]['colourpoint']);
+    phenotype += " " + determineWhitespotting(genotype[0]['whiteSpotting'], genotype[1]['whiteSpotting']);
+
+    return phenotype;
+}
+
+function determineColour(colour1, dilute1, colour2, dilute2) {
+    if (colour1 == 'B' || colour2 == 'B') {
+        if (dilute1 == true && dilute2 == true) return 'blue';
+        return 'black';
+    }
+
+    if (colour1 == 'b' || colour2 == 'b') {
+        if (dilute1 == true && dilute2 == true) return 'lilac';
+        return 'chocolate';
+    }
+
+    if (dilute1 == true && dilute2 == true) return 'fawn';
+    return 'cinnamon';
+}
+
+function determineTabby(tb1, tb2) {
+    if (tb1 == true || tb2 == true) return 'tabby';
+    return '';
+}
+
+function determineColourpoint(cp1, cp2) {
+    if (cp1 == true && cp2 == true) return 'colourpoint';
+    return '';
+}
+
+function determineWhitespotting(ws1, ws2) {
+    if (ws1 == true && ws2 == true) return 'high white';
+    if (ws1 == true || ws2 == true) return 'bicolour';
+    return 'self';
 }
 
 function calculateProbabilities(possiblePhenotypes) {
