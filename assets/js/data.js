@@ -12,6 +12,7 @@ function getQuestions() {
                         "p2": false
                     }
                 ],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Black"
             },
@@ -27,6 +28,7 @@ function getQuestions() {
                         "p2": true
                     }
                 ],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Blue"
             },
@@ -42,6 +44,7 @@ function getQuestions() {
                         "p2": false
                     }
                 ],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Chocolate"
             },
@@ -57,6 +60,7 @@ function getQuestions() {
                         "p2": true
                     }
                 ],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Lilac"
             },
@@ -72,6 +76,7 @@ function getQuestions() {
                         "p2": false
                     }
                 ],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Cinnamon"
             },
@@ -87,6 +92,7 @@ function getQuestions() {
                         "p2": true
                     }
                 ],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Fawn"
             }
@@ -101,6 +107,7 @@ function getQuestions() {
                     "gene": "dilute",
                     "p2": true
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [{
                     "questionIndex": 0,
                     "validAnswerIndices": [
@@ -116,6 +123,7 @@ function getQuestions() {
                     "gene": "colour",
                     "p2": "b"
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [{
                     "questionIndex": 0,
                     "validAnswerIndices": [
@@ -130,6 +138,7 @@ function getQuestions() {
                     "gene": "colour",
                     "p2": "b1"
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [{
                     "questionIndex": 0,
                     "validAnswerIndices": [
@@ -153,6 +162,7 @@ function getQuestions() {
                     "p1": true,
                     "p2": true
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Tabby"
             },
@@ -162,6 +172,7 @@ function getQuestions() {
                     "p1": false,
                     "p2": false
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Non-tabby"
             }
@@ -176,6 +187,7 @@ function getQuestions() {
                     "gene": "tabby",
                     "p2": false
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Yes"
             },
@@ -184,6 +196,7 @@ function getQuestions() {
                     "gene": "tabby",
                     "p2": true
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "No"
             }
@@ -204,6 +217,7 @@ function getQuestions() {
                     "p1": false,
                     "p2": false
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Self"
             },
@@ -213,6 +227,7 @@ function getQuestions() {
                     "p1": true,
                     "p2": false
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Bicolour"
             },
@@ -222,6 +237,7 @@ function getQuestions() {
                     "p1": true,
                     "p2": true
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Van"
             }
@@ -237,6 +253,7 @@ function getQuestions() {
                     "p1": false,
                     "p2": false
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Non-pointed"
             },
@@ -246,6 +263,7 @@ function getQuestions() {
                     "p1": true,
                     "p2": true
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Colourpoint"
             }
@@ -260,6 +278,7 @@ function getQuestions() {
                     "gene": "colourpoint",
                     "p2": true
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "Yes"
             },
@@ -268,6 +287,7 @@ function getQuestions() {
                     "gene": "colourpoint",
                     "p2": false
                 }],
+                "image" : "blue-self-draft",
                 "preconditions": [],
                 "text": "No"
             }
