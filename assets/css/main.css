@@ -57,6 +57,11 @@ section {
     background-color: #12c998;
 }
 
+.answer-image {
+    width: 150px;
+    height: 150px;
+}
+
 .selected {
     color: #444444;
     background-color: #f070a1;
