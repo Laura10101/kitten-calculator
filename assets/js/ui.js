@@ -115,13 +115,12 @@ function showCurrentQuestion() {
             let answerImage = answerButton.querySelector('#answer-image-template');
 
             //Create an id for the answer
-            let answerDescriptor = 'q' + currentQuestion + '-' + answers[i].text.replace('  ', ' ').replace(' ', '-');
             let answerId = 'q' + currentQuestion + '-a-' + i;
             //Set answer description 
             answerText.innerText = answers[i].text; 
             
             //Set answer image
-            imagePath = imgs + answerDescriptor + imgExt;
+            imagePath = imgs + answers[i].image + imgExt;
             answerImage.src = imagePath;
             
             //Set answer button ID
@@ -267,9 +266,17 @@ function updateSelectedAnswers() {
     }
 }
 
+//Calculate a genotype model from a given set of answers
+function getGenotypesFromAnswers(answers) {
+    
+}
+
 /*
  *  DISPLAY RESULTS
  */
 function displayResults() {
-    results = calculateKittens();
+    let maternalGenotype = getGenotypesFromAnswers(model['mum']);
+    let paternalGenotype = getGenotypesFromAnswers(model['dad']);
+    let genes = getGenes();
+    results = calculateKittens(maternalGenotype, paternalGenotype, genes);
 }
