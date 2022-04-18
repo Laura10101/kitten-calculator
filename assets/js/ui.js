@@ -318,7 +318,7 @@ function displayResults() {
         let resultSpan = resultTemplate.cloneNode(true);
         let resultImage = resultSpan.querySelector('#result-image-template');
         let resultFrequency = resultSpan.querySelector('#result-percentage-template');
-        let resultDescription = resultTemplate.querySelector('#result-description-template');
+        let resultDescription = resultSpan.querySelector('#result-description-template');
 
         resultSpan.id = phenotypeId + '-result-span';
 
