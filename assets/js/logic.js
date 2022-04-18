@@ -41,7 +41,7 @@ function calculateGenePermutations(maternalGenotype, paternalGenotype, gene) {
 
     //Permute mum's two alleles for this gene with dad's two alleles
     for (let m = 0; m < 2; m++) {
-        for (let d = 0; d < 2; d++) {
+        for (let p = 0; p < 2; p++) {
             let permutation = [
                 { gene : maternalGenotype[m][gene] },
                 { gene : paternalGenotype[p][gene] }
