@@ -21,8 +21,8 @@ function calculatePossibleGenotypes (maternalGenotype, paternalGenotype, genes, 
         for (let n = 0; n < nextGenePermutations.length; n++) {
             let gene = genes[currentGene];
             let permutation = [
-                { gene : currentGenePermutations[c][0][gene] },
-                { gene : currentGenePermutations[c][1][gene] }
+                { [gene] : currentGenePermutations[c][0][gene] },
+                { [gene] : currentGenePermutations[c][1][gene] }
             ]
             for (let g = currentGene + 1; g < genes.length; g++) {
                 gene = genes[g];
@@ -43,8 +43,8 @@ function calculateGenePermutations(maternalGenotype, paternalGenotype, gene) {
     for (let m = 0; m < 2; m++) {
         for (let p = 0; p < 2; p++) {
             let permutation = [
-                { gene : maternalGenotype[m][gene] },
-                { gene : paternalGenotype[p][gene] }
+                { [gene] : maternalGenotype[m][gene] },
+                { [gene] : paternalGenotype[p][gene] }
             ]
             permutations.push(permutation)
         }
