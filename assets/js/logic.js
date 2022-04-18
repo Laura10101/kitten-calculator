@@ -8,13 +8,13 @@ function calculatePossibleGenotypes (maternalGenotype, paternalGenotype, genes, 
     let possibleGenotypes = []
 
     //Calculate all of the possible permutations of mum/dad's alleles for this gene
-    currentGenePermutations = calculateGenePermutations(maternalGenotype, paternalGenotype, genes[currentGene]);
+    let currentGenePermutations = calculateGenePermutations(maternalGenotype, paternalGenotype, genes[currentGene]);
 
     //If this is the last gene in the array, stop recursing and instead just return possible permutations for this gene
     if (currentGene == genes.length - 1) return currentGenePermutations;
 
     //If we aren't on the last gene, then get the permutations for all of the next genes
-    nextGenePermutations = calculatePossibleGenotypes(maternalGenotype, paternalGenotype, genes, currentGene + 1);
+    let nextGenePermutations = calculatePossibleGenotypes(maternalGenotype, paternalGenotype, genes, currentGene + 1);
 
     //Now we can combine the two sets of combinations
     for (let c = 0; c < currentGenePermutations.length; c++) {
