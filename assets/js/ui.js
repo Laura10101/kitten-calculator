@@ -326,7 +326,7 @@ function displayResults() {
         resultImage.src = imgs + phenotypeId + imgExt;
 
         resultFrequency.id = phenotypeId + '-result-percentage-paragraph';
-        resultFrequency.innerText = frequency;
+        resultFrequency.innerText = frequency + '%';
 
         resultDescription.id = phenotypeId + '-result-paragraph';
         resultDescription.innerText = phenotype;
