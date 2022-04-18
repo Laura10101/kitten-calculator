@@ -18,6 +18,8 @@ const answerTemplate = document.getElementById('answer-template');
 const previousQuestionButton = document.getElementById('previous-question-button');
 const nextQuestionButton = document.getElementById('next-question-button');
 const calculateKittensButton = document.getElementById('calculate-kittens-button');
+const resultsContainer = document.getElementById('results-info-container');
+const resultTemplate = document.getElementById('result-template');
 
 //Initialise calculator
 initialiseCalculator();
@@ -283,9 +285,9 @@ function calculateGenotypesFromAnswers() {
 
 //Calculate the genotype for a single parent given the answers for that parent 
 function calculateParentGenotype(parentModel, parentGenotype) {
-    for (let q = 0; q < parentModel.length; q++) {
+    for (let q = 0; q < questions.length; q++) {
         for (let a = 0; a < parentModel[q].length; a++) {
-            let geneMappings = questions[q].answers[a].geneMapping;
+            let geneMappings = questions[q].answers[parentModel[q][a]].geneMapping;
             for (let m = 0; m < geneMappings.length; m++) {
                 let gene = geneMappings[m].gene; 
                 //Only update P1 if the gene mapping exists for p1
@@ -306,8 +308,30 @@ function calculateParentGenotype(parentModel, parentGenotype) {
  *  DISPLAY RESULTS
  */
 function displayResults() {
-    let genotypes = calculateGenotypesFromAnswers;
-    let kittenResults = calculateKittens(genotyoes.mum, genotypes.dad, getGenes());
-    
+    let genotypes = calculateGenotypesFromAnswers();
+    let kittenResults = calculateKittens(genotypes.mum, genotypes.dad, getGenes());
+
+    for (const phenotype in kittenResults) {
+        let frequency = kittenResults[phenotype];
+        let phenotypeId = phenotype.toLowerCase().replace(" ", "-");
+
+        let resultSpan = resultTemplate.cloneNode(true);
+        let resultImage = resultSpan.querySelector('#result-image-template');
+        let resultFrequency = resultSpan.querySelector('#result-percentage-template');
+        let resultDescription = resultTemplate.querySelector('#result-description-template');
+
+        resultSpan.id = phenotypeId + '-result-span';
+
+        resultImage.id = phenotypeId + '-result-img';
+        resultImage.src = imgs + phenotypeId + imgExt;
+
+        resultFrequency.id = phenotypeId + '-result-percentage-paragraph';
+        resultFrequency.innerText = frequency;
+
+        resultDescription.id = phenotypeId + '-result-paragraph';
+        resultDescription.innerText = phenotype;
+
+        resultsContainer.appendChild(resultSpan);
+    }
 }
 
