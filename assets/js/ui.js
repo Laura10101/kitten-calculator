@@ -54,6 +54,7 @@ function showQuestionsSection() {
 function showResultsSection() {
     currentSection = 2;
     showCurrentSection();
+    displayResults();
 }
 
 function showCurrentSection() {
@@ -229,6 +230,12 @@ function selectAnswer(buttonId) {
 }
 
 /*
+ * DISPLAY RESULTS
+ */
+
+
+
+/*
  *  MANAGE MODEL
  */
 function initialiseModel() {
@@ -267,16 +274,40 @@ function updateSelectedAnswers() {
 }
 
 //Calculate a genotype model from a given set of answers
-function getGenotypesFromAnswers(answers) {
-    
+function calculateGenotypesFromAnswers() {
+    let genotypes = getDefaultGenotypes();
+    genotypes.mum = calculateParentGenotype(model.mum, genotypes.mum); 
+    genotypes.dad = calculateParentGenotype(model.dad, genotypes.dad); 
+    return genotypes;
+}
+
+//Calculate the genotype for a single parent given the answers for that parent 
+function calculateParentGenotype(parentModel, parentGenotype) {
+    for (let q = 0; q < parentModel.length; q++) {
+        for (let a = 0; a < parentModel[q].length; a++) {
+            let geneMappings = questions[q].answers[a].geneMapping;
+            for (let m = 0; m < geneMappings.length; m++) {
+                let gene = geneMappings[m].gene; 
+                //Only update P1 if the gene mapping exists for p1
+                if (Object.keys(geneMappings[m]).includes("p1")) {
+                    let p1 = geneMappings[m].p1;
+                    parentGenotype[0][gene] = p1;
+                }
+                //it will always exist for gene 2
+                let p2 = geneMappings[m].p2;
+                parentGenotype[1][gene] = p2;
+            }
+        }
+    }
+    return parentGenotype;
 }
 
 /*
  *  DISPLAY RESULTS
  */
 function displayResults() {
-    let maternalGenotype = getGenotypesFromAnswers(model['mum']);
-    let paternalGenotype = getGenotypesFromAnswers(model['dad']);
-    let genes = getGenes();
-    results = calculateKittens(maternalGenotype, paternalGenotype, genes);
+    let genotypes = calculateGenotypesFromAnswers;
+    let kittenResults = calculateKittens(genotyoes.mum, genotypes.dad, getGenes());
+    
 }
+
