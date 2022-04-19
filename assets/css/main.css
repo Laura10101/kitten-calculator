@@ -28,23 +28,19 @@ section {
     border-width: 3px;
     border-style: solid;
     border-radius: 5px;
-    visibility: hidden;
+    display: none;
 }
 
 .current-section {
-    visibility: visible;
+    display: block;
 }
 
 #introduction {
     background-color: #ffffff;
 }
 
-#answer-template {
-    visibility: hidden;
-}
-
-#result-template {
-    visibility: hidden;
+#answer-template, #result-template {
+    display: none;
 }
 
 .answer {
