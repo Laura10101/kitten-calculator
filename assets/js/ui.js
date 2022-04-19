@@ -256,7 +256,8 @@ function displayResults() {
         resultSpan.id = phenotypeId + '-result-span';
 
         resultImage.id = phenotypeId + '-result-img';
-        resultImage.src = imgs + phenotypeId + imgExt;
+        //resultImage.src = imgs + phenotypeId + imgExt;
+        resultImage.src = imgs + 'blue-self-draft' + imgExt; //this is only for testing, until the proper images arrive
 
         resultFrequency.id = phenotypeId + '-result-percentage-paragraph';
         resultFrequency.innerText = frequency + '%';
@@ -267,7 +268,6 @@ function displayResults() {
         resultsContainer.appendChild(resultSpan);
     }
 }
-
 
 /*
  *  MANAGE MODEL
