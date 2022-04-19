@@ -240,7 +240,33 @@ function selectAnswer(buttonId) {
 /*
  * DISPLAY RESULTS
  */
+function displayResults() {
+    let genotypes = calculateGenotypesFromAnswers();
+    let kittenResults = calculateKittens(genotypes.mum, genotypes.dad, getGenes());
 
+    for (const phenotype in kittenResults) {
+        let frequency = kittenResults[phenotype];
+        let phenotypeId = phenotype.toLowerCase().replace(" ", "-");
+
+        let resultSpan = resultTemplate.cloneNode(true);
+        let resultImage = resultSpan.querySelector('#result-image-template');
+        let resultFrequency = resultSpan.querySelector('#result-percentage-template');
+        let resultDescription = resultSpan.querySelector('#result-description-template');
+
+        resultSpan.id = phenotypeId + '-result-span';
+
+        resultImage.id = phenotypeId + '-result-img';
+        resultImage.src = imgs + phenotypeId + imgExt;
+
+        resultFrequency.id = phenotypeId + '-result-percentage-paragraph';
+        resultFrequency.innerText = frequency + '%';
+
+        resultDescription.id = phenotypeId + '-result-paragraph';
+        resultDescription.innerText = phenotype;
+
+        resultsContainer.appendChild(resultSpan);
+    }
+}
 
 
 /*
@@ -309,35 +335,3 @@ function calculateParentGenotype(parentModel, parentGenotype) {
     }
     return parentGenotype;
 }
-
-/*
- *  DISPLAY RESULTS
- */
-function displayResults() {
-    let genotypes = calculateGenotypesFromAnswers();
-    let kittenResults = calculateKittens(genotypes.mum, genotypes.dad, getGenes());
-
-    for (const phenotype in kittenResults) {
-        let frequency = kittenResults[phenotype];
-        let phenotypeId = phenotype.toLowerCase().replace(" ", "-");
-
-        let resultSpan = resultTemplate.cloneNode(true);
-        let resultImage = resultSpan.querySelector('#result-image-template');
-        let resultFrequency = resultSpan.querySelector('#result-percentage-template');
-        let resultDescription = resultSpan.querySelector('#result-description-template');
-
-        resultSpan.id = phenotypeId + '-result-span';
-
-        resultImage.id = phenotypeId + '-result-img';
-        resultImage.src = imgs + phenotypeId + imgExt;
-
-        resultFrequency.id = phenotypeId + '-result-percentage-paragraph';
-        resultFrequency.innerText = frequency + '%';
-
-        resultDescription.id = phenotypeId + '-result-paragraph';
-        resultDescription.innerText = phenotype;
-
-        resultsContainer.appendChild(resultSpan);
-    }
-}
-
