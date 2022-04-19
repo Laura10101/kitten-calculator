@@ -93,7 +93,7 @@ function showPreviousQuestion() {
     do {
         if (currentParent == 1 && currentQuestion == 0) {
             currentParent = 0;
-            currentQuestion = 0;
+            currentQuestion = 0; // BUG: this should take us back to the last question of previous parent
         }
         else currentQuestion = currentQuestion - 1;
     } while (!isValidQuestion(currentQuestion) || !hasValidAnswers(currentQuestion));
@@ -144,6 +144,9 @@ function showCurrentQuestion() {
     }
 }
 
+/*
+ * TEST PRECONDITIONS ON QUESTIONS AND ANSWERS
+ */
 //Check whether questions and answers are valid based on their preconditions and
 //the answers given to previous questions
 function isValidQuestion(q) {
@@ -190,6 +193,9 @@ function preconditionsSatisfied(preconditions) {
     return preconditionsSatisfied;
 }
 
+/*
+ * CONTROL FLOW BUTTONS
+ */
 //Enable or disable buttons
 function controlFlowButtons() {
     //Enable or disable the previous and next buttons, depending on which question we are on
