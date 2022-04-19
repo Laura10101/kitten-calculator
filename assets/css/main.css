@@ -43,6 +43,10 @@ section {
     visibility: hidden;
 }
 
+#result-template {
+    visibility: hidden;
+}
+
 .answer {
     border-color:#f070a1;
     border-width: 1px;
