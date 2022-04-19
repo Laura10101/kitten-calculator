@@ -57,6 +57,10 @@ section {
     background-color: #12c998;
 }
 
+.result {
+    width: 170px;
+}
+
 .cat-image {
     width: 150px;
     height: 150px;
