@@ -21,6 +21,11 @@ const calculateKittensButton = document.getElementById('calculate-kittens-button
 const resultsContainer = document.getElementById('results-info-container');
 const resultTemplate = document.getElementById('result-template');
 
+//Define constants to hold the three parent display elements 
+const parentDisplayExplanation = document.getElementById('parent-display-explanation');
+const parentDisplayImage = document.getElementById('parent-display-image');
+const parentDisplayPhenotype = document.getElementById('parent-display-phenotype');
+
 //Initialise calculator
 initialiseCalculator();
 
@@ -235,6 +240,7 @@ function selectAnswer(buttonId) {
     answerContainer.querySelector('#' + buttonId).classList.add('selected');
     //Now the buttons are correctly set, update the selected answers in the model
     updateSelectedAnswers();
+    updateParentDisplay();
 }
 
 /*
@@ -246,7 +252,7 @@ function displayResults() {
 
     for (const phenotype in kittenResults) {
         let frequency = kittenResults[phenotype];
-        let phenotypeId = phenotype.toLowerCase().replace(" ", "-");
+        let phenotypeId = getPhenotypeId(phenotype);
 
         let resultSpan = resultTemplate.cloneNode(true);
         let resultImage = resultSpan.querySelector('#result-image-template');
@@ -267,6 +273,10 @@ function displayResults() {
 
         resultsContainer.appendChild(resultSpan);
     }
+}
+
+function getPhenotypeId(phenotype) {
+    return phenotype.toLowerCase().replace(" ", "-");
 }
 
 /*
@@ -305,6 +315,19 @@ function updateSelectedAnswers() {
             model[parents[currentParent]][currentQuestion].push(answerId);
         }
     }
+}
+
+//Update the parent display/image
+function updateParentDisplay() {
+    let genotypes = calculateGenotypesFromAnswers();
+    let parent = parents[currentParent];
+    let currentParentPhenotype = determinePhenotype(genotypes[parent]);
+    let phenotypeId = getPhenotypeId(currentParentPhenotype);
+    let image = imgs + 'blue-self-draft' + imgExt; //draft image used initially, update before launch
+
+    parentDisplayExplanation.innerText = "You are currently entering " + parent + "'s genes";
+    parentDisplayImage.src = image;
+    parentDisplayPhenotype.innerText = currentParentPhenotype;
 }
 
 //Calculate a genotype model from a given set of answers
