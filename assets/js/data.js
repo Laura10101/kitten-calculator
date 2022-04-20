@@ -1,3 +1,4 @@
+/*jslint es6 */
 function getQuestions() {
     return [
         {
