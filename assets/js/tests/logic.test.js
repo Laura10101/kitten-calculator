@@ -1,5 +1,5 @@
 /*jslint es6 */
-const {determineWhitespotting, determineColourpoint, determineTabby, determineColour,getPhenotypeFrequency,calculateProbabilities,determinePhenotype} = require("../logic");
+const {determineWhitespotting, determineColourpoint, determineTabby, determineColour,getPhenotypeFrequency,calculateProbabilities,determinePhenotype,calculateKittens} = require("../logic");
 
 describe("Probability calculations", () => {
     describe("Calculate frequencies", () => {
@@ -42,7 +42,7 @@ describe("Probability calculations", () => {
             expect(calculateProbabilities(["blue", "blue", "black", "cinnamon"])).toEqual({
                 "blue": 50,
                 "black": 25,
-                "cinnamon" : 25
+                "cinnamon": 25
             });
         });
 
@@ -255,5 +255,60 @@ describe("Determining phenotypes", () => {
                 { "colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false }
             ])).toEqual("black");
         });
+
+        test("b1b1 with single tabby, but no whitespotting or point determined as 'cinnamon tabby'", () => {
+            expect(determinePhenotype([
+                { "colour": "b1", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false },
+                { "colour": "b1", "dilute": false, "tabby": true, "whiteSpotting": false, "colourpoint": false }
+            ])).toEqual("cinnamon tabby");
+        });
+
+        test("bb1 with single tabby, and double dilute, pointy, and white spotting as 'lilac tabby point van'", () => {
+            expect(determinePhenotype([
+                { "colour": "b", "dilute": true, "tabby": false, "whiteSpotting": true, "colourpoint": true },
+                { "colour": "b1", "dilute": true, "tabby": true, "whiteSpotting": true, "colourpoint": true }
+            ])).toEqual("lilac tabby point van");
+        });
+    });
+});
+
+describe("Calculate kittens", () => {
+    test("BB x BB returns { 'black' : 100 }", () => {
+        expect(calculateKittens(
+            [
+                { "colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false },
+                { "colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false }
+            ],
+            [
+                { "colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false },
+                { "colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false }
+            ],
+            ["colour", "dilute", "tabby", "colourpoint", "whiteSpotting"]
+        )).toEqual(
+            {
+                "black": 100
+            }
+        );
+    });
+
+    test("bb1 Dd aa WSws CSCS x bb dd aa wsws CSCS returns { 'black' : 100 }", () => {
+        expect(calculateKittens(
+            [
+                { "colour": "b", "dilute": true, "tabby": false, "whiteSpotting": true, "colourpoint": false },
+                { "colour": "b1", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false }
+            ],
+            [
+                { "colour": "b", "dilute": true, "tabby": false, "whiteSpotting": false, "colourpoint": false },
+                { "colour": "b", "dilute": true, "tabby": false, "whiteSpotting": false, "colourpoint": false }
+            ],
+            ["colour", "dilute", "tabby", "colourpoint", "whiteSpotting"]
+        )).toEqual(
+            {
+                "chocolate": 25,
+                "chocolate bicolour": 25,
+                "lilac": 25,
+                "lilac bicolour": 25
+            }
+        );
     });
 });
