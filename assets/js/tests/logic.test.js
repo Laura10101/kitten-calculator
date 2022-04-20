@@ -1,5 +1,33 @@
 /*jslint es6 */
-const {determineWhitespotting, determineColourpoint, determineTabby, determineColour} = require("../logic");
+const {determineWhitespotting, determineColourpoint, determineTabby, determineColour,getPhenotypeFrequency} = require("../logic");
+
+describe("Probability calculations", () => {
+    describe("Calculate frequencies", () => {
+        test("getPhenotypeFrequency returns 3 for [A, B, A, B, C, C, C, B, A], A", () => {
+            expect(getPhenotypeFrequency(["A", "B", "A", "B", "C", "C", "C", "B", "A"], "A")).toEqual(3);
+        });
+
+        test("getPhenotypeFrequency returns 1 for [X, X, X, X, X, X, X, X, X, X, X, Y, X, X, X, Z, X], Z", () => {
+            expect(getPhenotypeFrequency(["X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "Y", "X", "X", "X", "Z", "X"], "Z")).toEqual(1);
+        });
+
+        test("getPhenotypeFrequency returns 1 for [X, X, X, X, X, X, X, X, X, X, X, Y, X, X, X, Z, X], A", () => {
+            expect(getPhenotypeFrequency(["X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "Y", "X", "X", "X", "Z", "X"], "A")).toEqual(0);
+        });
+
+        test("getPhenotypeFrequency returns 1 for [black, blue, black, cinnamon tabby, cinnamon tabby], cinnamon tabby", () => {
+            expect(getPhenotypeFrequency(["black", "blue", "black", "cinnamon tabby", "cinnamon tabby"], "cinnamon tabby")).toEqual(2);
+        });
+
+        test("getPhenotypeFrequency returns 10 for [black, black, black, black, black, black, black, black, black, black], black", () => {
+            expect(getPhenotypeFrequency(["black", "black", "black", "black", "black", "black", "black", "black", "black", "black"], "black")).toEqual(10);
+        });
+    });
+
+    describe("Calculate probabilities", () => {
+        
+    })
+});
 
 describe("Determining phenotypes", () => {
     describe("Determine white spotting", () => {
