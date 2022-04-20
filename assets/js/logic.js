@@ -93,7 +93,7 @@ function determineTabby(tb1, tb2) {
 }
 
 function determineColourpoint(cp1, cp2) {
-    if (cp1 == true && cp2 == true) return 'colourpoint';
+    if (cp1 == true && cp2 == true) return 'point';
     return '';
 }
 
@@ -127,4 +127,4 @@ function getPhenotypeFrequency(possiblePhenotypes, phenotype) {
     return count;
 }
 
-module.exports = { determineWhitespotting, determineColourpoint };
+module.exports = { determineWhitespotting, determineColourpoint, determineTabby };
