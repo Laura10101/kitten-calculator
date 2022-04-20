@@ -126,3 +126,5 @@ function getPhenotypeFrequency(possiblePhenotypes, phenotype) {
     }
     return count;
 }
+
+module.exports = determineWhitespotting;
