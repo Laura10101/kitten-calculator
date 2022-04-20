@@ -1,0 +1,19 @@
+{
+  "name": "kitten-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laura10101/kitten-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Laura10101/kitten-calculator/issues"
+  },
+  "homepage": "https://github.com/Laura10101/kitten-calculator#readme"
+}
