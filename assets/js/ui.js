@@ -275,7 +275,7 @@ function displayResults() {
 }
 
 function getPhenotypeId(phenotype) {
-    return phenotype.toLowerCase().replace(" ", "-");
+    return phenotype.toLowerCase().replaceAll(" ", "-");
 }
 
 /*
