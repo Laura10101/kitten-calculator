@@ -13,8 +13,8 @@ h1, h2, p, span {
     }
 
 h1 {
-    background-color: #444444;
-    color: #12c998;
+    background-color: #799aef;
+    color: #ffffff;
     text-align: center;
     font-size: 40px; 
     width: 80%;
@@ -30,8 +30,8 @@ main {
 }
 
 section {
-    background-color: #444444;
-    color:#12c998;
+    background-color: #ffffff;
+    color:#000000;
     text-align: center;
     padding: 30px;
     width: 80%;
@@ -96,8 +96,8 @@ section {
 }
 
 .flow-button {
-    background-color: #c34271;
-    color:aliceblue;
+    background-color: #c491ef;
+    color:#ffffff;
     font-size: 20px;
     padding: 10px;
     border-radius: 5px;
