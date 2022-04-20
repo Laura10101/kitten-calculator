@@ -1,3 +1,4 @@
+/*jslint es6 */
 //Get application data
 const questions = getQuestions();
 const parents = ['dad', 'mum'];
