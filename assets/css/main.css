@@ -13,12 +13,12 @@ h1, h2, p, span {
     }
 
 h1 {
-    background-color: #799aef;
     color: #ffffff;
     text-align: center;
     font-size: 40px; 
     width: 80%;
     margin: 0 auto;
+    padding: 10px;
 }
 
 p, span {
