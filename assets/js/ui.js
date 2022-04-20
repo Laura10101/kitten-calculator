@@ -115,7 +115,7 @@ function showCurrentQuestion() {
     //Clear answers from the answer container
     answerContainer.innerHTML = "";
     //Display question answers
-    answers.forEach(answer => {
+    answers.forEach((answer, i) => {
         if (isValidAnswer(currentQuestion, i)) {
             //Duplicate answer template
             let answerButton = answerTemplate.cloneNode(true);
@@ -161,7 +161,7 @@ function isValidQuestion(q) {
 
 function hasValidAnswers(q) {
     let validAnswerExists = false;
-    questions.answers.forEach((answers, a) => {
+    questions[q].answers.forEach((answers, a) => {
         if (isValidAnswer(q, a)) {
             validAnswerExists = true;
         }
