@@ -11,7 +11,7 @@ const sections = [document.getElementById('introduction'),
                 document.getElementById('questions'),
                 document.getElementById('results')];
 
-//Get references to DOM elements for questions 
+//Get references to DOM elements for questions
 const questionText = document.getElementById('question-text');
 const answerContainer = document.getElementById('answer-container');
 const answerTemplate = document.getElementById('answer-template');
@@ -21,7 +21,7 @@ const calculateKittensButton = document.getElementById('calculate-kittens-button
 const resultsContainer = document.getElementById('results-info-container');
 const resultTemplate = document.getElementById('result-template');
 
-//Define constants to hold the three parent display elements 
+//Define constants to hold the three parent display elements
 const parentDisplayExplanation = document.getElementById('parent-display-explanation');
 const parentDisplayImage = document.getElementById('parent-display-image');
 const parentDisplayPhenotype = document.getElementById('parent-display-phenotype');
@@ -41,9 +41,8 @@ function initialiseCalculator() {
 /*
  *  CONTROL SECTION FLOW
  */
-//These 3 functions control the display of the different sections 
-//Used 3 functions to reduce the chance of errors caused by incrementing current section too many times 
-
+//These 3 functions control the display of the different sections
+//Used 3 functions to reduce the chance of errors caused by incrementing current section too many times
 function showIntroSection() {
     currentSection = 0;
     showCurrentSection();
@@ -56,7 +55,7 @@ function showQuestionsSection() {
     currentParent = 0;
     currentQuestion = -1;
     showNextQuestion();
-} 
+}
 
 function showResultsSection() {
     currentSection = 2;
@@ -66,9 +65,9 @@ function showResultsSection() {
 
 function showCurrentSection() {
     //Remove the current-section class from all sections
-    for (let i = 0; i < sections.length; i++) {
-        sections[i].classList.remove("current-section");
-    }
+    sections.forEach(section => {
+        section.classList.remove("current-section");
+    });
 
     //Add the current-section class to the currentSection
     sections[currentSection].classList.add("current-section")
@@ -77,7 +76,7 @@ function showCurrentSection() {
 /*
  *  CONTROL QUESTION FLOW
  */
-//These functions traverse through the different questions 
+//These functions traverse through the different questions
 function showNextQuestion() {
     let isValid = false;
     do {
@@ -107,7 +106,7 @@ function showPreviousQuestion() {
 }
 
 function showCurrentQuestion() {
-    //Get current question from questions object 
+    //Get current question from questions object
     let question = questions[currentQuestion];
     let answers = question.answers;
     //Show question
@@ -115,7 +114,7 @@ function showCurrentQuestion() {
     //Clear answers from the answer container
     answerContainer.innerHTML = "";
     //Display question answers
-    for (let i = 0; i < answers.length; i++) {
+    answers.forEach(answer => {
         if (isValidAnswer(currentQuestion, i)) {
             //Duplicate answer template
             let answerButton = answerTemplate.cloneNode(true);
@@ -124,29 +123,29 @@ function showCurrentQuestion() {
 
             //Create an id for the answer
             let answerId = 'q' + currentQuestion + '-a-' + i;
-            //Set answer description 
-            answerText.innerText = answers[i].text; 
-            
+            //Set answer description
+            answerText.innerText = answer.text;
+
             //Set answer image
-            imagePath = imgs + answers[i].image + imgExt;
+            imagePath = imgs + answer.image + imgExt;
             answerImage.src = imagePath;
-            
+
             //Set answer button ID
             answerButton.id = answerId + '-answer-button';
 
             //Set the onclick event handler for the answer
-            answerButton.onclick = function() { selectAnswer(answerButton.id); }
-            
+            answerButton.onclick = function() { selectAnswer(answerButton.id); };
+
             //Set the answer image ID
             answerImage.id = answerId + '-answer-image';
-            
+
             //Set the answer text ID
             answerText.id = answerId + 'answer-description';
-            
+
             //Add the new answer button to the DOM
             answerContainer.appendChild(answerButton);
         }
-    }
+    });
 }
 
 /*
@@ -161,12 +160,11 @@ function isValidQuestion(q) {
 
 function hasValidAnswers(q) {
     let validAnswerExists = false;
-    for (let a = 0; a < questions[q].answers.length; a++) {
+    questions.answers.forEach((answers, a) => {
         if (isValidAnswer(q, a)) {
             validAnswerExists = true;
-            break;
         }
-    }
+    });
     return validAnswerExists;
 }
 
@@ -333,18 +331,18 @@ function updateParentDisplay() {
 //Calculate a genotype model from a given set of answers
 function calculateGenotypesFromAnswers() {
     let genotypes = getDefaultGenotypes();
-    genotypes.mum = calculateParentGenotype(model.mum, genotypes.mum); 
-    genotypes.dad = calculateParentGenotype(model.dad, genotypes.dad); 
+    genotypes.mum = calculateParentGenotype(model.mum, genotypes.mum);
+    genotypes.dad = calculateParentGenotype(model.dad, genotypes.dad);
     return genotypes;
 }
 
-//Calculate the genotype for a single parent given the answers for that parent 
+//Calculate the genotype for a single parent given the answers for that parent
 function calculateParentGenotype(parentModel, parentGenotype) {
     for (let q = 0; q < questions.length; q++) {
         for (let a = 0; a < parentModel[q].length; a++) {
             let geneMappings = questions[q].answers[parentModel[q][a]].geneMapping;
             for (let m = 0; m < geneMappings.length; m++) {
-                let gene = geneMappings[m].gene; 
+                let gene = geneMappings[m].gene;
                 //Only update P1 if the gene mapping exists for p1
                 if (Object.keys(geneMappings[m]).includes("p1")) {
                     let p1 = geneMappings[m].p1;
