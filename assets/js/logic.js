@@ -127,4 +127,4 @@ function getPhenotypeFrequency(possiblePhenotypes, phenotype) {
     return count;
 }
 
-module.exports = determineWhitespotting;
+module.exports = { determineWhitespotting, determineColourpoint };
