@@ -122,10 +122,10 @@ function calculateProbabilities(possiblePhenotypes) {
 
 function getPhenotypeFrequency(possiblePhenotypes, phenotype) {
     let count = 0;
-    for (let i = 0; i < possiblePhenotypes.length; i++) {
-        if (possiblePhenotypes[i] == phenotype) count++;
-    }
+    possiblePhenotypes.forEach(possiblePhenotype => {
+        if (possiblePhenotype == phenotype) count++;
+    });
     return count;
 }
 
-module.exports = { determineWhitespotting, determineColourpoint, determineTabby, determineColour };
+module.exports = { determineWhitespotting, determineColourpoint, determineTabby, determineColour, getPhenotypeFrequency };
