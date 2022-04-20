@@ -1,17 +1,19 @@
 function calculateKittens(maternalGenotype, paternalGenotype, genes) {
-    let possibleGenotypes = calculatePossibleGenotypes(maternalGenotype, paternalGenotype, genes, 0)
-    let possiblePhenotypes = determinePhenotypes(possibleGenotypes)
-    return calculateProbabilities(possiblePhenotypes)
+    let possibleGenotypes = calculatePossibleGenotypes(maternalGenotype, paternalGenotype, genes, 0);
+    let possiblePhenotypes = determinePhenotypes(possibleGenotypes);
+    return calculateProbabilities(possiblePhenotypes);
 }
 
 function calculatePossibleGenotypes (maternalGenotype, paternalGenotype, genes, currentGene) {
-    let possibleGenotypes = []
+    let possibleGenotypes = [];
 
     //Calculate all of the possible permutations of mum/dad's alleles for this gene
     let currentGenePermutations = calculateGenePermutations(maternalGenotype, paternalGenotype, genes[currentGene]);
 
     //If this is the last gene in the array, stop recursing and instead just return possible permutations for this gene
-    if (currentGene == genes.length - 1) return currentGenePermutations;
+    if (currentGene == genes.length - 1) {
+        return currentGenePermutations;
+    }
 
     //If we aren't on the last gene, then get the permutations for all of the next genes
     let nextGenePermutations = calculatePossibleGenotypes(maternalGenotype, paternalGenotype, genes, currentGene + 1);
