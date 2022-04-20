@@ -19,12 +19,12 @@ function calculatePossibleGenotypes (maternalGenotype, paternalGenotype, genes, 
     let nextGenePermutations = calculatePossibleGenotypes(maternalGenotype, paternalGenotype, genes, currentGene + 1);
 
     //Now we can combine the two sets of combinations
-    for (let c = 0; c < currentGenePermutations.length; c++) {
+    currentGenePermutations.forEach(currentGenePermutation => {
         for (let n = 0; n < nextGenePermutations.length; n++) {
             let gene = genes[currentGene];
             let permutation = [
-                { [gene] : currentGenePermutations[c][0][gene] },
-                { [gene] : currentGenePermutations[c][1][gene] }
+                { [gene] : currentGenePermutation[0][gene] },
+                { [gene] : currentGenePermutation[1][gene] }
             ]
             for (let g = currentGene + 1; g < genes.length; g++) {
                 gene = genes[g];
@@ -33,7 +33,7 @@ function calculatePossibleGenotypes (maternalGenotype, paternalGenotype, genes, 
             }
             possibleGenotypes.push(permutation)
         }
-    }
+    });
 
     return possibleGenotypes;
 }
@@ -56,9 +56,9 @@ function calculateGenePermutations(maternalGenotype, paternalGenotype, gene) {
 
 function determinePhenotypes(possibleGenotypes) {
     let phenotypes = []
-    for (let i = 0; i < possibleGenotypes.length; i++) {
-        phenotypes.push(determinePhenotype(possibleGenotypes[i]));
-    }
+    possibleGenotypes.forEach(genotype => {
+        phenotypes.push(determinePhenotype(genotype));
+    });
     return phenotypes;
 }
 
@@ -111,11 +111,11 @@ function calculateProbabilities(possiblePhenotypes) {
 
     //For each distinct phenotype, calculate the probability that it occurs in the list of possible phenotypes
     //Set the probability in the object
-    for (let i = 0; i < phenotypes.length; i++) {
-        let frequency = getPhenotypeFrequency(possiblePhenotypes, phenotypes[i]);
+    phenotypes.forEach(phenotype => {
+        let frequency = getPhenotypeFrequency(possiblePhenotypes, phenotype);
         let probability = (frequency / possiblePhenotypes.length) * 100;
-        phenotypeProbabilities[phenotypes[i]] = probability;
-    }
+        phenotypeProbabilities[phenotype] = probability;
+    });
     return phenotypeProbabilities;
 }
 
