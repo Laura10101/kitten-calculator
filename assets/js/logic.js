@@ -70,7 +70,7 @@ function determinePhenotype(genotype) {
     phenotype += " " + determineColourpoint(genotype[0]['colourpoint'], genotype[1]['colourpoint']);
     phenotype += " " + determineWhitespotting(genotype[0]['whiteSpotting'], genotype[1]['whiteSpotting']);
 
-    return phenotype.replace("  ", " ").trim();
+    return phenotype.replaceAll(new RegExp("[ ]{2,}", 'g'), " ").trim();
 }
 
 function determineColour(colour1, dilute1, colour2, dilute2) {
