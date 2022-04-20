@@ -1,3 +1,4 @@
+/*jslint es6 */
 function calculateKittens(maternalGenotype, paternalGenotype, genes) {
     let possibleGenotypes = calculatePossibleGenotypes(maternalGenotype, paternalGenotype, genes, 0);
     let possiblePhenotypes = determinePhenotypes(possibleGenotypes);
@@ -127,4 +128,4 @@ function getPhenotypeFrequency(possiblePhenotypes, phenotype) {
     return count;
 }
 
-module.exports = { determineWhitespotting, determineColourpoint, determineTabby };
+module.exports = { determineWhitespotting, determineColourpoint, determineTabby, determineColour };
