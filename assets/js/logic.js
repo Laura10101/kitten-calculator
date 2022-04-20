@@ -98,9 +98,9 @@ function determineColourpoint(cp1, cp2) {
 }
 
 function determineWhitespotting(ws1, ws2) {
-    if (ws1 == true && ws2 == true) return 'high white';
+    if (ws1 == true && ws2 == true) return 'van';
     if (ws1 == true || ws2 == true) return 'bicolour';
-    return 'self';
+    return '';
 }
 
 function calculateProbabilities(possiblePhenotypes) {
