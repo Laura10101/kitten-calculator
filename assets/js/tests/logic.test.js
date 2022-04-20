@@ -1,5 +1,5 @@
 /*jslint es6 */
-const {determineWhitespotting, determineColourpoint, determineTabby, determineColour,getPhenotypeFrequency} = require("../logic");
+const {determineWhitespotting, determineColourpoint, determineTabby, determineColour,getPhenotypeFrequency,calculateProbabilities,determinePhenotype} = require("../logic");
 
 describe("Probability calculations", () => {
     describe("Calculate frequencies", () => {
@@ -25,8 +25,36 @@ describe("Probability calculations", () => {
     });
 
     describe("Calculate probabilities", () => {
-        
-    })
+        test("calculateProbabilities returns { 'lilac' : 100 } for [lilac]", () => {
+            expect(calculateProbabilities(["lilac"])).toEqual({
+                "lilac": 100
+            });
+        });
+
+        test("calculateProbabilities returns { 'blue' : 50, 'black' : 50 } for [blue, blue, black, black]", () => {
+            expect(calculateProbabilities(["blue", "blue", "black", "black"])).toEqual({
+                "blue": 50,
+                "black": 50
+            });
+        });
+
+        test("calculateProbabilities returns { 'blue' : 50, 'black' : 25, 'cinnamon' : 25 } for [blue, blue, black, cinnamon]", () => {
+            expect(calculateProbabilities(["blue", "blue", "black", "cinnamon"])).toEqual({
+                "blue": 50,
+                "black": 25,
+                "cinnamon" : 25
+            });
+        });
+
+        test("calculateProbabilities returns { 'black tabby' : 50, 'black' : 25, 'fawn' : 12.5, 'chocolate' : 12.5 } for [black tabby, black tabby, black tabby, black tabby, black, black, fawn, chocolate]", () => {
+            expect(calculateProbabilities(["black tabby", "black tabby", "black tabby", "black tabby", "black", "black", "fawn", "chocolate"])).toEqual({
+                "black tabby": 50,
+                "black": 25,
+                "fawn": 12.5,
+                "chocolate": 12.5
+            });
+        });
+    });
 });
 
 describe("Determining phenotypes", () => {
@@ -218,6 +246,14 @@ describe("Determining phenotypes", () => {
 
         test("b1, true, b1, true for colour returns fawn", () => {
             expect(determineColour("b1", true, "b1", true)).toEqual("fawn");
+        });
+    });
+    describe("Determine phenotype", () => {
+        test("BB with no tabby, whitespotting or point determined as 'black'", () => {
+            expect(determinePhenotype([
+                { "colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false },
+                { "colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false }
+            ])).toEqual("black");
         });
     });
 });
