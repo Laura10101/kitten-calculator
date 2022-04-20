@@ -128,4 +128,4 @@ function getPhenotypeFrequency(possiblePhenotypes, phenotype) {
     return count;
 }
 
-module.exports = { determineWhitespotting, determineColourpoint, determineTabby, determineColour, getPhenotypeFrequency, calculateProbabilities, determinePhenotype };
+module.exports = { determineWhitespotting, determineColourpoint, determineTabby, determineColour, getPhenotypeFrequency, calculateProbabilities, determinePhenotype, calculateKittens };
