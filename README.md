@@ -100,3 +100,33 @@ Additionally, the application could be used to request that cat owners send gene
 With more time, the application could be further developed by the creation of kitten calculators for other cat breeds, and other species (e.g. dogs, rabbits and even hamsters are commonly bred). As the basic genetic rules will be largely the same, similar algorithms can be used to create those additional calculators. This would increase web traffic further and allow more research projects to be highlighted. 
 
 XXXXXXCalculate genotype of the kittensXXXXX 
+
+## Testing
+
+For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+### Local Deployment
+
+In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/Laura10101/kitten-calculator.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Laura10101/kitten-calculator)
+
+## Credits
+
+### Educational Resources
+
+### Code
+
+### Content
+
+### Media
+
+## Acknowledgements
+I would like to thank the following people for their support in implementing this project:
+
+- My mentor, Tim Nelson, for his help and guidance throughout.
+- The Code Institute community on Slack for their helpful guidance.
