@@ -111,7 +111,7 @@ function showPreviousQuestion() {
     do {
         if (currentParent == 1 && currentQuestion == 0) {
             currentParent = 0;
-            currentQuestion = 0; // BUG: this should take us back to the last question of previous parent
+            currentQuestion = questions.length - 1;
         }
         else currentQuestion = currentQuestion - 1;
     } while (!isValidQuestion(currentQuestion) || !hasValidAnswers(currentQuestion));
