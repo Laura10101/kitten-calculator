@@ -154,6 +154,7 @@ function showCurrentQuestion() {
             answerContainer.appendChild(answerButton);
         }
     });
+    updateParentDisplay();
 }
 
 /*
@@ -332,7 +333,7 @@ function updateParentDisplay() {
     let phenotypeId = getPhenotypeId(currentParentPhenotype);
     let image = imgs + 'blue-self-draft' + imgExt; //draft image used initially, update before launch
 
-    parentDisplayExplanation.innerText = "You are currently entering " + parent + "'s genes";
+    parentDisplayExplanation.innerText = "You are currently entering " + parent + "'s genes. The image below will update as you make selections:";
     parentDisplayImage.src = image;
     parentDisplayPhenotype.innerText = currentParentPhenotype;
 }
