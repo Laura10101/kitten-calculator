@@ -52,3 +52,12 @@ Lilac: #c491ef
 Candy pink: #f070a1
 Periwinkle blue: #799aef
 
+### Typography
+Ease of use was the primary consideration for the typography. For this reason, text was kept black and ……………………………..XXXXXXXXX font was used. 
+
+### Imagery
+It was important to keep the background simple, without being boring. So I chose to create a gradient in the website colour palette. This allowed me to add some interest to the background, in line with the cute/cartoon/retro feel of the theme, whilst maintaining a simple feel that would not distract from the application. I used Colorzilla for this: Ultimate CSS Gradient Generator - ColorZilla.com. 
+
+This project took a lot of time to construct and test the back end. As a result, I had to prioritise functionality and testing in order to get the calculator working properly in the timeframe. If I had more time I would go back to the front end design and make it a little slicker and more modern by playing around with the colour placement.
+
+The images used to represent the different colours of cat were a critical part of the design, and there is more detail on the decision making framework for this in the section above. The images were commissioned for me, and paid for with a full licence for commercial use so I am the owner of these images. 
