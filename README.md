@@ -1,1 +1,8 @@
-# kitten-calculator
+# British Shorthair Kitten Calculator
+
+British shorthair cats are the most popular breed of cat in the UK. There is a large body of hobby breeders who enjoy raising kittens. However, feline genetics is a complicated area, and because the British Shorthair is available in a broad range of colours and patterns, it can be very difficult for breeders to predict what colour of kittens they will get from their cats. 
+
+This kitten calculator is designed for hobby breeders, who have a basic knowledge of cat colours and feline genetics. It assumes, therefore, that its users will already know the basic terminology for feline colours: blue is grey, chocolate is brown, cinnamon is a warm brown, and so on. In order to make the application as accessible as possible, I have also opted to have images of each of the different variations of cats that is possible from the genes that have been used. This means that even where a user is not aware that blue means grey, there will be a visual representation of each colour and pattern. I used a recommended freelancer on Fiver to create these for the project, in the colours and patterns that I determined and provided photographs for. I am the owner of the copyright of these images since they were paid for with full commercial rights for use. 
+
+The kitten calculator will be placed on an existing website. It will keep people returning to the site, thereby helping to increase web traffic. The website in question is a member of the Amazon Affiliate Marketing scheme, so an increase in web traffic may lead to an increase in site income through that scheme. It will also assist with establishing the website as a trusted source of expert information. 
+
