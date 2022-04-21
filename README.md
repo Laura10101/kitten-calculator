@@ -26,3 +26,29 @@ As a British Shorthair hobby breeder, I want to:
 - Consider what pairings would produce kittens of the colour I want, so that I can make an informed decision
 - Improve my understanding of feline genetics 
 - Navigate the application easily 
+
+## UX
+
+### Colour Scheme
+Whilst the existing website is not targeted solely at cat breeders, it is a feline-focused website, so I looked at the statistics for the past 12 months on google analytics to get information about the demographics of its typical user. The website is predominantly used by female users, but still has a significant number of male users (66.6% vs 33.4% male users). It was therefore important to choose a colour scheme that was not overly-directed at any particular gender stereotype. 
+
+The most common age of users is 25-34, followed by 18-34 and 35-44. It is notable that google analytics was only able to collect age data for just under 25% of the total sessions, so this data may not be accurate across all of the sessions. Nevertheless, this still comprised around 25,000 sessions where age was recorded, making it a reasonably good sized data set. It shows a clear trend for typical age range within the sample that we have available. 
+
+Millennials are generally considered to be between the ages of 26-40 (Gallup) whilst Gen Z-ers are considered to be age 10-25 (Gallup). These two generational groups therefore represent the bulk of the total user demographic for this client, comprising around 70% of the total session count. 
+
+This gave a clear steer for the user experience and branding for the application. A major part of the design was choosing the visual representations of the cat colours. I considered using photographs but it would have been almost impossible to find photographs that had enough continuity of style to provide a consistent user experience, which was vital for the flow of the application. After some research, I decided on using illustrations in a cute, slightly manga-inspired style. This design decision then helped to inform the colour palette choice. Modern, on-trend colours were used to reflect current design trends: I opted for a slightly retro, 90’s inspired, cartoon-esque feel.
+
+It was also important that the colours used complimented the cat images, and did not fight with or overpower them so that the cat images remain the central focus of the site. 
+
+Ease of use was also a major consideration. This is a practical application and therefore a positive user experience was critical. Colours were chosen to make navigation of the application as easy as possible, with good contrast between sections, easy to see buttons with responsive elements so the user was clear when a button was clicked and selected or deselected. 
+
+I identified a pastel shade of blue and then used w3 schools colour picker to select different colours of the same tone. (HTML Color Picker (w3schools.com)) This created a soft, cohesive feel to the colour scheme with a high level of harmony, which was important for a consistent user experience.
+
+The colour palette is shown below: 
+
+Coral: #e7b7b 
+Mint: #7befb5
+Lilac: #c491ef
+Candy pink: #f070a1
+Periwinkle blue: #799aef
+
