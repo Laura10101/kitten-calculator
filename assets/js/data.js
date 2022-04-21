@@ -109,6 +109,7 @@ function getQuestions() {
             "preconditions": [],
             "text": "Please choose the base colour"
         },
+
         {
             "answers": [
                 {
@@ -119,16 +120,35 @@ function getQuestions() {
                         }
                     ],
                     "image": "blue-self-draft",
-                    "preconditions": [{
-                        "questionIndex": 0,
-                        "validAnswerIndices": [
-                            0,
-                            2,
-                            4
-                        ]
-                    }],
-                    "text": "Dilute"
+                    "preconditions": [],
+                    "text": "Yes"
                 },
+                {
+                    "geneMapping": [
+                        {
+                            "gene": "dilute",
+                            "p2": false
+                        }
+                    ],
+                    "image": "blue-self-draft",
+                    "preconditions": [],
+                    "text": "No"
+                }
+            ],
+            "multiselect": false,
+            "preconditions": [{
+                "questionIndex": 0,
+                "validAnswerIndices": [
+                    0,
+                    2,
+                    4
+                ]
+            }],
+            "text": "Does this cat carry dilute?"
+        },
+
+        {
+            "answers": [
                 {
                     "geneMapping": [
                         {
@@ -164,12 +184,27 @@ function getQuestions() {
                         ]
                     }],
                     "text": "Cinnamon"
+                },
+                {
+                    "geneMapping": [],
+                    "image": "blue-self-draft",
+                    "preconditions": [{
+                        "questionIndex": 0,
+                        "validAnswerIndices": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    }],
+                    "text": "No"
                 }
             ],
-            "multiselect": true,
+            "multiselect": false,
             "preconditions": [],
-            "text": "Select any other genes carried by this parent"
+            "text": "Does this cat carry chocolate or cinnamon?"
         },
+
         {
             "answers": [
                 {
