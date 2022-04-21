@@ -27,6 +27,11 @@ const parentDisplayExplanation = document.getElementById('parent-display-explana
 const parentDisplayImage = document.getElementById('parent-display-image');
 const parentDisplayPhenotype = document.getElementById('parent-display-phenotype');
 
+//Define the model
+let model = [];
+let currentSection = 0;
+let currentParent = 0;
+
 //Set up events
 document.getElementById("start-button").onclick = showQuestionsSection;
 document.getElementById("previous-question-button").onclick = showPreviousQuestion;
@@ -136,7 +141,7 @@ function showCurrentQuestion() {
             answerText.innerText = answer.text;
 
             //Set answer image
-            imagePath = imgs + answer.image + imgExt;
+            let imagePath = imgs + answer.image + imgExt;
             answerImage.src = imagePath;
 
             //Set answer button ID
