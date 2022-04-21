@@ -101,10 +101,10 @@ function showNextQuestion() {
         else {
             currentQuestion = currentQuestion + 1;
         }
-        isValid = isValidQuestion(currentQuestion) && hasValidAnswers(currentQuestion);
-    } while (currentQuestion < questions.length - 1 && !isValid);
+        isValid = currentQuestion < questions.length && isValidQuestion(currentQuestion) && hasValidAnswers(currentQuestion);
+    } while (currentQuestion <= questions.length - 1 && !isValid);
     if (isValid) showCurrentQuestion();
-    controlFlowButtons();
+    controlFlowButtonsForDisplayedQuestion();
 }
 
 function showPreviousQuestion() {
@@ -116,7 +116,7 @@ function showPreviousQuestion() {
         else currentQuestion = currentQuestion - 1;
     } while (!isValidQuestion(currentQuestion) || !hasValidAnswers(currentQuestion));
     if (currentQuestion >= 0) showCurrentQuestion();
-    controlFlowButtons();
+    controlFlowButtonsForDisplayedQuestion();
 }
 
 function showCurrentQuestion() {
@@ -213,21 +213,60 @@ function preconditionsSatisfied(preconditions) {
 
 /*
  * CONTROL FLOW BUTTONS
+ * Two functions are needed here as the flow buttons are controlled in two steps
+ * Firstly, the previous button and/or calculate buttons are displayed if
+ * we are on the last question. The previous button is hidden if we are on the first question.
+ * The calculate button is hidden if we are not on the last question.
+ * Secondly, the next button is only displayed when an answer is selected and then,
+ * only if not on the last question, or the penultimate question with no valid answers
+ * to the ultimate question.
  */
 //Enable or disable buttons
-function controlFlowButtons() {
+function controlFlowButtonsForDisplayedQuestion() {
     //Enable or disable the previous and next buttons, depending on which question we are on
     disableButton(calculateKittensButton);
-
     disableButton(nextQuestionButton);
     if (currentParent == 0 && currentQuestion == 0) {
         disableButton(previousQuestionButton);
     }
-    else if (currentParent == 1 && currentQuestion >= questions.length - 1) {
-        enableButton(calculateKittensButton);
-    }
     else {
         enableButton(previousQuestionButton);
+    }
+}
+
+function controlFlowButtonsForSelectedAnswer() {
+    //Catch-all - disable the next/calculate buttons so they only display if new selection
+    //has valid next question
+    disableButton(calculateKittensButton);
+    disableButton(nextQuestionButton);
+
+    //This logic ensures that next question button displayed ONLY if:
+    //  - We are not on the second parent
+    //  - Or, if we are on the second parent, then:
+    //    * We are not on the last question AND
+    //    * If we are on the penultimate question, then:
+    //      + The last question is valid given current selection
+    //If penultimate question and question is not valid, display calculate button instead
+    if (currentParent == 1) {
+        if (currentQuestion >= questions.length - 1) {
+            enableButton(calculateKittensButton);
+        }
+        if (currentQuestion < questions.length - 1) {
+            if (currentQuestion == questions.length - 2) {
+                if (isValidQuestion(currentQuestion + 1) && hasValidAnswers(currentQuestion + 1)) {
+                    enableButton(nextQuestionButton);
+                }
+                else {
+                    enableButton(calculateKittensButton);
+                }
+            }
+            else {
+                enableButton(nextQuestionButton);
+            }
+        }
+    }
+    else {
+        enableButton(nextQuestionButton);
     }
 }
 
@@ -254,7 +293,7 @@ function selectAnswer(buttonId) {
     //Now the buttons are correctly set, update the selected answers in the model
     updateSelectedAnswers();
     updateParentDisplay();
-    enableButton(nextQuestionButton);
+    controlFlowButtonsForSelectedAnswer();
 }
 
 /*
@@ -264,7 +303,7 @@ function displayResults() {
     let genotypes = calculateGenotypesFromAnswers();
     let kittenResults = calculateKittens(genotypes.mum, genotypes.dad, getGenes());
 
-    kittenResults.forEach(function(phenotype) {
+    Object.keys(kittenResults).forEach(function(phenotype) {
         let frequency = kittenResults[phenotype];
         let phenotypeId = getPhenotypeId(phenotype);
 
