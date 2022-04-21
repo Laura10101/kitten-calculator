@@ -1,4 +1,4 @@
-/*jslint es6 */
+/* jshint esversion: 8 */
 const {determineWhitespotting, determineColourpoint, determineTabby, determineColour, getPhenotypeFrequency, calculateProbabilities, determinePhenotype, calculateKittens} = require("../logic");
 
 describe("Probability calculations", () => {

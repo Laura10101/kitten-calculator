@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 function calculateKittens(maternalGenotype, paternalGenotype, genes) {
     let possibleGenotypes =
         calculatePossibleGenotypes

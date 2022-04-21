@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 function getQuestions() {
     return [
         {

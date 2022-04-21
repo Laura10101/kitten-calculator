@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 //Get application data
 const questions = getQuestions();
 const parents = ['dad', 'mum'];
@@ -78,7 +79,7 @@ function showCurrentSection() {
     });
 
     //Add the current-section class to the currentSection
-    sections[currentSection].classList.add("current-section")
+    sections[currentSection].classList.add("current-section");
 }
 
 /*
@@ -258,7 +259,7 @@ function displayResults() {
     let genotypes = calculateGenotypesFromAnswers();
     let kittenResults = calculateKittens(genotypes.mum, genotypes.dad, getGenes());
 
-    for (const phenotype in kittenResults) {
+    kittenResults.forEach(function(phenotype) {
         let frequency = kittenResults[phenotype];
         let phenotypeId = getPhenotypeId(phenotype);
 
@@ -280,7 +281,7 @@ function displayResults() {
         resultDescription.innerText = phenotype;
 
         resultsContainer.appendChild(resultSpan);
-    }
+    });
 }
 
 function getPhenotypeId(phenotype) {
