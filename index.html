@@ -28,7 +28,7 @@
                         and see what the difference is! 
                         Most recessive genes can be tested for by sending a simple cheek swab to a lab. Langford Vets are a popular option in the UK. 
                     </p>
-                    <button class="flow-button" onclick="showQuestionsSection()">Start</button>
+                    <button id="start-button" class="flow-button">Start</button>
                 </div>
             </section>
 
@@ -49,9 +49,9 @@
                             <p id="answer-description-template"></p>
                         </button>
                     </div>
-                    <button id="previous-question-button" class="flow-button" onclick="showPreviousQuestion()">Previous Step</button>
-                    <button id="next-question-button" class="flow-button" onclick="showNextQuestion()">Next Step</button>
-                    <button id="calculate-kittens-button" class="flow-button" onclick="showResultsSection()">Calculate Kittens</button>
+                    <button id="previous-question-button" class="flow-button">Previous Step</button>
+                    <button id="next-question-button" class="flow-button">Next Step</button>
+                    <button id="calculate-kittens-button" class="flow-button">Calculate Kittens</button>
                 </div>
             </section>
             
@@ -66,8 +66,8 @@
                             <p id="result-description-template" class="result-text"></p>
                         </button>
                     </div>
-                    <button class="flow-button">Previous Step</button>
-                    <button class="flow-button">Start Again</button>
+                    <button id="previous-section-button" class="flow-button">Previous Step</button>
+                    <button id="restart-button" class="flow-button">Start Again</button>
                 </div>
             </section>
         </main>
