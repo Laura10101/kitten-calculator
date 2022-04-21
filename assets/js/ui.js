@@ -37,8 +37,8 @@ document.getElementById("start-button").onclick = showQuestionsSection;
 document.getElementById("previous-question-button").onclick = showPreviousQuestion;
 document.getElementById("next-question-button").onclick = showNextQuestion;
 document.getElementById("calculate-kittens-button").onclick = showResultsSection;
-document.getElementById("previous-section-button").onclick = showQuestionsSection;
-document.getElementById("restart-button").onclick = initialiseCalculator();
+document.getElementById("previous-section-button").onclick = returnToQuestionsSection;
+document.getElementById("restart-button").onclick = initialiseCalculator;
 
 //Initialise calculator
 initialiseCalculator();
@@ -75,6 +75,14 @@ function showResultsSection() {
     currentSection = 2;
     showCurrentSection();
     displayResults();
+}
+
+function returnToQuestionsSection() {
+    currentSection = 1;
+    showCurrentSection();
+
+    currentQuestion = questions.length;
+    showPreviousQuestion();
 }
 
 function showCurrentSection() {
@@ -302,6 +310,9 @@ function selectAnswer(buttonId) {
 function displayResults() {
     let genotypes = calculateGenotypesFromAnswers();
     let kittenResults = calculateKittens(genotypes.mum, genotypes.dad, getGenes());
+
+    //Clear out all previous results
+    resultsContainer.innerHTML = "";
 
     Object.keys(kittenResults).forEach(function(phenotype) {
         let frequency = kittenResults[phenotype];
