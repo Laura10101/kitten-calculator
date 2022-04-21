@@ -102,150 +102,150 @@ describe("Determining phenotypes", () => {
     });
     describe("Determine colour", () => {
         //Test Black gene
-        test("B, false, B, false for colour returns black", () => {
-            expect(determineColour("B", false, "B", false)).toEqual("black");
+        test("B, false, B, false for colour returns Black", () => {
+            expect(determineColour("B", false, "B", false)).toEqual("Black");
         });
 
-        test("B, false, B, true for colour returns black", () => {
-            expect(determineColour("B", false, "B", true)).toEqual("black");
+        test("B, false, B, true for colour returns Black", () => {
+            expect(determineColour("B", false, "B", true)).toEqual("Black");
         });
 
-        test("B, true, B, false for colour returns black", () => {
-            expect(determineColour("B", true, "B", false)).toEqual("black");
+        test("B, true, B, false for colour returns Black", () => {
+            expect(determineColour("B", true, "B", false)).toEqual("Black");
         });
 
-        test("B, true, B, true for colour returns blue", () => {
-            expect(determineColour("B", true, "B", true)).toEqual("blue");
+        test("B, true, B, true for colour returns Blue", () => {
+            expect(determineColour("B", true, "B", true)).toEqual("Blue");
         });
 
-        test("B, false, b, false for colour returns black", () => {
-            expect(determineColour("B", false, "b", false)).toEqual("black");
+        test("B, false, b, false for colour returns Black", () => {
+            expect(determineColour("B", false, "b", false)).toEqual("Black");
         });
 
-        test("B, false, b, true for colour returns black", () => {
-            expect(determineColour("B", false, "b", true)).toEqual("black");
+        test("B, false, b, true for colour returns Black", () => {
+            expect(determineColour("B", false, "b", true)).toEqual("Black");
         });
 
-        test("B, true, b, false for colour returns black", () => {
-            expect(determineColour("B", true, "b", false)).toEqual("black");
+        test("B, true, b, false for colour returns Black", () => {
+            expect(determineColour("B", true, "b", false)).toEqual("Black");
         });
 
-        test("B, true, b, true for colour returns blue", () => {
-            expect(determineColour("B", true, "b", true)).toEqual("blue");
+        test("B, true, b, true for colour returns Blue", () => {
+            expect(determineColour("B", true, "b", true)).toEqual("Blue");
         });
 
-        test("b, false, B, false for colour returns black", () => {
-            expect(determineColour("b", false, "B", false)).toEqual("black");
+        test("b, false, B, false for colour returns Black", () => {
+            expect(determineColour("b", false, "B", false)).toEqual("Black");
         });
 
-        test("b, false, B, true for colour returns black", () => {
-            expect(determineColour("b", false, "B", true)).toEqual("black");
+        test("b, false, B, true for colour returns Black", () => {
+            expect(determineColour("b", false, "B", true)).toEqual("Black");
         });
 
-        test("b, true, B, false for colour returns black", () => {
-            expect(determineColour("b", true, "B", false)).toEqual("black");
+        test("b, true, B, false for colour returns Black", () => {
+            expect(determineColour("b", true, "B", false)).toEqual("Black");
         });
 
-        test("b, true, B, true for colour returns blue", () => {
-            expect(determineColour("b", true, "B", true)).toEqual("blue");
+        test("b, true, B, true for colour returns Blue", () => {
+            expect(determineColour("b", true, "B", true)).toEqual("Blue");
         });
 
-        test("B, false, b1, false for colour returns black", () => {
-            expect(determineColour("B", false, "b1", false)).toEqual("black");
+        test("B, false, b1, false for colour returns Black", () => {
+            expect(determineColour("B", false, "b1", false)).toEqual("Black");
         });
 
-        test("B, false, b1, true for colour returns black", () => {
-            expect(determineColour("B", false, "b1", true)).toEqual("black");
+        test("B, false, b1, true for colour returns Black", () => {
+            expect(determineColour("B", false, "b1", true)).toEqual("Black");
         });
 
-        test("B, true, b1, false for colour returns black", () => {
-            expect(determineColour("B", true, "b1", false)).toEqual("black");
+        test("B, true, b1, false for colour returns Black", () => {
+            expect(determineColour("B", true, "b1", false)).toEqual("Black");
         });
 
-        test("B, true, b1, true for colour returns blue", () => {
-            expect(determineColour("B", true, "b1", true)).toEqual("blue");
+        test("B, true, b1, true for colour returns Blue", () => {
+            expect(determineColour("B", true, "b1", true)).toEqual("Blue");
         });
 
-        test("b1, false, B, false for colour returns black", () => {
-            expect(determineColour("b1", false, "B", false)).toEqual("black");
+        test("b1, false, B, false for colour returns Black", () => {
+            expect(determineColour("b1", false, "B", false)).toEqual("Black");
         });
 
-        test("b1, false, B, true for colour returns black", () => {
-            expect(determineColour("b1", false, "B", true)).toEqual("black");
+        test("b1, false, B, true for colour returns Black", () => {
+            expect(determineColour("b1", false, "B", true)).toEqual("Black");
         });
 
-        test("b1, true, B, false for colour returns black", () => {
-            expect(determineColour("b1", true, "B", false)).toEqual("black");
+        test("b1, true, B, false for colour returns Black", () => {
+            expect(determineColour("b1", true, "B", false)).toEqual("Black");
         });
 
-        test("b1, true, B, true for colour returns blue", () => {
-            expect(determineColour("b1", true, "B", true)).toEqual("blue");
+        test("b1, true, B, true for colour returns Blue", () => {
+            expect(determineColour("b1", true, "B", true)).toEqual("Blue");
         });
 
         //Test chocolate
-        test("b, false, b, false for colour returns chocolate", () => {
-            expect(determineColour("b", false, "b", false)).toEqual("chocolate");
+        test("b, false, b, false for colour returns Chocolate", () => {
+            expect(determineColour("b", false, "b", false)).toEqual("Chocolate");
         });
 
-        test("b, true, b, false for colour returns chocolate", () => {
-            expect(determineColour("b", true, "b", false)).toEqual("chocolate");
+        test("b, true, b, false for colour returns Chocolate", () => {
+            expect(determineColour("b", true, "b", false)).toEqual("Chocolate");
         });
 
-        test("b, false, b, true for colour returns chocolate", () => {
-            expect(determineColour("b", false, "b", true)).toEqual("chocolate");
+        test("b, false, b, true for colour returns Chocolate", () => {
+            expect(determineColour("b", false, "b", true)).toEqual("Chocolate");
         });
 
-        test("b, true, b, true for colour returns lilac", () => {
-            expect(determineColour("b", true, "b", true)).toEqual("lilac");
+        test("b, true, b, true for colour returns Lilac", () => {
+            expect(determineColour("b", true, "b", true)).toEqual("Lilac");
         });
 
-        test("b, false, b1, false for colour returns chocolate", () => {
-            expect(determineColour("b", false, "b1", false)).toEqual("chocolate");
+        test("b, false, b1, false for colour returns Chocolate", () => {
+            expect(determineColour("b", false, "b1", false)).toEqual("Chocolate");
         });
 
-        test("b, true, b1, false for colour returns chocolate", () => {
-            expect(determineColour("b", true, "b1", false)).toEqual("chocolate");
+        test("b, true, b1, false for colour returns Chocolate", () => {
+            expect(determineColour("b", true, "b1", false)).toEqual("Chocolate");
         });
 
-        test("b, false, b1, true for colour returns chocolate", () => {
-            expect(determineColour("b", false, "b1", true)).toEqual("chocolate");
+        test("b, false, b1, true for colour returns Chocolate", () => {
+            expect(determineColour("b", false, "b1", true)).toEqual("Chocolate");
         });
 
-        test("b, true, b1, true for colour returns lilac", () => {
-            expect(determineColour("b", true, "b1", true)).toEqual("lilac");
+        test("b, true, b1, true for colour returns Lilac", () => {
+            expect(determineColour("b", true, "b1", true)).toEqual("Lilac");
         });
 
-        test("b1, false, b, false for colour returns chocolate", () => {
-            expect(determineColour("b1", false, "b", false)).toEqual("chocolate");
+        test("b1, false, b, false for colour returns Chocolate", () => {
+            expect(determineColour("b1", false, "b", false)).toEqual("Chocolate");
         });
 
-        test("b1, true, b, false for colour returns chocolate", () => {
-            expect(determineColour("b1", true, "b", false)).toEqual("chocolate");
+        test("b1, true, b, false for colour returns Chocolate", () => {
+            expect(determineColour("b1", true, "b", false)).toEqual("Chocolate");
         });
 
-        test("b1, false, b, true for colour returns chocolate", () => {
-            expect(determineColour("b1", false, "b", true)).toEqual("chocolate");
+        test("b1, false, b, true for colour returns Chocolate", () => {
+            expect(determineColour("b1", false, "b", true)).toEqual("Chocolate");
         });
 
-        test("b1, true, b, true for colour returns lilac", () => {
-            expect(determineColour("b1", true, "b", true)).toEqual("lilac");
+        test("b1, true, b, true for colour returns Lilac", () => {
+            expect(determineColour("b1", true, "b", true)).toEqual("Lilac");
         });
 
         //Test cinnammon
-        test("b1, false, b1, false for colour returns cinnamon", () => {
-            expect(determineColour("b1", false, "b1", false)).toEqual("cinnamon");
+        test("b1, false, b1, false for colour returns Cinnamon", () => {
+            expect(determineColour("b1", false, "b1", false)).toEqual("Cinnamon");
         });
 
-        test("b1, true, b1, false for colour returns cinnamon", () => {
-            expect(determineColour("b1", true, "b1", false)).toEqual("cinnamon");
+        test("b1, true, b1, false for colour returns Cinnamon", () => {
+            expect(determineColour("b1", true, "b1", false)).toEqual("Cinnamon");
         });
 
-        test("b1, false, b1, true for colour returns cinnamon", () => {
-            expect(determineColour("b1", false, "b1", true)).toEqual("cinnamon");
+        test("b1, false, b1, true for colour returns Cinnamon", () => {
+            expect(determineColour("b1", false, "b1", true)).toEqual("Cinnamon");
         });
 
-        test("b1, true, b1, true for colour returns fawn", () => {
-            expect(determineColour("b1", true, "b1", true)).toEqual("fawn");
+        test("b1, true, b1, true for colour returns Fawn", () => {
+            expect(determineColour("b1", true, "b1", true)).toEqual("Fawn");
         });
     });
     describe("Determine phenotype", () => {
@@ -253,21 +253,21 @@ describe("Determining phenotypes", () => {
             expect(determinePhenotype([
                 {"colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false},
                 {"colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false}
-            ])).toEqual("black");
+            ])).toEqual("Black");
         });
 
         test("b1b1 with single tabby, but no whitespotting or point determined as 'cinnamon tabby'", () => {
             expect(determinePhenotype([
                 {"colour": "b1", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false},
                 {"colour": "b1", "dilute": false, "tabby": true, "whiteSpotting": false, "colourpoint": false}
-            ])).toEqual("cinnamon tabby");
+            ])).toEqual("Cinnamon tabby");
         });
 
         test("bb1 with single tabby, and double dilute, pointy, and white spotting as 'lilac tabby point van'", () => {
             expect(determinePhenotype([
                 {"colour": "b", "dilute": true, "tabby": false, "whiteSpotting": true, "colourpoint": true},
                 {"colour": "b1", "dilute": true, "tabby": true, "whiteSpotting": true, "colourpoint": true}
-            ])).toEqual("lilac tabby point van");
+            ])).toEqual("Lilac tabby point van");
         });
     });
 });
@@ -286,7 +286,7 @@ describe("Calculate kittens", () => {
             ["colour", "dilute", "tabby", "colourpoint", "whiteSpotting"]
         )).toEqual(
             {
-                "black": 100
+                "Black": 100
             }
         );
     });
@@ -304,10 +304,10 @@ describe("Calculate kittens", () => {
             ["colour", "dilute", "tabby", "colourpoint", "whiteSpotting"]
         )).toEqual(
             {
-                "chocolate": 25,
-                "chocolate bicolour": 25,
-                "lilac": 25,
-                "lilac bicolour": 25
+                "Chocolate": 25,
+                "Chocolate bicolour": 25,
+                "Lilac": 25,
+                "Lilac bicolour": 25
             }
         );
     });
