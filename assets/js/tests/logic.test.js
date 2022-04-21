@@ -1,5 +1,5 @@
 /*jslint es6 */
-const {determineWhitespotting, determineColourpoint, determineTabby, determineColour,getPhenotypeFrequency,calculateProbabilities,determinePhenotype,calculateKittens} = require("../logic");
+const {determineWhitespotting, determineColourpoint, determineTabby, determineColour, getPhenotypeFrequency, calculateProbabilities, determinePhenotype, calculateKittens} = require("../logic");
 
 describe("Probability calculations", () => {
     describe("Calculate frequencies", () => {
