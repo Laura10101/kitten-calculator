@@ -374,7 +374,7 @@ function getQuestions() {
             ],
             "multiselect": false,
             "preconditions": [{
-                "questionIndex": 5,
+                "questionIndex": 6,
                 "validAnswerIndices": [
                     0
                 ]
