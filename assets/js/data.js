@@ -1,4 +1,3 @@
-/*jslint es6 */
 function getQuestions() {
     return [
         {
@@ -353,39 +352,42 @@ function getGenes() {
     return ["colour", "dilute", "tabby", "colourpoint", "whiteSpotting"];
 }
 
-//For simplicity, I will calculate mum and dad's genotypes from scratch every time we go backwards of forwards.
-//This function will calculate the blank/default genotypes which are then modified by each answer, which ensures that the JSON object is constructed properly.
+//For simplicity, I will calculate mum and dad's genotypes
+//from scratch every time we go backwards of forwards.
+//This function will calculate the blank/default genotypes
+//which are then modified by each answer, which ensures that
+//the JSON object is constructed properly.
 function getDefaultGenotypes() {
     return {
-        "mum": [
-            {
-                "colour": "B",
-                "dilute": false,
-                "tabby": false,
-                "colourpoint": false,
-                "whiteSpotting": false
-            },
-            {
-                "colour": "B",
-                "dilute": false,
-                "tabby": false,
-                "colourpoint": false,
-                "whiteSpotting": false
-            }
-        ],
         "dad": [
             {
                 "colour": "B",
+                "colourpoint": false,
                 "dilute": false,
                 "tabby": false,
-                "colourpoint": false,
                 "whiteSpotting": false
             },
             {
                 "colour": "B",
+                "colourpoint": false,
                 "dilute": false,
                 "tabby": false,
+                "whiteSpotting": false
+            }
+        ],
+        "mum": [
+            {
+                "colour": "B",
                 "colourpoint": false,
+                "dilute": false,
+                "tabby": false,
+                "whiteSpotting": false
+            },
+            {
+                "colour": "B",
+                "colourpoint": false,
+                "dilute": false,
+                "tabby": false,
                 "whiteSpotting": false
             }
         ]
