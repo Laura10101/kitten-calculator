@@ -61,3 +61,8 @@ It was important to keep the background simple, without being boring. So I chose
 This project took a lot of time to construct and test the back end. As a result, I had to prioritise functionality and testing in order to get the calculator working properly in the timeframe. If I had more time I would go back to the front end design and make it a little slicker and more modern by playing around with the colour placement.
 
 The images used to represent the different colours of cat were a critical part of the design, and there is more detail on the decision making framework for this in the section above. The images were commissioned for me, and paid for with a full licence for commercial use so I am the owner of these images. 
+
+### Wireframes
+These wireframes were produced at the very beginning of planning the project. There have been some changes to the design since they were done. The most notable change is that there is now an image of a cat at the top of the page which represents the parent cat that the user is currently creating or inputting. This image changes as the user inputs the different colours/patterns. I felt this was an important addition to the application to make it more interactive but also to allow users with little to no knowledge of feline genetics to use the application. Users can simply look at the image they are ‘building’ and instantly know whether that image is representative of the cat they have in mind. This visual representation allowed me to remove the need for written explanatory notes, which has made the application a lot simpler and more visually pleasing. 
+
+XXXX INSERT WIREFRAMES XXXXXX
