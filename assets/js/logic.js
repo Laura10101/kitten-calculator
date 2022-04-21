@@ -119,22 +119,22 @@ function determinePhenotype(genotype) {
 function determineColour(colour1, dilute1, colour2, dilute2) {
     if (colour1 === "B" || colour2 === "B") {
         if (dilute1 === true && dilute2 === true) {
-            return "blue";
+            return "Blue";
         }
-        return "black";
+        return "Black";
     }
 
     if (colour1 === "b" || colour2 === "b") {
         if (dilute1 === true && dilute2 === true) {
-            return "lilac";
+            return "Lilac";
         }
-        return "chocolate";
+        return "Chocolate";
     }
 
     if (dilute1 === true && dilute2 === true) {
-        return "fawn";
+        return "Fawn";
     }
-    return "cinnamon";
+    return "Cinnamon";
 }
 
 function determineTabby(tb1, tb2) {
