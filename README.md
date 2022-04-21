@@ -66,3 +66,37 @@ The images used to represent the different colours of cat were a critical part o
 These wireframes were produced at the very beginning of planning the project. There have been some changes to the design since they were done. The most notable change is that there is now an image of a cat at the top of the page which represents the parent cat that the user is currently creating or inputting. This image changes as the user inputs the different colours/patterns. I felt this was an important addition to the application to make it more interactive but also to allow users with little to no knowledge of feline genetics to use the application. Users can simply look at the image they are ‘building’ and instantly know whether that image is representative of the cat they have in mind. This visual representation allowed me to remove the need for written explanatory notes, which has made the application a lot simpler and more visually pleasing. 
 
 XXXX INSERT WIREFRAMES XXXXXX
+
+## Features
+
+### Existing Features
+
+- __First Page__
+The first page gives simple instructions on how to use the calculator, and includes a ‘start’ button.
+
+- __Question Pages__
+following pages then ask the user to input details about their cat’s phenotype (appearance) and genotype (recessive genes). This allows the calculator to get all the relevant genetic information for the parent.
+
+- __Genetic Trait Illustrated for Each Answer__
+Blah
+
+- __Back and Next Buttons__
+to optimise user experience, I included a back button so that users could easily step backwards. This means that, if a user enters incorrect information, they do not have to start the calculator from the beginning, which would have been irritating. This was quite challenging algorithmically, but I think it was well worth the investment of time.
+
+- __Results Page__
+the genetic information for each parent is then used to calculate the possible kittens that could be produced from the pairing. At the moment the calculator only calculates the phenotype of the kittens, i.e. what colour they will be. It does not tell the user what recessive genes the kittens could carry. That is a potential addition that could be made with more time. 
+
+- __Parent Display__
+An interactive cat image that reflects the cat the user is currently entering/creating. This allows the user to see a visual representation of the cat they have in mind. Even if they are confused by the terminology, the visual representation should be enough to allow them to use the application in an informed way. Adding this feature allowed me to dispense with the need for complex written explanatory notes which would have slowed down the user experience and made it less accessible.
+
+- __Accessibility__
+All images have accurate alt attributes, allowing those with visual impairment to use the calculator. ??????????
+
+### Features Left to Implement
+This application could be developed into a more encompassing website by including a blog/articles page. The blog would contain further explanations about cat genetics and could explore a range of topics. These topics could range from basic explanations to highly complex areas like the inhibitor gene and bimetallic cats, neither of which are fully understood by science. 
+
+Additionally, the application could be used to request that cat owners send genetic tests from their cats to research centres who are currently investigating the more complex genetic issues.  This would help to improve the understanding of the feline genome, and identify additional genetic mutations as they arise. In this way, it could be used not only for colour genetics, but also to highlight genetic health problems within the breed and collect data for researchers.  This could be achieved by having a page on the website that lists the current research projects in feline genetics, along with instructions on how to obtain and send a genetic swab to each project. An additional range of functions could be created to assist with this: when a user entered a ‘gene of interest’ into the calculator, it could display a message, explaining that their cat was of scientific interest and pointing them to the relevant page and research project. 
+
+With more time, the application could be further developed by the creation of kitten calculators for other cat breeds, and other species (e.g. dogs, rabbits and even hamsters are commonly bred). As the basic genetic rules will be largely the same, similar algorithms can be used to create those additional calculators. This would increase web traffic further and allow more research projects to be highlighted. 
+
+XXXXXXCalculate genotype of the kittensXXXXX 
