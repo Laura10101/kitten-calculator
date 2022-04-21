@@ -1,4 +1,3 @@
-/*jslint es6 */
 //Get application data
 const questions = getQuestions();
 const parents = ['dad', 'mum'];
@@ -26,6 +25,14 @@ const resultTemplate = document.getElementById('result-template');
 const parentDisplayExplanation = document.getElementById('parent-display-explanation');
 const parentDisplayImage = document.getElementById('parent-display-image');
 const parentDisplayPhenotype = document.getElementById('parent-display-phenotype');
+
+//Set up events
+document.getElementById("start-button").onclick = showQuestionsSection;
+document.getElementById("previous-question-button").onclick = showPreviousQuestion;
+document.getElementById("next-question-button").onclick = showNextQuestion;
+document.getElementById("calculate-kittens-button").onclick = showResultsSection;
+document.getElementById("previous-section-button").onclick = showQuestionsSection;
+document.getElementById("restart-button").onclick = initialiseCalculator();
 
 //Initialise calculator
 initialiseCalculator();
