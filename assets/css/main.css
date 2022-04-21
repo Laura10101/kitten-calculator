@@ -1,4 +1,4 @@
-html {
+body {
     height: 100%;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c491ef+17,f070a1+44,799aef+70,799aef+82,7befb5+97&1+0,0.44+2,1+100 */
     background: -moz-linear-gradient(-45deg,  rgba(196,145,239,1) 0%, rgba(196,145,239,0.44) 2%, rgba(196,145,239,0.53) 17%, rgba(240,112,161,0.68) 44%, rgba(121,154,239,0.83) 70%, rgba(121,154,239,0.9) 82%, rgba(123,239,181,0.98) 97%, rgba(123,239,181,1) 100%); /* FF3.6-15 */
@@ -101,7 +101,7 @@ section {
     font-size: 20px;
     padding: 10px;
     border-radius: 5px;
-    transition-duration: 0.4s;
+    //transition-duration: 0.4s;
     margin: 30px;
 }
 
@@ -112,5 +112,3 @@ section {
 .disabled-button {
     visibility: hidden;
 }
-
-/* colours used: #f070a1, #c34271, #16ffbd - mint green, #12c998 - slightly darker green, #439f76 neutral green 
