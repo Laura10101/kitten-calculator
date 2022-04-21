@@ -211,16 +211,16 @@ function preconditionsSatisfied(preconditions) {
 function controlFlowButtons() {
     //Enable or disable the previous and next buttons, depending on which question we are on
     disableButton(calculateKittensButton);
+
+    disableButton(nextQuestionButton);
     if (currentParent == 0 && currentQuestion == 0) {
         disableButton(previousQuestionButton);
     }
     else if (currentParent == 1 && currentQuestion >= questions.length - 1) {
-        disableButton(nextQuestionButton);
         enableButton(calculateKittensButton);
     }
     else {
         enableButton(previousQuestionButton);
-        enableButton(nextQuestionButton);
     }
 }
 
@@ -247,6 +247,7 @@ function selectAnswer(buttonId) {
     //Now the buttons are correctly set, update the selected answers in the model
     updateSelectedAnswers();
     updateParentDisplay();
+    enableButton(nextQuestionButton);
 }
 
 /*
