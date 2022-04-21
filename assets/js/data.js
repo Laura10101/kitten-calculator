@@ -265,7 +265,7 @@ function getQuestions() {
             "multiselect": false,
             "preconditions": [
                 {
-                    "questionIndex": 2,
+                    "questionIndex": 3,
                     "validAnswerIndices": [
                         0
                     ]
