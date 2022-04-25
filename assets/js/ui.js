@@ -10,6 +10,7 @@ const imgExt = '.png';
 //Get references to DOM elements for sections
 const sections = [document.getElementById('introduction'),
                 document.getElementById('questions'),
+                document.getElementById('results-preloader'),
                 document.getElementById('results')];
 
 //Get references to DOM elements for questions
@@ -36,7 +37,7 @@ let currentParent = 0;
 document.getElementById("start-button").onclick = showQuestionsSection;
 document.getElementById("previous-question-button").onclick = showPreviousQuestion;
 document.getElementById("next-question-button").onclick = showNextQuestion;
-document.getElementById("calculate-kittens-button").onclick = showResultsSection;
+document.getElementById("calculate-kittens-button").onclick = showResultsPreloaderSection;
 document.getElementById("previous-section-button").onclick = returnToQuestionsSection;
 document.getElementById("restart-button").onclick = initialiseCalculator;
 
@@ -71,10 +72,18 @@ function showQuestionsSection() {
     showNextQuestion();
 }
 
-function showResultsSection() {
+function showResultsPreloaderSection() {
     currentSection = 2;
     showCurrentSection();
     displayResults();
+    setTimeout(() => {
+        showResultsSection();
+    }, 5000);
+}
+
+function showResultsSection() {
+    currentSection = 3;
+    showCurrentSection();
 }
 
 function returnToQuestionsSection() {
