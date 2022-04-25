@@ -335,6 +335,10 @@ function displayResults() {
         resultSpan.id = phenotypeId + '-result-span';
 
         resultImage.id = phenotypeId + '-result-img';
+        resultImage.addEventListener("error", function(event) {
+            event.target.src = imgs + 'unicorn' + imgExt;
+            event.onerror = null;
+        });
         resultImage.src = imgs + phenotypeId + imgExt;
 
         resultFrequency.id = phenotypeId + '-result-percentage-paragraph';
@@ -398,6 +402,10 @@ function updateParentDisplay() {
     let image = imgs + phenotypeId + imgExt; //draft image used initially, update before launch
 
     parentDisplayExplanation.innerText = "You are currently entering " + parent + "'s genes. The image below will update as you make selections:";
+    parentDisplayImage.addEventListener("error", function(event) {
+        event.target.src = imgs + 'unicorn' + imgExt;
+        event.onerror = null;
+    });
     parentDisplayImage.src = image;
     parentDisplayPhenotype.innerText = currentParentPhenotype;
 }
