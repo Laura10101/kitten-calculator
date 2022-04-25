@@ -44,6 +44,7 @@ section {
     border-style: solid;
     border-radius: 5px;
     display: none;
+    min-height: 650px;
 }
 
 .section-container {
