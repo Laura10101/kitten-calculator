@@ -12,6 +12,7 @@ h1, h2, p, span {
     font-family: Arial, Helvetica, sans-serif;
     }
 
+/* Header*/
 h1 {
     color: #ffffff;
     text-align: center;
@@ -21,6 +22,7 @@ h1 {
     padding: 10px;
 }
 
+/*Style paragraph elements*/
 p, span {
     font-size: 24px;
 }
@@ -29,6 +31,7 @@ main {
     height: 100%;
 }
 
+/* Style section*/
 section {
     background-color: #ffffff;
     color:#000000;
@@ -60,6 +63,7 @@ section {
     display: none;
 }
 
+/*Make button responsive when selected*/
 .answer {
     border-color:#f070a1;
     border-width: 1px;
@@ -69,6 +73,7 @@ section {
     margin: 10px
 }
 
+/* Make answer button responsive when user hovers*/
 .answer:hover {
     color: #444444;
     background-color: #7befb5;
@@ -95,6 +100,7 @@ section {
     background-color: #f070a1;
 }
 
+/* Style navigation buttons*/
 .flow-button {
     display: inline;
     background-color: #c491ef;
@@ -111,6 +117,7 @@ section {
     background-color:#f070a1
 }
 
+/*Hide buttons until the user has made a relevant selection*/
 .disabled-button {
     display: none;
 }
