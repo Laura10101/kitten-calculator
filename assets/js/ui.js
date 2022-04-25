@@ -339,6 +339,7 @@ function displayResults() {
             event.target.src = imgs + 'unicorn' + imgExt;
             event.onerror = null;
         });
+        resultImage.alt = "Your kitten will have a " + frequency + "% chance of being " + phenotype;
         resultImage.src = imgs + phenotypeId + imgExt;
 
         resultFrequency.id = phenotypeId + '-result-percentage-paragraph';
@@ -406,6 +407,7 @@ function updateParentDisplay() {
         event.target.src = imgs + 'unicorn' + imgExt;
         event.onerror = null;
     });
+    parentDisplayImage.alt = parent + " will be " + currentParentPhenotype + " based on your entry so far.";
     parentDisplayImage.src = image;
     parentDisplayPhenotype.innerText = currentParentPhenotype;
 }
