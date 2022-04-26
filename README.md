@@ -20,12 +20,21 @@ I therefore chose to optimise user experience for those with a basic understandi
 It may be that this site is not well suited to experienced breeders with expert knowledge of feline genetics. In future, I may create a second, ‘advanced’ version of this calculator that is aimed at experts and has a far more simple, ‘to the point’ user experience that simply allows a quick calculation to be performed without the fuss of explanations and images. 
 
 ## User Stories 
-As a British Shorthair hobby breeder, I want to:
-- Enter the genetic traits for two parents
-- Calculate what colour kittens I can expect from the two entered parents
-- Consider what pairings would produce kittens of the colour I want, so that I can make an informed decision
-- Improve my understanding of feline genetics 
-- Navigate the application easily 
+As a British Shorthair hobby breeder:
+- I want to see an introduction explaining how the calculator will work, so that I understand how to use it
+- I need to be able to enter the genetic traits for both mum and dad, so that their kitten phenotypes and probabilities can be calculated
+- I want to see an image of each parent's phenotype as I enter their traits, so that I know what I have input so far
+- I want to see an illustration showing the trait for each answer, so that I can understand which trait best matches my cat
+- I want the application to prevent me from inputing invalid combinations of traits, so that I only see kittens that my cats can actually produce 
+- I want the application to ensure that I select the right number of traits for each question, so that it can accurately calculate my kittens
+- I want to be able to return to previous questions, so that I can correct my answers without having to start again
+- I want the application to forget answers I gave to subsequent questions if I return to previous questions, so that I can reanswer the questions correctly based on my updated choices
+- I want to confirm once I have entered all information for both mum and dad, so that the kitten results can be calculated
+- I want the application to clearly indicate when it is calculating kitten results, so that I can be sure it hasn't crashed
+- I want to see the results of my kitten calculation, so that I know what kittens mum and dad could produce
+- I want to see an image for each possible kitten phenotype, so that I know what that phenotype will look like
+- I want to see the probability for each possible kitten phenotype, so that I know how likely it is that mum and dad will produce that type of kitten
+- I want to be able to start the calculator again once I have reviewed my results, so that I can calculate the kittens for a different pairing
 
 ## UX
 
