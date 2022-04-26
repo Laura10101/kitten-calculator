@@ -191,9 +191,11 @@ Once all results have been calculated and loaded, they are displayed to the user
   ![Answer selected for dilute question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/dilute-question-selection.png)
 
   - The screenshot below shows the application's internal state when on the second question with "Yes" selected.
+
   ![The model state after selecting "Yes" for the dilute question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/model-state-dilute-question.png)
 
   - The screenshot below shows the application's internal state after selecting a different option on the previous question. Note that the answer to question 2 has now been removed.
+  
   ![The model state after changing answers to the previous base colour question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/model-state-after-answer-change.png)
   
 - __Results Preloader__
