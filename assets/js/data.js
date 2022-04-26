@@ -16,7 +16,7 @@ function getQuestions() {
                             "p2": false
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "black",
                     "preconditions": [],
                     "text": "Black"
                 },
@@ -33,7 +33,7 @@ function getQuestions() {
                             "p2": true
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue",
                     "preconditions": [],
                     "text": "Blue"
                 },
@@ -50,7 +50,7 @@ function getQuestions() {
                             "p2": false
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "chocolate",
                     "preconditions": [],
                     "text": "Chocolate"
                 },
@@ -67,7 +67,7 @@ function getQuestions() {
                             "p2": true
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "lilac",
                     "preconditions": [],
                     "text": "Lilac"
                 },
@@ -84,7 +84,7 @@ function getQuestions() {
                             "p2": false
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "cinnamon",
                     "preconditions": [],
                     "text": "Cinnamon"
                 },
@@ -101,7 +101,7 @@ function getQuestions() {
                             "p2": true
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "fawn",
                     "preconditions": [],
                     "text": "Fawn"
                 }
@@ -120,7 +120,7 @@ function getQuestions() {
                             "p2": true
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue",
                     "preconditions": [],
                     "text": "Yes"
                 },
@@ -131,7 +131,7 @@ function getQuestions() {
                             "p2": false
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "black",
                     "preconditions": [],
                     "text": "No"
                 }
@@ -157,7 +157,7 @@ function getQuestions() {
                             "p2": "b"
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "chocolate",
                     "preconditions": [{
                         "questionIndex": 0,
                         "validAnswerIndices": [
@@ -174,7 +174,7 @@ function getQuestions() {
                             "p2": "b1"
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "cinnamon",
                     "preconditions": [{
                         "questionIndex": 0,
                         "validAnswerIndices": [
@@ -188,7 +188,7 @@ function getQuestions() {
                 },
                 {
                     "geneMapping": [],
-                    "image": "blue-self-draft",
+                    "image": "blue",
                     "preconditions": [{
                         "questionIndex": 0,
                         "validAnswerIndices": [
@@ -216,7 +216,7 @@ function getQuestions() {
                             "p2": true
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue-tabby",
                     "preconditions": [],
                     "text": "Tabby"
                 },
@@ -228,7 +228,7 @@ function getQuestions() {
                             "p2": false
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue",
                     "preconditions": [],
                     "text": "Non-tabby"
                 }
@@ -246,7 +246,7 @@ function getQuestions() {
                             "p2": false
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue",
                     "preconditions": [],
                     "text": "Yes"
                 },
@@ -257,7 +257,7 @@ function getQuestions() {
                             "p2": true
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue-tabby",
                     "preconditions": [],
                     "text": "No"
                 }
@@ -271,7 +271,7 @@ function getQuestions() {
                     ]
                 }
             ],
-            "text": "Does this parent carry self?"
+            "text": "Does this parent carry the non-tabby gene?"
         },
         {
             "answers": [
@@ -283,7 +283,7 @@ function getQuestions() {
                             "p2": false
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue",
                     "preconditions": [],
                     "text": "Self"
                 },
@@ -295,7 +295,7 @@ function getQuestions() {
                             "p2": false
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue-bicolour",
                     "preconditions": [],
                     "text": "Bicolour"
                 },
@@ -307,7 +307,7 @@ function getQuestions() {
                             "p2": true
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue-van",
                     "preconditions": [],
                     "text": "Van"
                 }
@@ -322,25 +322,25 @@ function getQuestions() {
                     "geneMapping": [
                         {
                             "gene": "colourpoint",
-                            "p1": false,
-                            "p2": false
+                            "p1": true,
+                            "p2": true
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue-point",
                     "preconditions": [],
-                    "text": "Non-pointed"
+                    "text": "Colourpoint"
                 },
                 {
                     "geneMapping": [
                         {
                             "gene": "colourpoint",
-                            "p1": true,
-                            "p2": true
+                            "p1": false,
+                            "p2": false
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue",
                     "preconditions": [],
-                    "text": "Colourpoint"
+                    "text": "Non-pointed"
                 }
             ],
             "multiselect": false,
@@ -356,7 +356,7 @@ function getQuestions() {
                             "p2": true
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue-point",
                     "preconditions": [],
                     "text": "Yes"
                 },
@@ -367,7 +367,7 @@ function getQuestions() {
                             "p2": false
                         }
                     ],
-                    "image": "blue-self-draft",
+                    "image": "blue",
                     "preconditions": [],
                     "text": "No"
                 }
