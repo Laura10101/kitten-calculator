@@ -7,6 +7,10 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c491ef', endColorstr='#7befb5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+img {
+  background-color: #ffffff;
+}
+
 /* style fonts*/
 h1, h2, p, span {
     font-family: Arial, Helvetica, sans-serif;
