@@ -82,47 +82,47 @@ The following wireframes show the main user journey through the application.
 
 When the user first lands on the application, a welcome message is displayed to explain the purpose and use of the kitten calculator. From here, the user can click start to begin the kitten calculation process:
 
-![Welcome section](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-one.png)
+![Welcome section](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-one.jpg)
 
 The first step of the kitten calculation process is to select the base colour for the first parent as shown below:
 
-![Base colour - widescreen format](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-two.png)
+![Base colour - widescreen format](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-two.jpg)
 
 The following wireframe shows how the first question would look on a mobile device:
 
-![Base colour - mobile](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-three.png)
+![Base colour - mobile](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-three.jpg)
 
 The second question is to determine whether the parent is a tabby as shown below:
 
-![Tabby](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-four.png)
+![Tabby](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-four.jpg)
 
 The third question is to determine whether the parent carries a recessive non-tabby gene:
 
-![Non-tabby](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-five.png)
+![Non-tabby](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-five.jpg)
 
 The fourth question is to determine whether the parent is a colourpoint, which is recessive:
 
-![Colourpoint](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-six.png)
+![Colourpoint](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-six.jpg)
 
 The fifth question asks whether the parent carries a single recessive colourpoint gene. This question is conditional on the prior question being answered in the negative:
 
-![Carries colourpoint](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-seven.png)
+![Carries colourpoint](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-seven.jpg)
 
 The sixth question checks whether the parent has one, two, or no white spotting genes:
 
-![White spotting genes](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-eight.png)
+![White spotting genes](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-eight.jpg)
 
 Once the user has confirmed the answer to the sixth question for the first parent, the same questions are then repeated for the second parent. Once both parents have been fully input, the application displays a calculate kittens button as indicated in the above wireframe.
 
 When the user clicks this button, a preloader will be displayed as shown below while the results are being calculated:
 
-![Results preloader](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-nine.png)
+![Results preloader](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-nine.jpg)
 
 This preloader was enhanced during development by the addition of a countdown.
 
 Once all results have been calculated and loaded, they are displayed to the user as shown below:
 
-![Results are displayed](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-ten.png)
+![Results are displayed](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-ten.jpg)
 
 ## Features
 
