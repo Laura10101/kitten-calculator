@@ -171,19 +171,49 @@ Once all results have been calculated and loaded, they are displayed to the user
   ![Colours carried options for a chocolate parent](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/chocolate-dad-carry-options.png)
 
 - __Parent Phenotype Display__
-  - 
+  - To assist the user in accurately entering each parent's traits, a phenotype display is provided at the top of each question.
+  - The phenotype display shows an image which represents what the parent that is currently being entered will be, based on the information provided so far.
+  - As the user selects each answer, this display will update to reflect the parent's phenotype based on the current selection.
+  - The following screenshots show the phenotype display for a chocolate parent when the "bicolour" option is selected, versus when the "van" option is selected for the white spotting gene.
+
+  ![Phenotype display for a chocolate bicolour parent](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/chocolate-bicolour-dad-phenotype.png)
+
+  ![Phenotype display for a chocolate van parent](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/chocolate-van-dad-phenotype.png)
+
 
 - __Previous Question Buttons__
-Blah
+  - A previous question button is provided to allow the user to return to previous questions if they are unhappy with the answer they provided.
+  - Having returned to a previous question, if the user changes their answer to that question all the answers they have provided to any subsequent questions are forgotten.
+  - This is important because if the user changes an earlier answer, the answer they gave to a subsequent question may no longer be valid.
+  - This is the result of the question and answer filtering above.
+  - The following example shows the "previous step" button on the second question with the answer "Yes" selected. The user then presses previous step to return to the first question.
+  - The screenshot below shows the user interface with "Yes" selected for question two.
+  ![Answer selected for dilute question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/dilute-question-selection.png)
 
+  - The screenshot below shows the application's internal state when on the second question with "Yes" selected.
+  ![The model state after selecting "Yes" for the dilute question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/model-state-dilute-question.png)
+
+  - The screenshot below shows the application's internal state after selecting a different option on the previous question. Note that the answer to question 2 has now been removed.
+  ![The model state after changing answers to the previous base colour question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/model-state-after-answer-change.png)
+  
 - __Results Preloader__
-Blah
+  - When the user has finished entering all the required information for dad and mum, and have clicked the "calculate" button, a preloader is displayed while the kitten results are being calculated.
+  - The preloader shows an animation to illustrate that the browser has not crashed.
+  - The preloader also display a countdown to let the user know how long it will be until their results are ready.
+  ![The results preloader](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/results-countdown.png)
 
 - __Kitten Results Display__
-Blah
+  - Once the kitten results have been calculated, they are displayed to the user through the results display.
+  - The results display shows all of the phenotypes that could be produced by pairing the entered mum and dad.
+  - Images are displayed showing what each phenotype will look like.
+  - Additionally, the probability of that phenotype being produced by the pairing of mum and dad is displayed.
+  - Furthermore, the textual description of the phenotype is shown.
+  - This allows the user to understand the range of kittens they could get from mum and dad, and the likelihood of each.
+  ![Example results](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/results.png)
 
 - __Start Again Button__
-Blah
+  - Once the user has finished reviewing the calculated results, they can start a new calculation by clicking the start again button.
+  - This returns the user to the introductory section to remind them of the instructions for using the calculator.
 
 - __Accessibility__
 All images have accurate alt attributes, allowing those with visual impairment to use the calculator. ??????????
