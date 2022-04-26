@@ -39,21 +39,19 @@ As a British Shorthair hobby breeder:
 ## UX
 
 ### Colour Scheme
-Whilst the existing website is not targeted solely at cat breeders, it is a feline-focused website, so I looked at the statistics for the past 12 months on google analytics to get information about the demographics of its typical user. The website is predominantly used by female users, but still has a significant number of male users (66.6% vs 33.4% male users). It was therefore important to choose a colour scheme that was not overly-directed at any particular gender stereotype.
+The existing website is not targeted solely at cat breeders. It is a feline-focused website, so I looked at the statistics for the past 12 months on google analytics to get information about the demographics of its typical user. The website is predominantly used by female users with 66.6% of users being female. 
 
 ![Google Analytics: Users by Gender](https://laura10101.github.io/kitten-calculator/assets/img/documentation/readme/ga-users-by-gender.png)
 
-The most common age of users is 25-34, followed by 18-34 and 35-44. It is notable that google analytics was only able to collect age data for just under 25% of the total sessions, so this data may not be accurate across all of the sessions. Nevertheless, this still comprised around 25,000 sessions where age was recorded, making it a reasonably good sized data set. It shows a clear trend for typical age range within the sample that we have available.
+The most common age of users is 25-34, followed by 18-34 and 35-44. It is notable that Google Analytics was only able to collect age data for just under 25% of the total sessions, so this data may not be accurate across all of the sessions. Nevertheless, this still comprised around 25,000 sessions where age was recorded, making it a reasonably good sized data set. It shows a clear trend for typical age range within the sample that we have available.
 
 ![Google Analytics: Users by Age](https://laura10101.github.io/kitten-calculator/assets/img/documentation/readme/ga-users-by-age.png)
 
 Millennials are generally considered to be between the ages of 26-40 (Gallup) whilst Gen Z-ers are considered to be age 10-25 (Gallup). These two generational groups therefore represent the bulk of the total user demographic for this client, comprising around 70% of the total session count. 
 
-This gave a clear steer for the user experience and branding for the application. A major part of the design was choosing the visual representations of the cat colours. I considered using photographs but it would have been almost impossible to find photographs that had enough continuity of style to provide a consistent user experience, which was vital for the flow of the application. After some research, I decided on using illustrations in a cute, slightly manga-inspired style. This design decision then helped to inform the colour palette choice. Modern, on-trend colours were used to reflect current design trends: I opted for a slightly retro, 90’s inspired, cartoon-esque feel.
+This gave a clear steer for the user experience and branding for the application. A major part of the design was choosing the visual representations of the cat colours. It was important that the colours used complimented the cat images, and did not fight with or overpower them, so that the cat images remain the central focus of the application.  This design decision helped to inform the colour palette choice. Modern, on-trend colours were used to reflect current design trends: I opted for a slightly retro, 90’s inspired, cartoon-esque feel.
 
-It was also important that the colours used complimented the cat images, and did not fight with or overpower them so that the cat images remain the central focus of the site. 
-
-Ease of use was also a major consideration. This is a practical application and therefore a positive user experience was critical. Colours were chosen to make navigation of the application as easy as possible, with good contrast between sections, easy to see buttons with responsive elements so the user was clear when a button was clicked and selected or deselected. 
+Ease of use was also a major consideration. This is a practical application and therefore a positive user experience was critical. Colours were chosen to make navigation of the application as easy as possible, with good contrast between sections, easy to see buttons with responsive elements so the user was clear when a button was clicked and selected or deselected.
 
 I identified a pastel shade of blue and then used w3 schools colour picker to [select different colours](https://www.w3schools.com/colors/colors_picker.asp) of the same tone. This created a soft, cohesive feel to the colour scheme with a high level of harmony, which was important for a consistent user experience.
 
@@ -68,14 +66,12 @@ Periwinkle blue: #799aef
 ![Colour Palette](https://laura10101.github.io/kitten-calculator/assets/img/documentation/readme/colour-palette.png)
 
 ### Typography
-Ease of use was the primary consideration for the typography. For this reason, text was kept black and ……………………………..XXXXXXXXX font was used. 
+Ease of use was the primary consideration for the typography. For this reason, text was kept black. Arial was used as the primary font, with Helvetica as the web-safe font and Sans-sarif as a fallback font. This ensured that the typography was simple and easy to read so that users could navigate the application easily. 
 
 ### Imagery
-It was important to keep the background simple, without being boring. So I chose to create a gradient in the website colour palette. This allowed me to add some interest to the background, in line with the cute/cartoon/retro feel of the theme, whilst maintaining a simple feel that would not distract from the application. I used Colorzilla for this: Ultimate CSS Gradient Generator - ColorZilla.com. 
+Providing users with a visual representation of the different cat traits was a key feature to make the application more intuitive for the target users. The images used to represent the different traits were a critical part of the design. I considered using photographs but it would have been almost impossible to find photographs that had enough continuity of style to provide a consistent user experience, which was vital for the flow of the application. After some research, I decided on using illustrations in a cute, slightly manga-inspired style.The images were commissioned by me, and paid for with a full licence for commercial use so I am the owner of these images.
 
-This project took a lot of time to construct and test the back end. As a result, I had to prioritise functionality and testing in order to get the calculator working properly in the timeframe. If I had more time I would go back to the front end design and make it a little slicker and more modern by playing around with the colour placement.
-
-The images used to represent the different colours of cat were a critical part of the design, and there is more detail on the decision making framework for this in the section above. The images were commissioned for me, and paid for with a full licence for commercial use so I am the owner of these images. 
+It was important to keep the background simple without being boring so that it did not distract from the functionality. To achieve this, I chose to create a gradient in the website colour palette. This allowed me to add some interest to the background, in line with the cute, cartoon, retro feel of the theme, whilst maintaining a simple feel that would not distract from the application. I used [Colorzilla's Ultimate CSS Gradient Generator](https://www.colorzilla.com/gradient-editor/) for this.
 
 ### Wireframes
 These wireframes were produced at the very beginning of planning the project. There have been some changes to the design since they were done. The most notable change is that there is now an image of a cat at the top of the page which represents the parent cat that the user is currently creating or inputting. This image changes as the user inputs the different colours/patterns. I felt this was an important addition to the application to make it more interactive but also to allow users with little to no knowledge of feline genetics to use the application. Users can simply look at the image they are ‘building’ and instantly know whether that image is representative of the cat they have in mind. This visual representation allowed me to remove the need for written explanatory notes, which has made the application a lot simpler and more visually pleasing. 
