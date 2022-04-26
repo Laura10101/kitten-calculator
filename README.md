@@ -74,9 +74,55 @@ Providing users with a visual representation of the different cat traits was a k
 It was important to keep the background simple without being boring so that it did not distract from the functionality. To achieve this, I chose to create a gradient in the website colour palette. This allowed me to add some interest to the background, in line with the cute, cartoon, retro feel of the theme, whilst maintaining a simple feel that would not distract from the application. I used [Colorzilla's Ultimate CSS Gradient Generator](https://www.colorzilla.com/gradient-editor/) for this.
 
 ### Wireframes
-These wireframes were produced at the very beginning of planning the project. There have been some changes to the design since they were done. The most notable change is that there is now an image of a cat at the top of the page which represents the parent cat that the user is currently creating or inputting. This image changes as the user inputs the different colours/patterns. I felt this was an important addition to the application to make it more interactive but also to allow users with little to no knowledge of feline genetics to use the application. Users can simply look at the image they are ‘building’ and instantly know whether that image is representative of the cat they have in mind. This visual representation allowed me to remove the need for written explanatory notes, which has made the application a lot simpler and more visually pleasing. 
+These wireframes were produced at the very beginning of planning the project. There have been some changes to the design since they were done. The most notable change is that there is now an image of a cat at the top of the page which represents the parent cat that the user is currently creating or inputting. This image changes as the user inputs the different colours/patterns. I felt this was an important addition to the application to make it more interactive but also to allow users with little to no knowledge of feline genetics to use the application. Users can simply look at the image they are ‘building’ and instantly know whether that image is representative of the cat they have in mind. This visual representation allowed me to remove the need for written explanatory notes, which has made the application a lot simpler and more visually pleasing.
 
-XXXX INSERT WIREFRAMES XXXXXX
+I decided to add additional questions in to the calculator to improve the quality of the calculation results. However, the display of these additional questions was in line with the wireframes below.
+
+The following wireframes show the main user journey through the application.
+
+When the user first lands on the application, a welcome message is displayed to explain the purpose and use of the kitten calculator. From here, the user can click start to begin the kitten calculation process:
+
+![Welcome section](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-one.png)
+
+The first step of the kitten calculation process is to select the base colour for the first parent as shown below:
+
+![Base colour - widescreen format](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-two.png)
+
+The following wireframe shows how the first question would look on a mobile device:
+
+![Base colour - mobile](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-three.png)
+
+The second question is to determine whether the parent is a tabby as shown below:
+
+![Tabby](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-four.png)
+
+The third question is to determine whether the parent carries a recessive non-tabby gene:
+
+![Non-tabby](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-five.png)
+
+The fourth question is to determine whether the parent is a colourpoint, which is recessive:
+
+![Colourpoint](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-six.png)
+
+The fifth question asks whether the parent carries a single recessive colourpoint gene. This question is conditional on the prior question being answered in the negative:
+
+![Carries colourpoint](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-seven.png)
+
+The sixth question checks whether the parent has one, two, or no white spotting genes:
+
+![White spotting genes](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-eight.png)
+
+Once the user has confirmed the answer to the sixth question for the first parent, the same questions are then repeated for the second parent. Once both parents have been fully input, the application displays a calculate kittens button as indicated in the above wireframe.
+
+When the user clicks this button, a preloader will be displayed as shown below while the results are being calculated:
+
+![Results preloader](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-nine.png)
+
+This preloader was enhanced during development by the addition of a countdown.
+
+Once all results have been calculated and loaded, they are displayed to the user as shown below:
+
+![Results are displayed](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-ten.png)
 
 ## Features
 
