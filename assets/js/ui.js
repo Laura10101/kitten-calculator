@@ -20,6 +20,7 @@ const answerTemplate = document.getElementById('answer-template');
 const previousQuestionButton = document.getElementById('previous-question-button');
 const nextQuestionButton = document.getElementById('next-question-button');
 const calculateKittensButton = document.getElementById('calculate-kittens-button');
+const resultsCountdown = document.getElementById('results-countdown');
 const resultsContainer = document.getElementById('results-info-container');
 const resultTemplate = document.getElementById('result-template');
 
@@ -76,9 +77,20 @@ function showResultsPreloaderSection() {
     currentSection = 2;
     showCurrentSection();
     displayResults();
-    setTimeout(() => {
+
+    countdownToResults(5);
+}
+
+function countdownToResults(countdown) {
+    if (countdown == 0) {
         showResultsSection();
-    }, 5000);
+    }
+    else {
+        resultsCountdown.innerText = countdown;
+        setTimeout(() => {
+            countdownToResults(countdown - 1);
+        }, 1000);
+    }
 }
 
 function showResultsSection() {
