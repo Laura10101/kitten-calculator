@@ -128,23 +128,62 @@ Once all results have been calculated and loaded, they are displayed to the user
 
 ### Existing Features
 
-- __First Page__
-The first page gives simple instructions on how to use the calculator, and includes a ‘start’ button.
+- __Introductory Section__
+  - The application displays a detailed introduction when the user first lands on the page, and when they press the start again button.
+  - This provides the user with information about the purpose of the application and usage instructions.
+  - The user can choose when to start the kitten calculation process by pressing the start button.
+  ![Introductory section](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/introductory-section.png)
 
-- __Question Pages__
-following pages then ask the user to input details about their cat’s phenotype (appearance) and genotype (recessive genes). This allows the calculator to get all the relevant genetic information for the parent.
+- __Parent Genotype Questions__
+  - Once the kitten calculation process has started, the user is presented with a series of questions to gather information about each parent.
+  - The same questions are firstly asked for dad, and then for mum.
+  - A message at the top of this section lets the user know which parent they are currently inputting.
+  - The user can choose answers to the questions by selecting the answer buttons at the bottom of the screen.
+  - The application guides the user through a series of questions until it has enough information about each parent.
 
-- __Genetic Trait Illustrated for Each Answer__
+  ![Base colour question for dad](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/base-colour-dad.png)
+
+  ![Tabby question for dad](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/tabby-dad.png)
+
+  ![Carries tabby question for dad](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/carries-tabby-dad.png)
+
+  ![Base colour question for mum](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/base-colour-mum.png)
+
+  ![Tabby question for mum](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/tabby-mum.png)
+
+- __Answer Buttons__
+  - For each question, the application displays a set of buttons that allow the user to choose appropriate answers to the question.
+  - This prevents the user from entering invalid input, as they are restricted to the available options.
+  - Images on each answer button illustrate the trait represented by that answer.
+  - The answer button changes colour when selected, and on hover, to illustrate to the user the current button state.
+
+  ![Answer buttons](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/answer-buttons.png)
+
+- __Question and Answer Filtering__
+  - Each question and its associated answers has a (possibly empty) set of preconditions.
+  - These preconditions allow questions and answers to be filtered based on the answers given to earlier questions.
+  - This mechanism prevents the user from inputing impossible genetic combinations by ensuring only valid answers can be selected.
+  - The first of the following examples shows that when dad's base colour is black, the user can specify that he additionally carries chocolate or cinnamon genes.
+  - The second example shows that when dad's base colour is chocolate, the user can only specify that dad carries cinnamon.
+
+  ![Colours carried options for a black parent](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/black-dad-carry-options.png)
+
+  ![Colours carried options for a chocolate parent](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/chocolate-dad-carry-options.png)
+
+- __Parent Phenotype Display__
+  - 
+
+- __Previous Question Buttons__
 Blah
 
-- __Back and Next Buttons__
-to optimise user experience, I included a back button so that users could easily step backwards. This means that, if a user enters incorrect information, they do not have to start the calculator from the beginning, which would have been irritating. This was quite challenging algorithmically, but I think it was well worth the investment of time.
+- __Results Preloader__
+Blah
 
-- __Results Page__
-the genetic information for each parent is then used to calculate the possible kittens that could be produced from the pairing. At the moment the calculator only calculates the phenotype of the kittens, i.e. what colour they will be. It does not tell the user what recessive genes the kittens could carry. That is a potential addition that could be made with more time. 
+- __Kitten Results Display__
+Blah
 
-- __Parent Display__
-An interactive cat image that reflects the cat the user is currently entering/creating. This allows the user to see a visual representation of the cat they have in mind. Even if they are confused by the terminology, the visual representation should be enough to allow them to use the application in an informed way. Adding this feature allowed me to dispense with the need for complex written explanatory notes which would have slowed down the user experience and made it less accessible.
+- __Start Again Button__
+Blah
 
 - __Accessibility__
 All images have accurate alt attributes, allowing those with visual impairment to use the calculator. ??????????
