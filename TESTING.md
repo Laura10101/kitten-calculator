@@ -152,9 +152,51 @@ On Safari (mobile):
 
 ![Background gradient on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/mobile-gradient.png)
 
-### Questions Page
+### Questions Section
+
+  - The following screenshots demonstrate that the questions (including the phenotype display) stack properly on small desktop screens, and on mobile devices.
+  - The test passes if the phenotype display, question text, and answer buttons all stack correctly within the white section box.
+  - No horizontal scrolling should be needed, and no elements should stretch outside of the white box.
+  - Larger screen sizes have been tested extensively through the browser compatibility tests above.
+
+On Edge (small):
+
+![Questions section on a small Edge device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-questions-small.png)
+
+On Firefox (small):
+
+![Questions section on a small Firefox device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-questions-small.png)
+
+On Chrome (small):
+
+![Questions section on a small Chrome device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-questions-small.png)
+
+On Safari (mobile):
+
+![Questions section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/safari-questions-small.png)
 
 ### Results Page
+
+  - The following screenshots demonstrate that the results stack properly on small desktop screens, and on mobile devices.
+  - The test passes if the all results stack correctly within the white section box.
+  - No horizontal scrolling should be needed, and no elements should stretch outside of the white box.
+  - Larger screen sizes have been tested extensively through the browser compatibility tests above.
+
+On Edge (small):
+
+![Results section on a small Edge device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-results-small.png)
+
+On Firefox (small):
+
+![Results section on a small Firefox device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-results-small.png)
+
+On Chrome (small):
+
+![Results section on a small Chrome device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-results-small.png)
+
+On Safari (mobile):
+
+![Results section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/safari-results-small.png)
 
 ## User Story Tests
 
