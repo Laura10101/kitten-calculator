@@ -6,7 +6,7 @@ This kitten calculator is designed for hobby breeders, who have a basic knowledg
 
 The kitten calculator will be placed on an existing website. It will keep people returning to the site, thereby helping to increase web traffic. The website in question is a member of the Amazon Affiliate Marketing scheme, so an increase in web traffic may lead to an increase in site income through that scheme. It will also assist with establishing the website as a trusted source of expert information.
 
-![Am I responsive?](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/am-i-responsive.png)
+![Am I responsive?](https://laura10101.github.io/kitten-calculator/documentation/features/am-i-responsive.png)
 
 ## Users
 Users will be British Shorthair breeders. Some will be new to breeding, or just considering breeding, and therefore not have any knowledge beyond the most basic terminology. Others will be more experienced, understand all the terminology and be able to calculate the colour of kittens themselves, but want a quicker or easier way of achieving it. 
@@ -43,11 +43,11 @@ As a British Shorthair hobby breeder:
 ### Colour Scheme
 The existing website is not targeted solely at cat breeders. It is a feline-focused website, so I looked at the statistics for the past 12 months on google analytics to get information about the demographics of its typical user. The website is predominantly used by female users with 66.6% of users being female. 
 
-![Google Analytics: Users by Gender](https://laura10101.github.io/kitten-calculator/assets/img/documentation/readme/ga-users-by-gender.png)
+![Google Analytics: Users by Gender](https://laura10101.github.io/kitten-calculator/documentation/readme/ga-users-by-gender.png)
 
 The most common age of users is 25-34, followed by 18-34 and 35-44. It is notable that Google Analytics was only able to collect age data for just under 25% of the total sessions, so this data may not be accurate across all of the sessions. Nevertheless, this still comprised around 25,000 sessions where age was recorded, making it a reasonably good sized data set. It shows a clear trend for typical age range within the sample that we have available.
 
-![Google Analytics: Users by Age](https://laura10101.github.io/kitten-calculator/assets/img/documentation/readme/ga-users-by-age.png)
+![Google Analytics: Users by Age](https://laura10101.github.io/kitten-calculator/documentation/readme/ga-users-by-age.png)
 
 Millennials are generally considered to be between the ages of 26-40 (Gallup) whilst Gen Z-ers are considered to be age 10-25 (Gallup). These two generational groups therefore represent the bulk of the total user demographic for this client, comprising around 70% of the total session count. 
 
@@ -65,7 +65,7 @@ Lilac: #c491ef
 Candy pink: #f070a1
 Periwinkle blue: #799aef
 
-![Colour Palette](https://laura10101.github.io/kitten-calculator/assets/img/documentation/readme/colour-palette.png)
+![Colour Palette](https://laura10101.github.io/kitten-calculator/documentation/readme/colour-palette.png)
 
 ### Typography
 Ease of use was the primary consideration for the typography. For this reason, text was kept black. Arial was used as the primary font, with Helvetica as the web-safe font and Sans-sarif as a fallback font. This ensured that the typography was simple and easy to read so that users could navigate the application easily. 
@@ -84,47 +84,47 @@ The following wireframes show the main user journey through the application.
 
 When the user first lands on the application, a welcome message is displayed to explain the purpose and use of the kitten calculator. From here, the user can click start to begin the kitten calculation process:
 
-![Welcome section](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-one.jpg)
+![Welcome section](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-one.jpg)
 
 The first step of the kitten calculation process is to select the base colour for the first parent as shown below:
 
-![Base colour - widescreen format](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-two.jpg)
+![Base colour - widescreen format](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-two.jpg)
 
 The following wireframe shows how the first question would look on a mobile device:
 
-![Base colour - mobile](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-three.jpg)
+![Base colour - mobile](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-three.jpg)
 
 The second question is to determine whether the parent is a tabby as shown below:
 
-![Tabby](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-four.jpg)
+![Tabby](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-four.jpg)
 
 The third question is to determine whether the parent carries a recessive non-tabby gene:
 
-![Non-tabby](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-five.jpg)
+![Non-tabby](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-five.jpg)
 
 The fourth question is to determine whether the parent is a colourpoint, which is recessive:
 
-![Colourpoint](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-six.jpg)
+![Colourpoint](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-six.jpg)
 
 The fifth question asks whether the parent carries a single recessive colourpoint gene. This question is conditional on the prior question being answered in the negative:
 
-![Carries colourpoint](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-seven.jpg)
+![Carries colourpoint](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-seven.jpg)
 
 The sixth question checks whether the parent has one, two, or no white spotting genes:
 
-![White spotting genes](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-eight.jpg)
+![White spotting genes](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-eight.jpg)
 
 Once the user has confirmed the answer to the sixth question for the first parent, the same questions are then repeated for the second parent. Once both parents have been fully input, the application displays a calculate kittens button as indicated in the above wireframe.
 
 When the user clicks this button, a preloader will be displayed as shown below while the results are being calculated:
 
-![Results preloader](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-nine.jpg)
+![Results preloader](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-nine.jpg)
 
 This preloader was enhanced during development by the addition of a countdown.
 
 Once all results have been calculated and loaded, they are displayed to the user as shown below:
 
-![Results are displayed](https://laura10101.github.io/kitten-calculator/assets/img/documentation/wireframes/wireframe-ten.jpg)
+![Results are displayed](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-ten.jpg)
 
 ## Features
 
@@ -134,7 +134,7 @@ Once all results have been calculated and loaded, they are displayed to the user
   - The application displays a detailed introduction when the user first lands on the page, and when they press the start again button.
   - This provides the user with information about the purpose of the application and usage instructions.
   - The user can choose when to start the kitten calculation process by pressing the start button.
-  ![Introductory section](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/introductory-section.png)
+  ![Introductory section](https://laura10101.github.io/kitten-calculator/documentation/features/introductory-section.png)
 
 - __Parent Genotype Questions__
   - Once the kitten calculation process has started, the user is presented with a series of questions to gather information about each parent.
@@ -143,15 +143,15 @@ Once all results have been calculated and loaded, they are displayed to the user
   - The user can choose answers to the questions by selecting the answer buttons at the bottom of the screen.
   - The application guides the user through a series of questions until it has enough information about each parent.
 
-  ![Base colour question for dad](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/base-colour-dad.png)
+  ![Base colour question for dad](https://laura10101.github.io/kitten-calculator/documentation/features/base-colour-dad.png)
 
-  ![Tabby question for dad](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/tabby-dad.png)
+  ![Tabby question for dad](https://laura10101.github.io/kitten-calculator/documentation/features/tabby-dad.png)
 
-  ![Carries tabby question for dad](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/carries-tabby-dad.png)
+  ![Carries tabby question for dad](https://laura10101.github.io/kitten-calculator/documentation/features/carries-tabby-dad.png)
 
-  ![Base colour question for mum](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/base-colour-mum.png)
+  ![Base colour question for mum](https://laura10101.github.io/kitten-calculator/documentation/features/base-colour-mum.png)
 
-  ![Tabby question for mum](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/tabby-mum.png)
+  ![Tabby question for mum](https://laura10101.github.io/kitten-calculator/documentation/features/tabby-mum.png)
 
 - __Answer Buttons__
   - For each question, the application displays a set of buttons that allow the user to choose appropriate answers to the question.
@@ -159,7 +159,7 @@ Once all results have been calculated and loaded, they are displayed to the user
   - Images on each answer button illustrate the trait represented by that answer.
   - The answer button changes colour when selected, and on hover, to illustrate to the user the current button state.
 
-  ![Answer buttons](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/answer-buttons.png)
+  ![Answer buttons](https://laura10101.github.io/kitten-calculator/documentation/features/answer-buttons.png)
 
 - __Question and Answer Filtering__
   - Each question and its associated answers has a (possibly empty) set of preconditions.
@@ -168,9 +168,9 @@ Once all results have been calculated and loaded, they are displayed to the user
   - The first of the following examples shows that when dad's base colour is black, the user can specify that he additionally carries chocolate or cinnamon genes.
   - The second example shows that when dad's base colour is chocolate, the user can only specify that dad carries cinnamon.
 
-  ![Colours carried options for a black parent](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/black-dad-carry-options.png)
+  ![Colours carried options for a black parent](https://laura10101.github.io/kitten-calculator/documentation/features/black-dad-carry-options.png)
 
-  ![Colours carried options for a chocolate parent](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/chocolate-dad-carry-options.png)
+  ![Colours carried options for a chocolate parent](https://laura10101.github.io/kitten-calculator/documentation/features/chocolate-dad-carry-options.png)
 
 - __Parent Phenotype Display__
   - To assist the user in accurately entering each parent's traits, a phenotype display is provided at the top of each question.
@@ -178,9 +178,9 @@ Once all results have been calculated and loaded, they are displayed to the user
   - As the user selects each answer, this display will update to reflect the parent's phenotype based on the current selection.
   - The following screenshots show the phenotype display for a chocolate parent when the "bicolour" option is selected, versus when the "van" option is selected for the white spotting gene.
 
-  ![Phenotype display for a chocolate bicolour parent](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/chocolate-bicolour-dad-phenotype.png)
+  ![Phenotype display for a chocolate bicolour parent](https://laura10101.github.io/kitten-calculator/documentation/features/chocolate-bicolour-dad-phenotype.png)
 
-  ![Phenotype display for a chocolate van parent](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/chocolate-van-dad-phenotype.png)
+  ![Phenotype display for a chocolate van parent](https://laura10101.github.io/kitten-calculator/documentation/features/chocolate-van-dad-phenotype.png)
 
 
 - __Previous Step Button__
@@ -190,21 +190,21 @@ Once all results have been calculated and loaded, they are displayed to the user
   - This is the result of the question and answer filtering above.
   - The following example shows the "previous step" button on the second question with the answer "Yes" selected. The user then presses previous step to return to the first question.
   - The screenshot below shows the user interface with "Yes" selected for question two.
-  ![Answer selected for dilute question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/dilute-question-selection.png)
+  ![Answer selected for dilute question](https://laura10101.github.io/kitten-calculator/documentation/features/dilute-question-selection.png)
 
   - The screenshot below shows the application's internal state when on the second question with "Yes" selected.
 
-  ![The model state after selecting "Yes" for the dilute question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/model-state-dilute-question.png)
+  ![The model state after selecting "Yes" for the dilute question](https://laura10101.github.io/kitten-calculator/documentation/features/model-state-dilute-question.png)
 
   - The screenshot below shows the application's internal state after selecting a different option on the previous question. Note that the answer to question 2 has now been removed.
 
-  ![The model state after changing answers to the previous base colour question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/model-state-after-answer-change.png)
+  ![The model state after changing answers to the previous base colour question](https://laura10101.github.io/kitten-calculator/documentation/features/model-state-after-answer-change.png)
   
 - __Results Preloader__
   - When the user has finished entering all the required information for dad and mum, and have clicked the "calculate" button, a preloader is displayed while the kitten results are being calculated.
   - The preloader shows an animation to illustrate that the browser has not crashed.
   - The preloader also display a countdown to let the user know how long it will be until their results are ready.
-  ![The results preloader](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/results-countdown.png)
+  ![The results preloader](https://laura10101.github.io/kitten-calculator/documentation/features/results-countdown.png)
 
 - __Kitten Results Display__
   - Once the kitten results have been calculated, they are displayed to the user through the results display.
@@ -213,7 +213,7 @@ Once all results have been calculated and loaded, they are displayed to the user
   - Additionally, the probability of that phenotype being produced by the pairing of mum and dad is displayed.
   - Furthermore, the textual description of the phenotype is shown.
   - This allows the user to understand the range of kittens they could get from mum and dad, and the likelihood of each.
-  ![Example results](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/results.png)
+  ![Example results](https://laura10101.github.io/kitten-calculator/documentation/features/results.png)
 
 - __Start Again Button__
   - Once the user has finished reviewing the calculated results, they can start a new calculation by clicking the start again button.
