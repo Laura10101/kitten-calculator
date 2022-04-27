@@ -2,7 +2,17 @@
 
 ## Browser Compatibility
 
-### Introductory Section
+### Background Gradient (Small Screens)
+- The following screenshots show that the background gradient displays correctly in Edge, Chrome, and Firefox on small screens.
+- The gradient fills the background space in all browsers with no stitching.
+
+### Background Gradient (Large Screens)
+- The following screenshots show that the background gradient displays correctly in Edge, Chrome, and Firefox on small screens.
+- The gradient fills the background space in all browsers with no stitching.
+
+### Introductory Section (Small Screens)
+- The following screenshots show that the introductory section displays correctly in Edge, Chrome, and Firefox on small screens.
+
 
 ### Parent Genotype Questions
 
@@ -13,6 +23,8 @@
 ### Parent Phenotype Display
 
 ### Results Preloader
+
+### Comparium Tests
 
 ## Code Validation
 
