@@ -19,7 +19,7 @@ On Chrome:
 ![Background gradient on Firefox](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-questions-one.png)
 
 ### Parent Genotype Questions including Phenotype Display and Answer Buttons
-- The following screenshots show that the parent genotype questions feature works correctly in Edge, Chrome, and Firefox.
+- The following screenshots show that the parent genotype questions, phenotype display, and answer buttons features works correctly in Edge, Chrome, and Firefox.
 - Questions are displayed correctly.
 - Users can correctly navigate between questions.
 - Users can select answers.
@@ -50,6 +50,21 @@ On Chrome:
 ![Questions feature on Chrome](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-questions-three.png)
 
 ### Results Preloader
+- The following screenshots show that the result preloader works correctly in Edge, Chrome, and Firefox.
+- The animation works as expected.
+- The countdown also counts down correctly.
+
+On Edge:
+
+![Results preloader on Edge](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-preloader.png)
+
+On Firefox:
+
+![Results preloader on Firefox](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-preloader.png)
+
+On Chrome
+
+![Results preloader on Chrome](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-preloader.png)
 
 ### Results
 
