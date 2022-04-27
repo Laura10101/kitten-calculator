@@ -71,6 +71,16 @@ On Chrome
 - A set of results are calculated.
 - All elements of the results are displayed (image, probability, and phenotype description).
 
+On Edge:
+
+![Results on Edge](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-results.png)
+
+On Firefox:
+![Results on Firefox](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-results.png)
+
+On Chrome:
+![Results on Chrome](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-results.png)
+
 ### Comparium Tests
 
 ## Code Validation
