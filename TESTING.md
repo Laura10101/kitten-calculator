@@ -119,7 +119,7 @@ No validation errors were found for the UI layer:
 
 ![JS validation for the UI layer](https://laura10101.github.io/kitten-calculator/documentation/testing/js-validation-ui.png)
 
-No validation errors were found for the logic layer. However, one undefined variable (module) was found. This is because the functions in the logic layer need to be exported for testing within Jest. However, the module exporter is a Node.js feature which is not recognised by the validator. It was decided to leave this in to enable automated testing using Jest:
+No validation errors were found for the logic layer. However, one undefined variable (module) was found. This is because the functions in the logic layer need to be exported for testing within Jest. However, the module exporter is a Node.js feature which is not recognised by the validator. This was therefore left in the code, but wrapped in a test to ensure that the undefined variable does not throw an error in the browser:
 
 ![JS validation for the logic layer](https://laura10101.github.io/kitten-calculator/documentation/testing/js-validation-logic.png)
 
