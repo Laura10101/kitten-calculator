@@ -82,6 +82,7 @@ On Chrome:
 ![Results on Chrome](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-results.png)
 
 ### Comparium Tests
+To further build confidence that 
 
 ## Code Validation
 
@@ -129,6 +130,27 @@ No errors were identified for the data layer, although three unused variables we
 ## Responsiveness
 
 ### Background Gradient
+
+- The following screenshots demonstrate that the background gradient displays correctly both on small desktop screens and on mobile devices.
+- This test was performed as, during development, a problem was identified with the background gradient stitching differently at different devices sizes.
+- The test passes if the gradient fills the screen at all devices sizes, across browsers.
+- Larger screen sizes have been tested extensively through the browser compatibility tests above.
+
+On Edge (small):
+
+![Background gradient on a small Edge device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-gradient.png)
+
+On Firefox (small):
+
+![Background gradient on a small Firefox device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-gradient.png)
+
+On Chrome (small):
+
+![Background gradient on a small Chrome device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-gradient.png)
+
+On Safari (mobile):
+
+![Background gradient on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/mobile-gradient.png)
 
 ### Questions Page
 
