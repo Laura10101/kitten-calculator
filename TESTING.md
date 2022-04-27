@@ -173,7 +173,7 @@ On Chrome (small):
 
 On Safari (mobile):
 
-![Questions section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/safari-questions-small.png)
+![Questions section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/mobile-questions-small.png)
 
 ### Results Page
 
@@ -196,7 +196,7 @@ On Chrome (small):
 
 On Safari (mobile):
 
-![Results section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/safari-results-responsive.png)
+![Results section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/mobile-results-responsive.png)
 
 ## User Story Tests
 
