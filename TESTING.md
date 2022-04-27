@@ -196,7 +196,7 @@ On Chrome (small):
 
 On Safari (mobile):
 
-![Results section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/mobile-results-responsive.png)
+![Results section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/mobile-results-small.png)
 
 ## User Story Tests
 
