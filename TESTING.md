@@ -2,27 +2,56 @@
 
 ## Browser Compatibility
 
-### Background Gradient (Small Screens)
-- The following screenshots show that the background gradient displays correctly in Edge, Chrome, and Firefox on small screens.
+### Background Gradient
+- The following screenshots show that the background gradient displays correctly in Edge, Chrome, and Firefox.
 - The gradient fills the background space in all browsers with no stitching.
 
-### Background Gradient (Large Screens)
-- The following screenshots show that the background gradient displays correctly in Edge, Chrome, and Firefox on small screens.
-- The gradient fills the background space in all browsers with no stitching.
+On Edge:
 
-### Introductory Section (Small Screens)
-- The following screenshots show that the introductory section displays correctly in Edge, Chrome, and Firefox on small screens.
+![Background gradient on Edge](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-questions-one.png)
 
+On Firefox:
 
-### Parent Genotype Questions
+![Background gradient on Firefox](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-questions-one.png)
 
-### Answer Buttons
+On Chrome:
 
-### Question and Answer Filtering
+![Background gradient on Firefox](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-questions-one.png)
 
-### Parent Phenotype Display
+### Parent Genotype Questions including Phenotype Display and Answer Buttons
+- The following screenshots show that the parent genotype questions feature works correctly in Edge, Chrome, and Firefox.
+- Questions are displayed correctly.
+- Users can correctly navigate between questions.
+- Users can select answers.
+- The phenotype display correctly updates as users answer questions.
+
+On Edge:
+
+![Questions feature on Edge](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-questions-one.png)
+
+![Questions feature on Edge](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-questions-two.png)
+
+![Questions feature on Edge](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-questions-three.png)
+
+On Firefox:
+
+![Questions feature on Firefox](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-questions-one.png)
+
+![Questions feature on Firefox](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-questions-two.png)
+
+![Questions feature on Firefox](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-questions-three.png)
+
+On Chrome:
+
+![Questions feature on Chrome](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-questions-one.png)
+
+![Questions feature on Chrome](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-questions-two.png)
+
+![Questions feature on Chrome](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-questions-three.png)
 
 ### Results Preloader
+
+### Results
 
 ### Comparium Tests
 
