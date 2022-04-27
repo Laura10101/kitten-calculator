@@ -9,8 +9,29 @@
 ## Code Validation
 
 ### HTML Validation
+All validation errors identified during the development of the application were resolved.
+
+One warning remains indicating that the sections that are used for the different parts of the application have no headers. I decided to ignore these warnings as adding headers would have undermined the layout of the application.
+
+The index.html file was validated using the W3C official validator as shown below:
+![HTML validation on the index.html file](https://laura10101.github.io/kitten-calculator/assets/img/documentation/testing/html-validation-index.png)
+
+Furthermore, the questions and results section of the application each generate HTML dynamically through JavaScript, so a sample of the HTML generated at each stage was also validated.
+
+The following screenshot shows the validation results of HTML generated during the question stage of the application:
+
+![HTML validation on the questions section](https://laura10101.github.io/kitten-calculator/assets/img/documentation/testing/html-validation-questions.png)
+
+The following screenshot shows the validation results of HTML generated during the results stage of the application:
+
+![HTML validation on the results section](https://laura10101.github.io/kitten-calculator/assets/img/documentation/testing/html-validation-results.png)
+
+[Click here](https://validator.w3.org/nu/?doc=https%3A%2F%2Flaura10101.github.io%2Fkitten-calculator%2F) for a link to the official W3C validator for the application.
 
 ### CSS Validation
+The CSS was validated through W3C's jigsaw validator and no errors were found.
+
+![CSS validation](https://laura10101.github.io/kitten-calculator/assets/img/documentation/testing/css-validation.png)
 
 ### JavaScript Validation
 
