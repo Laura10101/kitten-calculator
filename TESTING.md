@@ -184,19 +184,19 @@ On Safari (mobile):
 
 On Edge (small):
 
-![Results section on a small Edge device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-results-small.png)
+![Results section on a small Edge device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/edge-results-responsive.png)
 
 On Firefox (small):
 
-![Results section on a small Firefox device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-results-small.png)
+![Results section on a small Firefox device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/ff-results-responsive.png)
 
 On Chrome (small):
 
-![Results section on a small Chrome device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-results-small.png)
+![Results section on a small Chrome device](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-results-responsive.png)
 
 On Safari (mobile):
 
-![Results section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/safari-results-small.png)
+![Results section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/safari-results-responsive.png)
 
 ## User Story Tests
 
