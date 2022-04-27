@@ -4,7 +4,15 @@
 
 ### Introductory Section
 
-### Feature 2
+### Parent Genotype Questions
+
+### Answer Buttons
+
+### Question and Answer Filtering
+
+### Parent Phenotype Display
+
+### Results Preloader
 
 ## Code Validation
 
@@ -241,6 +249,23 @@ The following screenshots confirm that this user story is satisfied by the Start
 ![Start again](https://laura10101.github.io/kitten-calculator/assets/img/documentation/testing/start-again.png)
 
 ### Automated Tests
+
+The logic layer in logic.js provides a set of functions for calculating the possible phenotypes produced by a pairing between mum and dad. The application captures information for five sets of genes (colour, dilute, white spotting, tabby, colourpoint) for both mum and dad. Mum and dad have two alleles each for each gene. There are, therefore, four possible genetic combinations for each gene in the offspring (mum 1 x dad 1, mum 1 x dad 2, mum 2 x dad 1, mum 2 x dad 2), so the total number of possible genetic permutations exceeds one thousand with more than seventy different phenotypes.
+
+Comprehensively verifying the correctness of these logic layer calculations through manual testing would not, therefore, be feasible within a realistic timescale. I therefore opted to implement good test coverage of the logic layer. I adopted a bottom-up approach to testing, using comprehensive testing to check the validity of lower-level functions and a sample of automated tests to check that higher-level functions worked as expected based on the lower-level functions. The tests implemented were as follows:
+
+- getPhenotypeFrequency is a simple function to return the number of times that a given string appears in an array of strings. Five test cases were implemented to test this function for a range of different strings and arrays. All tests are passing.
+- calculateProbabilities builds on getPhenotypeFrequency to produce a JSON object from an array of strings. The expectation is that each unique string in the input array becomes a key in the output JSON object, and that the value for each key is the probability that the string appears in the array. Four test cases of varying complexity were implemented to test this function for a range of different input arrays. All tests are passing.
+- determineWhitespotting is a function which returns a string describing the coat pattern of a cat depending on how many whitespotting alleles the cat has. The function accepts two boolean values as input indicating whether allele 1 and allele 2 are respectively positive or negative for whitespotting. Four automated tests were provided to test all of the four possible permutations of input. All tests are passing.
+- determineTabby is a function which returns a string describing the tabby markings of a cat depending on how many tabby alleles the cat has. The function accepts two boolean values as input to indicate whether allele 1 and allele 2 for the tabby gene are respectively positive or negative for tabby. Four automated tests were provided to test all of the four possible permutations of input. All tests are passing.
+- determineColourpoint is similarly a function which returns a string describing whether or not the cat is colourpoint based on the number of colourpoint alleles the cat has. Again, two boolean values are accepted as input to indicate whether allele 1 and allele 2 are positive or negative for colourpoint. Four automated tests were provided to test all of the possible permutations of input. All tests are passing.
+- determineColour also produces a string describing the colour that a cat will be. It accepts two string inputs representing the two colour alleles the cat has, but also accepts two boolean values indicating the number of dilute alleles the cat has. Comprehensive testing was also performed here to ensure that all possible permutations of input produce the correct result for colour. All tests are passing.
+- determinePhenotype is a function which uses the determineWhitespotting, determineTabby, determineColourpoint, and determineColour functions to determine the overall phenotype of a cat based on its genotype. A JSON object is accepted as input which consists of two values for each gene, representing the genotype of the cat. The relevant underlying functions are called to determine the phenotypical traits for each gene based on the two values for that gene, and these results are concatenated to produce the overall string. Automated testing was performed to verify the output phenotype for a sample of the more complex genotypes. All tests are passing.
+- The calculate kittens function is the top-level logic layer function which orchestrates the overall calculation process. The function first generates all possible kitten genotypes based on the possible permutations of mum and dad's genotypes. It then produces an array containing the phenotype for each calculated kitten genotype. Finally, it passes this array into calculateProbabilities to produce the final JSON object representing the probability of each unique phenotype occuring. Two automated test cases were implemented to test that this functionality works as expected. All tests are passing.
+
+The following screenshot shows the results of the automated testing:
+
+![Automated testing results](https://laura10101.github.io/kitten-calculator/assets/img/documentation/testing/automated-tests.png)
 
 ## Bugs
 
