@@ -70,7 +70,8 @@ section {
     border-style: solid;
     border-radius: 5px;
     width: 150px;
-    margin: 10px
+    margin: 10px;
+    vertical-align: top;
 }
 
 .answer:hover {
@@ -89,6 +90,7 @@ section {
     background-color: transparent;
     border: none;
     color: #000000;
+    vertical-align: top;
 }
 
 .result-text {
@@ -99,6 +101,7 @@ section {
 .cat-image {
     width: 150px;
     height: 150px;
+    vertical-align: top;
 }
 
 /* Navigation buttons */
