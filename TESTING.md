@@ -67,6 +67,9 @@ On Chrome
 ![Results preloader on Chrome](https://laura10101.github.io/kitten-calculator/assets/img/documentation/compatibility/chrome-preloader.png)
 
 ### Results
+- The following screenshots show that the results are correctly calculated and displayed in Edge, Chrome, and Firefox.
+- A set of results are calculated.
+- All elements of the results are displayed (image, probability, and phenotype description).
 
 ### Comparium Tests
 
