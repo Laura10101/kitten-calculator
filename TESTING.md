@@ -35,6 +35,20 @@ The CSS was validated through W3C's jigsaw validator and no errors were found.
 
 ### JavaScript Validation
 
+JSHint was used to validate the JavaScript for all three layers (UI, logic and data).
+
+No validation errors were found for the UI layer:
+
+![JS validation for the UI layer](https://laura10101.github.io/kitten-calculator/assets/img/documentation/testing/js-validation-ui.png)
+
+No validation errors were found for the logic layer. However, one undefined variable (module) was found. This is because the functions in the logic layer need to be exported for testing within Jest. However, the module exporter is a Node.js feature which is not recognised by the validator. It was decided to leave this in to enable automated testing using Jest:
+
+![JS validation for the logic layer](https://laura10101.github.io/kitten-calculator/assets/img/documentation/testing/js-validation-logic.png)
+
+No errors were identified for the data layer, although three unused variables were found. This is because these variables are the functions provided by the data layer. These are not consumed within the data.js file, but instead are used at higher layers of the application:
+
+![JS validation for the data layer](https://laura10101.github.io/kitten-calculator/assets/img/documentation/testing/js-validation-data.png)
+
 ## Responsiveness
 
 ### Background Gradient
