@@ -4,7 +4,9 @@ British Shorthair cats are the most popular breed of cat in the UK. There is a l
 
 This kitten calculator is designed for hobby breeders, who have a basic knowledge of cat colours and feline genetics. It assumes, therefore, that its users will already know the basic terminology for feline colours: blue is grey, chocolate is brown, cinnamon is a warm brown, and so on. In order to make the application as accessible as possible, I have also opted to have images of each of the different variations of cats that is possible from the genes that have been used. This means that even where a user is not aware that blue means grey, there will be a visual representation of each colour and pattern. I used a recommended freelancer on Fiver to create these for the project, in the colours and patterns that I determined and provided photographs for. I am the owner of the copyright of these images since they were paid for with full commercial rights for use. 
 
-The kitten calculator will be placed on an existing website. It will keep people returning to the site, thereby helping to increase web traffic. The website in question is a member of the Amazon Affiliate Marketing scheme, so an increase in web traffic may lead to an increase in site income through that scheme. It will also assist with establishing the website as a trusted source of expert information. 
+The kitten calculator will be placed on an existing website. It will keep people returning to the site, thereby helping to increase web traffic. The website in question is a member of the Amazon Affiliate Marketing scheme, so an increase in web traffic may lead to an increase in site income through that scheme. It will also assist with establishing the website as a trusted source of expert information.
+
+![Am I responsive?](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/am-i-responsive.png)
 
 ## Users
 Users will be British Shorthair breeders. Some will be new to breeding, or just considering breeding, and therefore not have any knowledge beyond the most basic terminology. Others will be more experienced, understand all the terminology and be able to calculate the colour of kittens themselves, but want a quicker or easier way of achieving it. 
@@ -195,7 +197,7 @@ Once all results have been calculated and loaded, they are displayed to the user
   ![The model state after selecting "Yes" for the dilute question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/model-state-dilute-question.png)
 
   - The screenshot below shows the application's internal state after selecting a different option on the previous question. Note that the answer to question 2 has now been removed.
-  
+
   ![The model state after changing answers to the previous base colour question](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/model-state-after-answer-change.png)
   
 - __Results Preloader__
@@ -247,7 +249,19 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 ### Educational Resources
 
+The following educational and community resources were used during the implementation of this site:
+
+- W3 Schools
+- Stack Overflow
+- CSS Tricks
+- [HTML Living Standard](https://html.spec.whatwg.org/)
+
+Additionally, assistance was provided by my Code Institute tutor, and by the Code Institute Slack community.
+
 ### Code
+Code libraries or snippets were used in whole or in part from the following sources:
+
+- All JavaScript code was 
 
 ### Content
 
