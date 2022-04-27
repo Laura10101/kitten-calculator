@@ -183,8 +183,8 @@ Once all results have been calculated and loaded, they are displayed to the user
   ![Phenotype display for a chocolate van parent](https://laura10101.github.io/kitten-calculator/assets/img/documentation/features/chocolate-van-dad-phenotype.png)
 
 
-- __Previous Question Buttons__
-  - A previous question button is provided to allow the user to return to previous questions if they are unhappy with the answer they provided.
+- __Previous Step Button__
+  - A previous step button is provided to allow the user to return to previous questions if they are unhappy with the answer they provided.
   - Having returned to a previous question, if the user changes their answer to that question all the answers they have provided to any subsequent questions are forgotten.
   - This is important because if the user changes an earlier answer, the answer they gave to a subsequent question may no longer be valid.
   - This is the result of the question and answer filtering above.
