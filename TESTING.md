@@ -274,17 +274,15 @@ By contrast, mum is specified as non-tabby. Tabby is dominant and so a non-tabby
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-ten.png)
 
-In another example, dad is specified as non-pointed. Like tabby, colourpoint is dominant and so a non-pointed cat cannot carry colourpoint. Therefore, having selected that dad is non-pointed the user moves straight to entering mum's traits:
+In another example, dad is specified as non-pointed. Colourpoint is recessive and so a non-pointed cat can carry colourpoint. Therefore, having selected that dad is non-pointed the user is asked whether he carries a single colourpoint gene:
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-five.png)
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-six.png)
 
-By contrast, mum is entered as colourpoint and so the user is asked whether she carries an additional colourpoint gene:
+By contrast, mum is entered as colourpoint and so the user moves straight to calculating kittens:
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-eleven.png)
-
-![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-twelve.png)
 
 **As a British shorthair hobby breeder, I want the application to ensure that I select the right number of traits for each question, so that it can accurately calculate my kittens**
 
