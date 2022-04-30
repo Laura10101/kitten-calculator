@@ -155,6 +155,10 @@ Once all results have been calculated and loaded, they are displayed to the user
 
   ![Tabby question for mum](https://laura10101.github.io/kitten-calculator/documentation/features/tabby-mum.png)
 
+One further display that I considered adding to the Parent Genotype Questions feature was a progress indicator to let the user know how many questions were remaining. However, the implication of the Question and Answer Filtering feature is that the number of questions left to answer will depend on the user's input. It is therefore impossible to display with certainty the number of questions remaining and, therefore, a progress indicator would potentially confuse a user. This is because by answering one conditional question, the user could jump several questions closer to the final question giving the impression of an error in the progress bar.
+
+An important consideration in the design of this feature was its inherently asynchronous nature. The application displays a question and possible answers to the user, and then allows them to asynchronously decide what answer to provide without waiting or looping. To achieve this, event handlers were added to the "Next Question" and Answer buttons and the user's answer selections are held in a global variable called 'model'. The model is updated when the user selects their answer, whereas the "Next Question" button triggers the process to clear the existing question and display the next one. Since asynchronous events are non-blocking, this implementation gives rise to the small possibility that in a slow-running browser the user could click "Next Question" and then choose a different answer on the existing question before it had been cleared. The result of this might be that the user is taken to a next question which is valid for their initial answer, but not for their updated answer. This could lead to invalid entry of genetic combinations. To defend against this, I have ensured that the first line of the "Next Question" button's onclick handler clears the existing question's answers to avoid a new selection being made after "Next Question" has been clicked.
+
 - __Answer Buttons__
   - For each question, the application displays a set of buttons that allow the user to choose appropriate answers to the question.
   - This prevents the user from entering invalid input, as they are restricted to the available options.
@@ -166,7 +170,7 @@ Once all results have been calculated and loaded, they are displayed to the user
 - __Question and Answer Filtering__
   - Each question and its associated answers has a (possibly empty) set of preconditions.
   - These preconditions allow questions and answers to be filtered based on the answers given to earlier questions.
-  - This mechanism prevents the user from inputting impossible genetic combinations by ensuring only valid answers can be selected.
+  - This mechanism prevents the user from inputting impossible genetic combinations by ensuring only valid answers can be selected based on the previous answers given.
   - The first of the following examples shows that when dad's base colour is black, the user can specify that he carries the chocolate or cinnamon gene, but not both.
   - The second example shows that when dad's base colour is chocolate, the user can only specify that dad carries cinnamon.
   - This reflects the genetic reality: a black cat can carry either chocolate or cinnamon, but not both. A chocolate cat can carry cinnamon. 
@@ -210,6 +214,8 @@ Once all results have been calculated and loaded, they are displayed to the user
   - The preloader also display a countdown to let the user know how long it will be until their results are ready.
   - Primarily this serves a functional purpose, but it also a psychological one. Psychological studies tell us that humans tend to have more trust in complex computer calculations where they have taken some time to 'process'. Having a small delay of a few seconds therefore increases users' perceived value of the process, and trust in it. Additionally, having the countdown helps to build a sense of excitement as people wait to find out what colour kittens they can expect. 
   ![The results preloader](https://laura10101.github.io/kitten-calculator/documentation/features/results-countdown.png)
+
+  The results preloader uses an asynchronous timeout process to control the global countdown variable. The timer is set to one second and when that second is up, the countdown variable is decremented by 1. To avoid any syncronisation issues, each timeout (other than the initial one) is only set within the lambda function that is passed to its predecessor timeout.
 
 - __Kitten Results Display__
   - Once the kitten results have been calculated, they are displayed to the user through the results display.
