@@ -734,43 +734,20 @@ The following screenshot shows the results of the automated testing:
 ## Bugs
 
 ### Fixed Bugs
-Once the user had entered dad's genes, the 'Next' button would have to be clicked twice in order to get to the next question, which wsa the first question for mum's genes. 
-XXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXX
-
-The gradient background was stitching and repeating itself. 
-XXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXX
-
-Buttons not fully hidden 
-I hid the buttons so that the user could not progress to the next section without making a relevant selection (in order to avoid incorrect calculations). However, the buttons were appearing for a split second on each screen. This meant that if a user clicked twice, quickly, they could get through to the next question without entering the correct informaiton. After investigating, I discovered that I had applied a delay of 0.4 seconds in button styling, which was also applying to the hide button action. I simply deleted the 0.4s delay, and the issue was fixed without losing any important functionality. 
-
-Button IDs had spaces, and double spaces in 
-XXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXX 
-
-Initial display 
-The message 'you are currently entering dad's genes', and the visual represetnation of the parent cat did not appear until the user had made thier first selection. 
-XXXXXXXXXXXXXX
-XXXXXXXXXXXXXX
-XXXXXXXXXXXXXX
-
-The 'Start Again' button did not work properly 
-XXXXXXXXXXXXXX
-XXXXXXXXXXXXXX
-XXXXXXXXXXXXXX
-
-The colours of cats were not capitalised in their descriptions 
-Simply capitalised all of the basic colours in the JSON object, since the colour is always the frist word of the string, this worked well. 
-XXXXXXXXXXXXX
-XXXXXXXXXXXXX
-
-The application was allowing a user to enter incorrect information 
-The application was allowing a user to enter that dad/mum was black or blue and carried chocolate AND cinnamon. It is not possible for a cat to be black and carry chocolate and cinnamon, only one or the other. I therefore .........................
-XXXXXXXXXXX
-XXXXXXXXXXX 
+The following bugs were fixed during the development process:
+- Initially, once the user had entered dad's genes, the 'Next' button would have to be clicked twice in order to get to the next question, which was the first question for mum's genes. 
+- The gradient background was stitching and repeating itself. This was resolved by setting the background-attachment to fixed in CSS.
+- Users were able to move to the next question without answering the current question. To fix this, I hid the buttons so that the user could not progress to the next section without making a relevant selection (in order to avoid incorrect calculations).
+- The 'Next Question' buttons were appearing for a split second on each screen. This meant that if a user clicked twice, quickly, they could get through to the next question without entering the correct informaiton. This was due to a delay of 0.4 seconds in button styling, which was also applying to the hide button action. I resolved the issue by deleting the 0.4s delay.
+- Some phenotype descriptions included multiple spaces. This was phenotype descriptions are calculated by concatenating the description for each trait (colour, tabby, white spotting, point) but some variants of some traits may return an empty string. The issue was resolved using RegEx to replace all instances of two or more spaces with a single space.
+- Button IDs contained spaces and, in some cases, double spaces. This was partly because button IDs are calculated from phenotype IDs. Fixing the previous bug improved the issue. A further issue was that I was using replace() to exchange spaces for hyphens, which only replpaces the first instance. The issue was ultimately fixed by switching to replaceAll() instead.
+- The message 'you are currently entering dad's genes', and the visual represetnation of the parent cat did not appear until the user had made thier first selection. This is because the logic to display the parent's phenotype was initially only invoked on answer selection. To address this, I amended the logic so that it was also called when displaying a question.
+- The colours of cats were not capitalised in their descriptions. This was resolved by capitalising all of the basic colours in the questions data JSON object, since the colour is always the first word of the string.
+- The application was allowing users to enter that dad/mum was black or blue and carried chocolate AND cinnamon. It is not possible for a cat to be black and carry chocolate and cinnamon, only one or the other. This is because I had intially grouped the dilute question and the "colours carried" question into one which was set to multiselect. The functionality does not yet exist to allow conditional answer filtering within a single question. I therefore resolved the issue by separating out dilute and "colours carried", making each single select only.
+- Selection of the next or previous valid question was not working correctly for the first or last question, or the last question before changing parent. This was because several boundary conditions were not being adequately handled in the showNextQuestion and showPreviousQuestion functions. Several refinements were made and tested to ensure this worked as required.
+- When calculating gene permutations, all gene keys were displaying as the literal string 'gene' instead of the name of the corresponding gene. This was resolved by updating the syntax used to build the gene permutation JSON object (see commit 0b214a00a97a7422326db5e5ae70de4701deab8f). The revised syntax, however, was not validated by JSHint so was further refined by commit cae0cc4b7aaea038b2d44044704a69255f34fbe9.
+- determineWhitespotting was returning 'high white' instead of 'van'. The relevant string literal was updated accordingly.
+- The answers from previous questions were displayed in addition to the new answers when moving to the next question. Logic was added to clear the existing answers when display a new question. 
 
 ### Unresolved Bugs
+I am not aware of any unresolved bugs at this time.
