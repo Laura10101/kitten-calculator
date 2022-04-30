@@ -386,14 +386,346 @@ The logic layer in logic.js provides a set of functions for calculating the poss
 
 Comprehensively verifying the correctness of these logic layer calculations through manual testing would not, therefore, be feasible within a realistic timescale. I therefore opted to implement good test coverage of the logic layer. I adopted a bottom-up approach to testing, using comprehensive testing to check the validity of lower-level functions and a sample of automated tests to check that higher-level functions worked as expected based on the lower-level functions. The tests implemented were as follows:
 
-- getPhenotypeFrequency is a simple function to return the number of times that a given string appears in an array of strings. Five test cases were implemented to test this function for a range of different strings and arrays. All tests are passing.
-- calculateProbabilities builds on getPhenotypeFrequency to produce a JSON object from an array of strings. The expectation is that each unique string in the input array becomes a key in the output JSON object, and that the value for each key is the probability that the string appears in the array. Four test cases of varying complexity were implemented to test this function for a range of different input arrays. All tests are passing.
-- determineWhitespotting is a function which returns a string describing the coat pattern of a cat depending on how many whitespotting alleles the cat has. The function accepts two boolean values as input indicating whether allele 1 and allele 2 are respectively positive or negative for whitespotting. Four automated tests were provided to test all of the four possible permutations of input. All tests are passing.
-- determineTabby is a function which returns a string describing the tabby markings of a cat depending on how many tabby alleles the cat has. The function accepts two boolean values as input to indicate whether allele 1 and allele 2 for the tabby gene are respectively positive or negative for tabby. Four automated tests were provided to test all of the four possible permutations of input. All tests are passing.
-- determineColourpoint is similarly a function which returns a string describing whether or not the cat is colourpoint based on the number of colourpoint alleles the cat has. Again, two boolean values are accepted as input to indicate whether allele 1 and allele 2 are positive or negative for colourpoint. Four automated tests were provided to test all of the possible permutations of input. All tests are passing.
-- determineColour also produces a string describing the colour that a cat will be. It accepts two string inputs representing the two colour alleles the cat has, but also accepts two boolean values indicating the number of dilute alleles the cat has. Comprehensive testing was also performed here to ensure that all possible permutations of input produce the correct result for colour. All tests are passing.
-- determinePhenotype is a function which uses the determineWhitespotting, determineTabby, determineColourpoint, and determineColour functions to determine the overall phenotype of a cat based on its genotype. A JSON object is accepted as input which consists of two values for each gene, representing the genotype of the cat. The relevant underlying functions are called to determine the phenotypical traits for each gene based on the two values for that gene, and these results are concatenated to produce the overall string. Automated testing was performed to verify the output phenotype for a sample of the more complex genotypes. All tests are passing.
-- The calculate kittens function is the top-level logic layer function which orchestrates the overall calculation process. The function first generates all possible kitten genotypes based on the possible permutations of mum and dad's genotypes. It then produces an array containing the phenotype for each calculated kitten genotype. Finally, it passes this array into calculateProbabilities to produce the final JSON object representing the probability of each unique phenotype occuring. Two automated test cases were implemented to test that this functionality works as expected. All tests are passing.
+**Unit tests for getPhenotypeFrequency**
+
+getPhenotypeFrequency is a simple function to return the number of times that a given string appears in an array of strings. Five test cases were implemented to test this function for a range of different strings and arrays. All tests are passing.
+
+The function is shown below:
+
+```JavaScript
+function getPhenotypeFrequency(possiblePhenotypes, phenotype) {
+    let count = 0;
+    possiblePhenotypes.forEach(function (possiblePhenotype) {
+        if (possiblePhenotype === phenotype) {
+            count = count + 1;
+        }
+    });
+    return count;
+}
+```
+
+Some of the automated tests for the function are shown below:
+
+```JavaScript
+test("getPhenotypeFrequency returns 1 for [black, blue, black, cinnamon tabby, cinnamon tabby], cinnamon tabby", () => {
+    expect(getPhenotypeFrequency(["black", "blue", "black", "cinnamon tabby", "cinnamon tabby"], "cinnamon tabby")).toEqual(2);
+});
+
+test("getPhenotypeFrequency returns 10 for [black, black, black, black, black, black, black, black, black, black], black", () => {
+    expect(getPhenotypeFrequency(["black", "black", "black", "black", "black", "black", "black", "black", "black", "black"], "black")).toEqual(10);
+});
+```
+
+**Unit tests for calculateProbabilities**
+
+calculateProbabilities builds on getPhenotypeFrequency to produce a JSON object from an array of strings. The expectation is that each unique string in the input array becomes a key in the output JSON object, and that the value for each key is the probability that the string appears in the array. Four test cases of varying complexity were implemented to test this function for a range of different input arrays. All tests are passing.
+
+The function is shown below:
+
+```JavaScript
+function calculateProbabilities(possiblePhenotypes) {
+    let phenotypeProbabilities = {};
+
+    //Get the distinct phenotypes
+    let phenotypes = [...new Set(possiblePhenotypes)];
+
+    //For each distinct phenotype, calculate the probability
+    //that it occurs in the list of possible phenotypes
+    //Set the probability in the object
+    phenotypes.forEach(function(phenotype) {
+        let frequency = getPhenotypeFrequency(possiblePhenotypes, phenotype);
+        let probability = (frequency / possiblePhenotypes.length) * 100;
+        phenotypeProbabilities[phenotype] = probability;
+    });
+    return phenotypeProbabilities;
+}
+```
+
+The automated tests for the function are shown below:
+
+```JavaScript
+test("calculateProbabilities returns { 'lilac' : 100 } for [lilac]", () => {
+    expect(calculateProbabilities(["lilac"])).toEqual({
+        "lilac": 100
+    });
+});
+
+test("calculateProbabilities returns { 'blue' : 50, 'black' : 50 } for [blue, blue, black, black]", () => {
+    expect(calculateProbabilities(["blue", "blue", "black", "black"])).toEqual({
+        "blue": 50,
+        "black": 50
+    });
+});
+
+test("calculateProbabilities returns { 'blue' : 50, 'black' : 25, 'cinnamon' : 25 } for [blue, blue, black, cinnamon]", () => {
+    expect(calculateProbabilities(["blue", "blue", "black", "cinnamon"])).toEqual({
+        "blue": 50,
+        "black": 25,
+        "cinnamon": 25
+    });
+});
+```
+
+**Unit tests for determineWhitespotting**
+
+determineWhitespotting is a function which returns a string describing the coat pattern of a cat depending on how many whitespotting alleles the cat has. The function accepts two boolean values as input indicating whether allele 1 and allele 2 are respectively positive or negative for whitespotting. Four automated tests were provided to test all of the four possible permutations of input. All tests are passing.
+
+The function is shown below:
+
+```JavaScript
+function determineWhitespotting(ws1, ws2) {
+    if (ws1 === true && ws2 === true) {
+        return "van";
+    }
+    if (ws1 === true || ws2 === true) {
+        return "bicolour";
+    }
+    return "";
+}
+```
+
+The automated tests for the function are shown below:
+
+```JavaScript
+describe("Determine white spotting", () => {
+    test("true and true for white spotting returns van", () => {
+        expect(determineWhitespotting(true, true)).toEqual("van");
+    });
+    test("true and false for white spotting returns bicolour", () => {
+        expect(determineWhitespotting(true, false)).toEqual("bicolour");
+    });
+    test("false and true for white spotting returns bicolour", () => {
+        expect(determineWhitespotting(false, true)).toEqual("bicolour");
+    });
+    test("false and false for white spotting returns ''", () => {
+        expect(determineWhitespotting(false, false)).toEqual("");
+    });
+});
+```
+
+**Unit tests for determineTabby**
+
+determineTabby is a function which returns a string describing the tabby markings of a cat depending on how many tabby alleles the cat has. The function accepts two boolean values as input to indicate whether allele 1 and allele 2 for the tabby gene are respectively positive or negative for tabby. Four automated tests were provided to test all of the four possible permutations of input. All tests are passing.
+
+The function is shown below:
+
+```JavaScript
+function determineTabby(tb1, tb2) {
+    if (tb1 === true || tb2 === true) {
+        return "tabby";
+    }
+    return "";
+}
+```
+
+The automated tests for the function are shown below:
+
+```JavaScript
+describe("Determine tabby", () => {
+    test("true and true for tabby returns tabby", () => {
+        expect(determineTabby(true, true)).toEqual("tabby");
+    });
+    test("true and false for tabby returns tabby", () => {
+        expect(determineTabby(true, false)).toEqual("tabby");
+    });
+    test("false and true for colourpoint returns tabby", () => {
+        expect(determineTabby(false, true)).toEqual("tabby");
+    });
+    test("false and false for tabby returns ''", () => {
+        expect(determineTabby(false, false)).toEqual("");
+    });
+});
+```
+
+**Unit tests for determineColourpoint**
+
+determineColourpoint is similarly a function which returns a string describing whether or not the cat is colourpoint based on the number of colourpoint alleles the cat has. Again, two boolean values are accepted as input to indicate whether allele 1 and allele 2 are positive or negative for colourpoint. Four automated tests were provided to test all of the possible permutations of input. All tests are passing.
+
+The function is shown below:
+
+```JavaScript
+function determineColourpoint(cp1, cp2) {
+    if (cp1 === true && cp2 === true) {
+        return "point";
+    }
+    return "";
+}
+```
+
+The automated tests for the function are shown below:
+
+```JavaScript
+describe("Determine colourpoint", () => {
+    test("true and true for colourpoint returns point", () => {
+        expect(determineColourpoint(true, true)).toEqual("point");
+    });
+    test("true and false for colourpoint returns ''", () => {
+        expect(determineColourpoint(true, false)).toEqual("");
+    });
+    test("false and true for colourpoint returns ''", () => {
+        expect(determineColourpoint(false, true)).toEqual("");
+    });
+    test("false and false for colourpoint returns ''", () => {
+        expect(determineColourpoint(false, false)).toEqual("");
+    });
+});
+```
+
+**Unit tests for determineColour**
+
+determineColour also produces a string describing the colour that a cat will be. It accepts two string inputs representing the two colour alleles the cat has, but also accepts two boolean values indicating the number of dilute alleles the cat has. Comprehensive testing was also performed here to ensure that all possible permutations of input produce the correct result for colour. All tests are passing.
+
+The function is shown below:
+
+```JavaScript
+function determineColour(colour1, dilute1, colour2, dilute2) {
+    if (colour1 === "B" || colour2 === "B") {
+        if (dilute1 === true && dilute2 === true) {
+            return "Blue";
+        }
+        return "Black";
+    }
+
+    if (colour1 === "b" || colour2 === "b") {
+        if (dilute1 === true && dilute2 === true) {
+            return "Lilac";
+        }
+        return "Chocolate";
+    }
+
+    if (dilute1 === true && dilute2 === true) {
+        return "Fawn";
+    }
+    return "Cinnamon";
+}
+```
+
+The automated tests for the function are shown below:
+
+```JavaScript
+test("B, false, B, false for colour returns Black", () => {
+    expect(determineColour("B", false, "B", false)).toEqual("Black");
+});
+
+test("B, false, B, true for colour returns Black", () => {
+    expect(determineColour("B", false, "B", true)).toEqual("Black");
+});
+
+test("B, true, B, false for colour returns Black", () => {
+    expect(determineColour("B", true, "B", false)).toEqual("Black");
+});
+```
+
+**Unit tests for determinePhenotype**
+determinePhenotype is a function which uses the determineWhitespotting, determineTabby, determineColourpoint, and determineColour functions to determine the overall phenotype of a cat based on its genotype. A JSON object is accepted as input which consists of two values for each gene, representing the genotype of the cat. The relevant underlying functions are called to determine the phenotypical traits for each gene based on the two values for that gene, and these results are concatenated to produce the overall string. Automated testing was performed to verify the output phenotype for a sample of the more complex genotypes. All tests are passing.
+
+The function is shown below:
+
+```JavaScript
+function determinePhenotype(genotype) {
+    let phenotype = determineColour(
+            genotype[0].colour,
+            genotype[0].dilute,
+            genotype[1].colour,
+            genotype[1].dilute
+        );
+
+    phenotype += " " + determineTabby(genotype[0].tabby, genotype[1].tabby);
+
+    phenotype += " " + determineColourpoint(
+            genotype[0].colourpoint,
+            genotype[1].colourpoint
+        );
+
+    phenotype += " " + determineWhitespotting(
+            genotype[0].whiteSpotting,
+            genotype[1].whiteSpotting
+        );
+
+    return phenotype.replaceAll(new RegExp("[ ]{2,}", "g"), " ").trim();
+}
+```
+
+Some of the automated tests for the function are shown below:
+
+```JavaScript
+test("BB with no tabby, whitespotting or point determined as 'black'", () => {
+    expect(determinePhenotype([
+        {"colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false},
+        {"colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false}
+    ])).toEqual("Black");
+});
+
+test("b1b1 with single tabby, but no whitespotting or point determined as 'cinnamon tabby'", () => {
+    expect(determinePhenotype([
+        {"colour": "b1", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false},
+        {"colour": "b1", "dilute": false, "tabby": true, "whiteSpotting": false, "colourpoint": false}
+    ])).toEqual("Cinnamon tabby");
+});
+```
+
+**Unit tests for calculateKittens**
+The calculate kittens function is the top-level logic layer function which orchestrates the overall calculation process. The function first generates all possible kitten genotypes based on the possible permutations of mum and dad's genotypes. It then produces an array containing the phenotype for each calculated kitten genotype. Finally, it passes this array into calculateProbabilities to produce the final JSON object representing the probability of each unique phenotype occuring. Two automated test cases were implemented to test that this functionality works as expected. All tests are passing.
+
+The function is shown below:
+
+```JavaScript
+function calculateKittens(maternalGenotype, paternalGenotype, genes) {
+    let possibleGenotypes =
+        calculatePossibleGenotypes
+        (maternalGenotype, paternalGenotype, genes, 0);
+
+    let possiblePhenotypes =
+        determinePhenotypes(possibleGenotypes);
+    return calculateProbabilities(possiblePhenotypes);
+}
+```
+
+Sample automated tests for the function are shown below:
+
+```JavaScript
+describe("Calculate kittens", () => {
+    test("BB x BB returns { 'black' : 100 }", () => {
+        expect(calculateKittens(
+            [
+                {"colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false},
+                {"colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false}
+            ],
+            [
+                {"colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false},
+                {"colour": "B", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false}
+            ],
+            ["colour", "dilute", "tabby", "colourpoint", "whiteSpotting"]
+        )).toEqual(
+            {
+                "Black": 100
+            }
+        );
+    });
+
+    test("bb1 Dd aa WSws CSCS x bb dd aa wsws CSCS returns { 'black' : 100 }", () => {
+        expect(calculateKittens(
+            [
+                {"colour": "b", "dilute": true, "tabby": false, "whiteSpotting": true, "colourpoint": false},
+                {"colour": "b1", "dilute": false, "tabby": false, "whiteSpotting": false, "colourpoint": false}
+            ],
+            [
+                {"colour": "b", "dilute": true, "tabby": false, "whiteSpotting": false, "colourpoint": false},
+                {"colour": "b", "dilute": true, "tabby": false, "whiteSpotting": false, "colourpoint": false}
+            ],
+            ["colour", "dilute", "tabby", "colourpoint", "whiteSpotting"]
+        )).toEqual(
+            {
+                "Chocolate": 25,
+                "Chocolate bicolour": 25,
+                "Lilac": 25,
+                "Lilac bicolour": 25
+            }
+        );
+    });
+});
+
+```
 
 The following screenshot shows the results of the automated testing:
 
