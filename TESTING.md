@@ -600,7 +600,7 @@ function determineColour(colour1, dilute1, colour2, dilute2) {
 }
 ```
 
-The automated tests for the function are shown below:
+Some of the automated tests for the function are shown below:
 
 ```JavaScript
 test("B, false, B, false for colour returns Black", () => {
