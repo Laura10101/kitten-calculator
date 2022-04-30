@@ -108,7 +108,7 @@ function getQuestions() {
             ],
             "multiselect": false,
             "preconditions": [],
-            "text": "Please choose the base colour"
+            "text": "Please choose the base colour for {parent}:"
         },
 
         {
@@ -145,7 +145,7 @@ function getQuestions() {
                     4
                 ]
             }],
-            "text": "Does this cat carry dilute?"
+            "text": "Does {parent} carry dilute?"
         },
 
         {
@@ -203,7 +203,7 @@ function getQuestions() {
             ],
             "multiselect": false,
             "preconditions": [],
-            "text": "Does this cat carry chocolate or cinnamon?"
+            "text": "Does {parent} carry chocolate or cinnamon?"
         },
 
         {
@@ -235,7 +235,7 @@ function getQuestions() {
             ],
             "multiselect": false,
             "preconditions": [],
-            "text": "This parent is"
+            "text": "{Parent} is:"
         },
         {
             "answers": [
@@ -271,7 +271,7 @@ function getQuestions() {
                     ]
                 }
             ],
-            "text": "Does this parent carry the non-tabby gene?"
+            "text": "Does {parent} carry the non-tabby gene?"
         },
         {
             "answers": [
@@ -314,7 +314,7 @@ function getQuestions() {
             ],
             "multiselect": false,
             "preconditions": [],
-            "text": "This parent is"
+            "text": "{Parent} is:"
         },
         {
             "answers": [
@@ -345,7 +345,7 @@ function getQuestions() {
             ],
             "multiselect": false,
             "preconditions": [],
-            "text": "This parent is"
+            "text": "{Parent} is:"
         },
         {
             "answers": [
@@ -379,7 +379,7 @@ function getQuestions() {
                     0
                 ]
             }],
-            "text": "Does this parent carry colourpoint?"
+            "text": "Does {parent} carry colourpoint?"
         }
     ];
 }
