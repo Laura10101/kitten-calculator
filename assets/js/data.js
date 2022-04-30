@@ -376,7 +376,7 @@ function getQuestions() {
             "preconditions": [{
                 "questionIndex": 6,
                 "validAnswerIndices": [
-                    0
+                    1
                 ]
             }],
             "text": "Does {parent} carry colourpoint?"
