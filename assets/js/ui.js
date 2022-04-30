@@ -161,7 +161,9 @@ function showCurrentQuestion() {
     let question = questions[currentQuestion];
     let answers = question.answers;
     //Show question
-    questionText.innerText = question.text + ' for ' + parents[currentParent] + ':';
+    questionText.innerText = question.text
+        .replace('{parent}', parents[currentParent])
+        .replace('{Parent}', parents[currentParent].charAt(0).toUpperCase() + parents[currentParent].slice(1));
     //Display question answers
     answers.forEach((answer, i) => {
         if (isValidAnswer(currentQuestion, i)) {
