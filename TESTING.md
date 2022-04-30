@@ -231,7 +231,6 @@ This user story is satisfied by both the Parent Genotype Questions and Answer Bu
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-eleven.png)
 
-![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-twelve.png)
 
 **As a British shorthair hobby breeder, I want to see an image of each parent's phenotype as I enter their traits, so that I know what I have input so far**
 
@@ -345,7 +344,7 @@ This user story is satisfied by the Results Preloader feature as described in th
 
 Once the preloader countdown reaches zero, the results are displayed. This provides enough time for all kitten images to load in the background so the results display smoothly.
 
-**As a British shorthair hobby breeder, I want to see the results of my kitten calculation, so that I know what kittens mum and dad could produce**
+**As a British Shorthair hobby breeder, I want to see the results of my kitten calculation, so that I know what kittens mum and dad could produce**
 
 This user story is satisfied by the Kitten Results Display feature as described in the Features section of [README.md](README.md). The functionality involved in calculating and displaying results on the screen is divided into two layers. The logic layer in logic.js provides the calculations to work out what phenotypes can be produced from a pairing between the given mum and dad, and to work out the probability of each phenotype being produced. Separately, the ui layer in ui.js is responsible for creating an answer button for each phenotype returned by the logic layer, and for ensuring the probability and phenotype image are correctly displayed for each. User story testing for this user story therefore focused on confirming that the output of the logic layer is correctly displayed on the screen. Automated testing was used (as described below) to confirm that the logic layer correctly calculates results.
 
