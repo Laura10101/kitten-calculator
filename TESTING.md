@@ -257,7 +257,7 @@ This user story is satisfied by the Question and Answer Filtering feature descri
 
 By contrast, mum is specified to be black. Black is the most dominant colour gene and so a black cat can additionally carry a gene for dilute and one gene for chocolate or cinnamon. The user is therefore presented with two questions for mum that were not displayed for dad:
 
-![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-six.png)
+![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-six-a.png)
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-seven.png)
 
