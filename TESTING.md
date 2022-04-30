@@ -403,5 +403,43 @@ The following screenshot shows the results of the automated testing:
 ## Bugs
 
 ### Fixed Bugs
+Once the user had entered dad's genes, the 'Next' button would have to be clicked twice in order to get to the next question, which wsa the first question for mum's genes. 
+XXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXX
+
+The gradient background was stitching and repeating itself. 
+XXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXX
+
+Buttons not fully hidden 
+I hid the buttons so that the user could not progress to the next section without making a relevant selection (in order to avoid incorrect calculations). However, the buttons were appearing for a split second on each screen. This meant that if a user clicked twice, quickly, they could get through to the next question without entering the correct informaiton. After investigating, I discovered that I had applied a delay of 0.4 seconds in button styling, which was also applying to the hide button action. I simply deleted the 0.4s delay, and the issue was fixed without losing any important functionality. 
+
+Button IDs had spaces, and double spaces in 
+XXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXX 
+
+Initial display 
+The message 'you are currently entering dad's genes', and the visual represetnation of the parent cat did not appear until the user had made thier first selection. 
+XXXXXXXXXXXXXX
+XXXXXXXXXXXXXX
+XXXXXXXXXXXXXX
+
+The 'Start Again' button did not work properly 
+XXXXXXXXXXXXXX
+XXXXXXXXXXXXXX
+XXXXXXXXXXXXXX
+
+The colours of cats were not capitalised in their descriptions 
+Simply capitalised all of the basic colours in the JSON object, since the colour is always the frist word of the string, this worked well. 
+XXXXXXXXXXXXX
+XXXXXXXXXXXXX
+
+The application was allowing a user to enter incorrect information 
+The application was allowing a user to enter that dad/mum was black or blue and carried chocolate AND cinnamon. It is not possible for a cat to be black and carry chocolate and cinnamon, only one or the other. I therefore .........................
+XXXXXXXXXXX
+XXXXXXXXXXX 
 
 ### Unresolved Bugs
