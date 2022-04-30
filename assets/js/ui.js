@@ -121,6 +121,8 @@ function showCurrentSection() {
  */
 //These functions traverse through the different questions
 function showNextQuestion() {
+    clearQuestion();
+    disableButton(nextQuestionButton);
     let isValid = false;
     do {
         if (currentParent == 0 && currentQuestion == questions.length - 1) {
@@ -137,6 +139,7 @@ function showNextQuestion() {
 }
 
 function showPreviousQuestion() {
+    clearQuestion();
     do {
         if (currentParent == 1 && currentQuestion == 0) {
             currentParent = 0;
@@ -148,14 +151,17 @@ function showPreviousQuestion() {
     controlFlowButtonsForDisplayedQuestion();
 }
 
+function clearQuestion() {
+    questionText.innerHTML = "";
+    answerContainer.innerHTML = "";
+}
+
 function showCurrentQuestion() {
     //Get current question from questions object
     let question = questions[currentQuestion];
     let answers = question.answers;
     //Show question
     questionText.innerText = question.text;
-    //Clear answers from the answer container
-    answerContainer.innerHTML = "";
     //Display question answers
     answers.forEach((answer, i) => {
         if (isValidAnswer(currentQuestion, i)) {
