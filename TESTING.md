@@ -150,7 +150,7 @@ On Chrome (small):
 
 On Safari (mobile):
 
-![Background gradient on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/documentation/compatibility/mobile-gradient.png)
+![Background gradient on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/documentation/compatibility/mobile-gradient-small.png)
 
 ### Questions Section
 
