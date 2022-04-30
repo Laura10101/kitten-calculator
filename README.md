@@ -256,15 +256,24 @@ XXXXXXCalculate genotype of the kittensXXXXX
 
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
+## Deployment
+
+The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the [GitHub repository](https://github.com/Laura10101/volanto-launchpad), navigate to the Settings tab 
+  - From the source section drop-down menu, select the **Main** Branch, then click "Save".
+  - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found [here](https://laura10101.github.io/volanto-launchpad)
+
 ### Local Deployment
 
 In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
 
-- `git clone https://github.com/Laura10101/kitten-calculator.git`
+- `git clone https://github.com/Laura10101/volanto-launchpad.git`
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Laura10101/kitten-calculator)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Laura10101/volanto-launchpad)
 
 ## Credits
 
