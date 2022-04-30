@@ -248,9 +248,7 @@ I would also like to display the preloader and countdown with a custom made cart
 
 I would like to include an information logo on each question that then linked to an animated YouTube video in which the genetic trait was explained in detail. This would involve a large amount of work in order to produce the animation, but would be a significant value-add. One video could be produced, with each genetic trait time stamped within the video so that it could be linked directly to. This would allow the user to either watch the entire video, or to only watch the specific section they are interested in. An easier function, that would achieve a similar outcome but at a greatly reduced cost, would be to make each genetic trait clickable, with a link that opens a new window featuring an article about the genetic trait that has been clicked on. 
 
-This application could then be developed into a more encompassing website by including a blog or articles page. The blog would contain further explanations about cat genetics and could explore a range of topics. These topics could range from basic explanations to highly complex areas like the inhibitor gene and bimetallic cats, neither of which are fully understood by the scientific community yet. 
-
-XXXXXXCalculate genotype of the kittensXXXXX 
+This application could then be developed into a more encompassing website by including a blog or articles page. The blog would contain further explanations about cat genetics and could explore a range of topics. These topics could range from basic explanations to highly complex areas like the inhibitor gene and bimetallic cats, neither of which are fully understood by the scientific community yet.
 
 ## Testing
 
@@ -286,12 +284,16 @@ The following educational and community resources were used during the implement
 - CSS Tricks
 - [HTML Living Standard](https://html.spec.whatwg.org/)
 
-Additionally, assistance was provided by my Code Institute tutor, and by the Code Institute Slack community.
+Additionally, assistance was provided by my Code Institute mentor, and by the Code Institute Slack community.
 
 ### Code
 Code libraries or snippets were used in whole or in part from the following sources:
 
-- All JavaScript code was 
+- All HTML was written by me exclusively for this application.
+- The JavaScript functionality is proprietary and was created by me for this application, with reference to the Educational Resources above.
+- The CSS background gradient was taken from [Colorzilla's Gradient Editor](https://colorzilla.com/gradient-editor/#c491ef+17,f070a1+44,799aef+70,799aef+82,7befb5+97&1+0,0.44+2,1+100)
+- The CSS preloader was taken from [Codepen.io](https://codepen.io/kevinjannis/pen/KwJvpa)
+- Code to prevent 'undefined variable' errors when using Jest was taken from [Stack Overflow](https://stackoverflow.com/a/68671391)
 
 ### Content
 All written content is original and created by me for this application. See below sections for information on images.
