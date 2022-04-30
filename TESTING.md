@@ -325,7 +325,7 @@ The following screenshot shows the same screen after an answer has been selected
 
 ![Testing that the calculate kittens button is only displayed once enough information is provided](https://laura10101.github.io/kitten-calculator/documentation/testing/calculate-button-shown.png)
 
-As discussed above, the final question may not be shown to users in all situations. This is because the penultimate question is whether or not mum is colourpoint whereas the final question asks whether mum carries colourpoint. Since colourpoint is a dominant trait, the final question is only valid for colourpoint cats. The following screenshot therefore shows that the calculate kittens button is displayed on the penultimate question if the cat is indicated to be non-colourpoint:
+As discussed above, the final question may not be shown to users in all situations. This is because the penultimate question is whether or not mum is colourpoint whereas the final question asks whether mum carries colourpoint. Since colourpoint is a recessive trait, the final question is only valid for non-pointed cats. The following screenshot therefore shows that the calculate kittens button is displayed on the penultimate question if the cat is indicated to be colourpoint:
 
 ![Testing that the calculate kittens button is only displayed once enough information is provided](https://laura10101.github.io/kitten-calculator/documentation/testing/calculate-button-shown-penultimate.png)
 
