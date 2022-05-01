@@ -104,11 +104,11 @@ The second question is to determine whether the parent is a tabby as shown below
 
 ![Tabby](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-four.jpg)
 
-The third question is to determine whether the parent carries a recessive non-tabby gene:
+The third question is to determine whether the parent carries a single recessive non-tabby gene so it will only be displayed if the user has selected 'Tabby' in question two:
 
 ![Non-tabby](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-five.jpg)
 
-The fourth question is to determine whether the parent is a colourpoint, which is recessive:
+The fourth question is to determine whether the parent is a colourpoint, which is a recessive gene:
 
 ![Colourpoint](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-six.jpg)
 
@@ -116,19 +116,19 @@ The fifth question asks whether the parent carries a single recessive colourpoin
 
 ![Carries colourpoint](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-seven.jpg)
 
-The sixth question checks whether the parent has one, two, or no white spotting genes:
+The sixth question checks whether the parent has one, two, or no white spotting genes (a self has no white spotting gene, a bicolour has one, and a van has two):
 
 ![White spotting genes](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-eight.jpg)
 
-Once the user has confirmed the answer to the sixth question for the first parent, the same questions are then repeated for the second parent. Once both parents have been fully input, the application displays a 'Calculate kittens' button as indicated in the above wireframe.
+Once the user has confirmed the answer to the sixth question for the first parent, the same questions are then repeated for the second parent. Once both parents have been fully input, the application displays a 'Calculate kittens' button as indicated by the note in the above wireframe.
 
 When the user clicks this button, a preloader will be displayed as shown below while the results are being calculated:
 
 ![Results preloader](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-nine.jpg)
 
-This preloader was enhanced during development by the addition of a countdown.
+This preloader was enhanced during development by the addition of a countdown which improved user experience by ensuring the user is informed of how long they can expect to wait for the results to load.
 
-Once all results have been calculated and loaded, they are displayed to the user as shown below:
+Once all results have been calculated and loaded, they are displayed to the user as shown below, with the images representing each colour and pattern correctly:
 
 ![Results are displayed](https://laura10101.github.io/kitten-calculator/documentation/wireframes/wireframe-ten.jpg)
 
@@ -178,7 +178,7 @@ An important consideration in the design of this feature was its inherently asyn
   - The first of the following examples shows that when dad's base colour is black, the user can specify that he carries the chocolate or cinnamon gene, but not both.
   - The second example shows that when dad's base colour is chocolate, the user can only specify that dad carries cinnamon.
   - This reflects the genetic reality: a black cat can carry either chocolate or cinnamon, but not both. A chocolate cat can carry cinnamon. 
-  - Likewise, only a non-dilute (black, chocolate, or cinnamon) selection will result in the question 'Does this cat carry dilute?'. Blue, lilac and fawn cats are homozygous dilute, so we do not need to ascertain whether they carry the gene: we already know their full genetic status for that trait. Conditional questions thereby remove the chance of a user inputting incorect or impossible genetic combinations. Given that most users of the application will likely not have a high degree of knowledge of feline genetics, this is especially important. 
+  - Likewise, only a non-dilute (black, chocolate, or cinnamon) selection will result in the question 'Does this cat carry dilute?'. Blue, lilac and fawn cats are homozygous dilute, so we do not need to ascertain whether they carry the gene: we already know their full genetic status for that trait from their phenotype. Conditional questions thereby remove the chance of a user inputting incorect or impossible genetic combinations. Given that most users of the application will likely not have a high degree of knowledge of feline genetics, this is especially important. 
 
   ![Colours carried options for a black parent](https://laura10101.github.io/kitten-calculator/documentation/features/black-dad-carry-options.png)
 
@@ -188,7 +188,7 @@ An important consideration in the design of this feature was its inherently asyn
   - To assist the user in accurately entering each parent's traits, a phenotype display is provided at the top of each question.
   - The phenotype display shows an image which represents what the parent that is currently being entered will be, based on the information provided so far.
   - As the user selects each answer, this display will update to reflect the parent's phenotype based on the current selection.
-  - The following screenshots show the phenotype display for a chocolate parent when the "bicolour" option is selected, versus when the "van" option is selected for the white spotting gene.
+  - The following screenshots show the phenotype display for a chocolate parent when the "bicolour" option is selected, versus when the "van" option is selected for the white spotting gene:
 
   ![Phenotype display for a chocolate bicolour parent](https://laura10101.github.io/kitten-calculator/documentation/features/chocolate-bicolour-dad-phenotype.png)
 
@@ -216,18 +216,18 @@ An important consideration in the design of this feature was its inherently asyn
   - When the user has finished entering all the required information for dad and mum, and has clicked the "Calculate kittens" button, a preloader is displayed while the kitten results are being calculated.
   - The preloader shows an animation to illustrate that the browser has not crashed.
   - The preloader also display a countdown to let the user know how long it will be until their results are ready.
-  - Primarily this serves a functional purpose, but it also a psychological one. Psychological studies tell us that humans tend to have more trust in complex computer calculations where they have taken some time to 'process'. Having a small delay of a few seconds therefore increases users' perceived value of the process, and trust in it. Additionally, having the countdown helps to build a sense of excitement as people wait to find out what colour kittens they can expect. 
+  - Primarily this serves a functional purpose, but it also has a psychological purpose. Psychological studies tell us that humans tend to have more trust in complex computer calculations where they have taken some time to 'process'. Having a small delay of a few seconds therefore increases users' perceived value of the process, and trust in it. Additionally, having the countdown helps to build a sense of excitement as people wait to find out what colour kittens they can expect. 
   ![The results preloader](https://laura10101.github.io/kitten-calculator/documentation/features/results-countdown.png)
 
   The results preloader uses an asynchronous timeout process to control the global countdown variable. The timer is set to one second and when that second is up, the countdown variable is decremented by 1. To avoid any syncronisation issues, each timeout (other than the initial one) is only set within the lambda function that is passed to its predecessor timeout.
 
 - __Kitten Results Display__
   - Once the kitten results have been calculated, they are displayed to the user through the results display.
-  - The results display shows all of the phenotypes that could be produced by pairing the entered mum and dad.
-  - Images are displayed showing what each phenotype will look like.
-  - Additionally, the probability of that phenotype being produced by the pairing of mum and dad is displayed.
+  - The results display shows all of the phenotypes that could be produced by pairing the entered parents.
+  - Images are displayed showing what each kitten phenotype will look like.
+  - Additionally, the probability of that phenotype being produced by the pairing is displayed.
   - The textual description of the phenotype is also displayed.
-  - This allows the user to understand the range of kittens they could get from mum and dad, and the likelihood of each.
+  - This allows the user to understand the range of kittens they could get from the parents entered, and the likelihood of each.
   ![Example results](https://laura10101.github.io/kitten-calculator/documentation/features/results.png)
 
 - __Start Again Button__
@@ -238,21 +238,21 @@ An important consideration in the design of this feature was its inherently asyn
 All images have accurate and descriptive alt attributes to improve accessibility. Nevertheless, because of the design decision that was made to base the calculator heavily on visual representations rather than on detailed written explanatory notes, there is scope for further improvement to make the application more accesible to people who are visually impaired. With more time, I would create an additional version of the calculator that offers far more detailed written descriptions and explanations that could be read aloud by a text reader. This would offer more information to those who are eager to learn, and serve as a more accessible application to those with virual impairments.
 
 ### Features Left to Implement
-The most obvious addition to this application would be to include additioanl feline genes. As a result of time constraints, and the complexity of the algorithmic solutions, I had to constrain the peoject to the main and most common feline genes. With more time I would include all of the relevant feline genes: red, tortie, longhair, the inhibitor gene, tabby pattern, the wide-band gene, the odd-eyed gene...the list goes on! These will be added to the calculator over time. 
+The most obvious addition to this application would be to include additional feline genes. As a result of time constraints, and the complexity of the algorithmic solutions, I had to constrain the project to the main and most common feline genes. With more time I would include all of the relevant feline genes: red, tortie, longhair, the inhibitor gene, tabby pattern, the wide-band gene, the odd-eyed gene...the list goes on! These will be added to the calculator over time. 
 
-At the moment the calculator only calculates the phenotype of the kittens. It does not tell the user what genotypes the kittens might have, i.e. what recessive genes the kittens from any given pairing might carry. This could be a useful addition for breeders, who are considering their breeding programmes over muleiple generations. It would, however, make the final results screen more complex, with far more potential kittens needing to be displayed. Since most users are unlikely to want to know what recessive genes might be carried, the implementation of this addition would need to be considered very carefully. An additional button 'Calculate kitten genotypes' could be displayed, perhaps labelled in a more descriptive fashion. This would allow only those users who were interested in the potential genotypes to see the additional information, keeping the user experience as simple and streamlined as possible for other users. 
+At the moment the calculator only calculates the phenotype of the kittens. It does not tell the user what genotypes the kittens might have, i.e. what recessive genes the kittens from any given pairing might carry. This could be a useful addition for breeders, who are considering their breeding programmes over multiple generations. It would, however, make the final results screen more complex, with far more potential kittens needing to be displayed. Since most users are unlikely to want to know what recessive genes might be carried, the implementation of this addition would need to be considered very carefully. An additional button 'Calculate kitten genotypes' could be displayed, perhaps labelled in a more descriptive fashion. This would allow only those users who were interested in the potential genotypes to see the additional information, keeping the user experience as simple and streamlined as possible for other users. 
 
 Additionally, the application could be used to request that cat owners send genetic tests from their cats to research centres who are currently investigating the more complex genetic issues. This would help to improve the understanding of the feline genome, and identify additional genetic mutations as they arise. In this way, it could be used not only for colour genetics, but also to highlight genetic health problems within the breed and collect data for researchers.  This could be achieved by having a page on the website that lists the current research projects in feline genetics, along with instructions on how to obtain and send a genetic swab to each project. An additional range of functions could be created to assist with this: when a user entered a ‘gene of interest’ into the calculator, it could display a message, explaining that their cat was of scientific interest and pointing them to the relevant page and research project. 
 
 With more time, the application could be further developed by the creation of kitten calculators for other cat breeds, and other species (e.g. dogs, rabbits and even hamsters are commonly bred). As the basic genetic rules will be largely the same, similar algorithms can be used to create those additional calculators. This would increase web traffic further and allow more research projects to be highlighted. 
 
-Another potential addition would be a progress bar, so that users can see how far through the process they are and how many more questions they have to answer. As more genes are added to the calculator this will become more important. The complexity would be that many of the questions are conditional on previous answers, so the progress bar would need to either be highly responsive, or pair the questions into groupings/sections. The addition of a progress bar would need careful consideration to ensure that it did not detract from user experience or confuse people rather than helping improve the experience. 
+Another potential addition would be a progress bar, so that users can see how far through the process they are and how many more questions they have to answer. As more genes are added to the calculator this may become more important. The complexity is that many of the questions are conditional on previous answers, so the progress bar would need to either be highly responsive, or pair the questions into groupings/sections. The addition of a progress bar would need careful consideration to ensure that it did not detract from user experience or confuse people rather than helping improve the experience. 
 
 I would also like to display the preloader and countdown with a custom made cartoon animation that would tie into the overall theme of the application. Perhaps a stork flying in with a basket full of kittens. 
 
-I would like to include an information logo on each question that then linked to an animated YouTube video in which the genetic trait was explained in detail. This would involve a large amount of work in order to produce the animation, but would be a significant value-add. One video could be produced, with each genetic trait time stamped within the video so that it could be linked directly to. This would allow the user to either watch the entire video, or to only watch the specific section they are interested in. An easier function, that would achieve a similar outcome but at a greatly reduced cost, would be to make each genetic trait clickable, with a link that opens a new window featuring an article about the genetic trait that has been clicked on. 
+In order to provide more detailed information, I would like to include an information logo on each question that links to an animated YouTube video in which the genetic trait is explained in detail. This would involve a large amount of work in order to produce the animation, but could be a significant value-add. One video could be produced, with each genetic trait time stamped within the video so that it could be linked directly to. This would allow the user to either watch the entire video, or to only watch the specific section they are interested in. An easier function, that would achieve a similar outcome but at a greatly reduced cost, would be to make each genetic trait clickable, with a link that opens a new window featuring a written article about the genetic trait that has been clicked on. 
 
-This application could then be developed into a more encompassing website by including a blog or articles page. The blog would contain further explanations about cat genetics and could explore a range of topics. These topics could range from basic explanations to highly complex areas like the inhibitor gene and bimetallic cats, neither of which are fully understood by the scientific community yet.
+This application could be developed into a more encompassing, stand-alone website by including a blog or articles page. The blog would contain further explanations about cat genetics and could explore a range of topics. These topics could range from basic explanations to highly complex areas like the inhibitor gene and bimetallic cats, neither of which are fully understood by the scientific community yet.
 
 ## Testing
 
@@ -261,8 +261,8 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 ## Deployment
 
 The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the [GitHub repository](https://github.com/Laura10101/volanto-launchpad), navigate to the Settings tab 
-  - From the source section drop-down menu, select the **Main** Branch, then click "Save".
+  - In the [GitHub repository](https://github.com/Laura10101/volanto-launchpad), navigate to the Settings tab;
+  - From the source section drop-down menu, select the **Main** Branch, then click "Save";
   - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
 The live link can be found [here](https://laura10101.github.io/volanto-launchpad)
