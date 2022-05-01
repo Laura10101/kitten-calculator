@@ -132,8 +132,8 @@ No errors were identified for the data layer, although three unused variables we
 ### Background Gradient
 
 - The following screenshots demonstrate that the background gradient displays correctly both on small desktop screens and on mobile devices.
-- This test was performed as, during development, a problem was identified with the background gradient stitching differently at different devices sizes.
-- The test passes if the gradient fills the screen at all devices sizes, across browsers.
+- This test was performed as, during development, a problem was identified with the background gradient stitching differently at different device sizes.
+- The test passes if the gradient fills the screen at all device sizes, across browsers.
 - Larger screen sizes have been tested extensively through the browser compatibility tests above.
 
 On Edge (small):
@@ -200,12 +200,12 @@ On Safari (mobile):
 
 ## User Story Tests
 
-**As a British shorthair hobby breeder, I want to see an introduction explaining how the calculator will work, so that I understand how to use it**
+**As a British Shorthair hobby breeder, I want to see an introduction explaining how the calculator will work, so that I understand how to use it**
 
 This user story is satisfied by the Introductory Section described in the Features section of [README.md](README.md), as shown below:
 ![Introductory section](https://laura10101.github.io/kitten-calculator/documentation/features/introductory-section.png)
 
-**As a British shorthair hobby breeder, I need to be able to enter the genetic traits for both mum and dad, so that their kitten phenotypes and probabilities can be calculated**
+**As a British Shorthair hobby breeder, I need to be able to enter the genetic traits for both mum and dad, so that their kitten phenotypes and probabilities can be calculated**
 
 This user story is satisfied by both the Parent Genotype Questions and Answer Buttons described in the Features section of [README.md](README.md). The screenshots below show an example of a full user journey for inputting two parents:
 
@@ -234,7 +234,7 @@ This user story is satisfied by both the Parent Genotype Questions and Answer Bu
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-eleven.png)
 
 
-**As a British shorthair hobby breeder, I want to see an image of each parent's phenotype as I enter their traits, so that I know what I have input so far**
+**As a British Shorthair hobby breeder, I want to see an image of each parent's phenotype as I enter their traits, so that I know what I have input so far**
 
 This user story is satisfied by the Parent Phenotype Display described in the Features section of [README.md](README.md). The screenshots below show the phenotype display for two different sets of input:
 
@@ -242,20 +242,20 @@ This user story is satisfied by the Parent Phenotype Display described in the Fe
 
 ![Phenotype display for a chocolate van parent](https://laura10101.github.io/kitten-calculator/documentation/features/chocolate-van-dad-phenotype.png)
 
-**As a British shorthair hobby breeder, I want to see an illustration showing the trait for each answer, so that I can understand which trait best matches my cat**
+**As a British Shorthair hobby breeder, I want to see an illustration showing the trait for each answer, so that I can understand which trait best matches my cat**
 
 This user story is satisfied by the Answer Buttons feature described in the Features section of [README.md](README.md), as shown in the screenshot below:
 
 ![Answer buttons](https://laura10101.github.io/kitten-calculator/documentation/features/answer-buttons.png)
 
-**As a British shorthair hobby breeder, I want the application to prevent me from inputing invalid combinations of traits, so that I only see kittens that my cats can actually produce**
+**As a British Shorthair hobby breeder, I want the application to prevent me from inputing invalid combinations of traits, so that I only see kittens that my cats can actually produce**
 
-This user story is satisfied by the Question and Answer Filtering feature described in the Features section of [README.md](README.md). There are several examples of this feature at work in the user journey presented above. For example, on the first question dad is specified to be fawn. Fawn is a recessive trait and is the dilute of cinnamon so dad must have two cinnamon genes and two dilute genes, and therefore cannot carry any other colour. Questions two and three are therefore skipped therefore and the user is taken straight to the tabby question:
+This user story is satisfied by the Question and Answer Filtering feature described in the Features section of [README.md](README.md). There are several examples of this feature at work in the user journey presented above. For example, on the first question dad is specified to be fawn. Fawn is a recessive trait and is the dilute of cinnamon so dad must have two cinnamon genes and two dilute genes, and therefore cannot carry any other colour. Questions two and three are therefore skipped and the user is taken straight to the tabby question:
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-one.png)
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-two.png)
 
-By contrast, mum is specified to be black. Black is the most dominant colour gene and so a black cat can additionally carry a gene for dilute and one gene for chocolate or cinnamon. The user is therefore presented with two questions for mum that were not displayed for dad:
+By contrast, mum is specified to be black. Black is a dominant colour gene and so a black cat can additionally carry a gene for dilute and one gene for either chocolate or cinnamon. The user is therefore presented with two questions for mum that were not displayed for dad:
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-six-a.png)
 
@@ -263,29 +263,29 @@ By contrast, mum is specified to be black. Black is the most dominant colour gen
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-eight.png)
 
-Similarly, in the user journey above, dad is specified as a tabby and is therefore asked whether he carries a non-tabby gene:
+Similarly, in the user journey above, dad is specified as a tabby and the user is therefore asked whether he carries a non-tabby gene:
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-two.png)
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-three.png)
 
-By contrast, mum is specified as non-tabby. Tabby is dominant and so a non-tabby cannot have any tabby genes, so the non-tabby question is skipped:
+By contrast, mum is specified as non-tabby. Tabby is a dominant gene, so a non-tabby cat cannot carry a tabby genes (otherwise the cat would be a tabby), so the non-tabby question is skipped:
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-nine.png)
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-ten.png)
 
-In another example, dad is specified as non-pointed. Colourpoint is recessive and so a non-pointed cat can carry colourpoint. Therefore, having selected that dad is non-pointed the user is asked whether he carries a single colourpoint gene:
+In another example, dad is specified as non-pointed. Colourpoint is recessive, so to be a colourpoint cat the cat must be genetically homozygous, with two colourpoint genes. That also means that a non-pointed cat can carry the colourpoint gene, and produce colourpoint kittens if the other parent also has the colourpoint gene. Therefore, having selected that dad is non-pointed the user is asked whether he carries a single colourpoint gene:
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-five.png)
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-six.png)
 
-By contrast, mum is entered as colourpoint and so the user moves straight to calculating kittens:
+By contrast, mum is entered as colourpoint and so the user moves straight to calculating kittens as there are no further questions remaining:
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-eleven.png)
 
-**As a British shorthair hobby breeder, I want the application to ensure that I select the right number of traits for each question, so that it can accurately calculate my kittens**
+**As a British Shorthair hobby breeder, I want the application to ensure that I select the right number of traits for each question, so that it can accurately calculate my kittens**
 
 This user story is satisfied by the Answer Buttons feature as described in the Features section of [README.md](README.md). None of the questions in the application are set as multiselect questions, and therefore only one answer can be selected for each question. The following screenshots show an example of this on the base colour question:
 
@@ -299,14 +299,14 @@ The following screenshots show an example of this for the dilute question:
 
 ![Testing that only single selections are allowed](https://laura10101.github.io/kitten-calculator/documentation/testing/answers-single-select-four.png)
 
-**As a British shorthair hobby breeder, I want to be able to return to previous questions, so that I can correct my answers without having to start again**
+**As a British Shorthair hobby breeder, I want to be able to return to previous questions, so that I can correct my answers without having to start again**
 
 This user story is satisfied by the Previous Step feature as described in the Features section of [README.md](README.md). This button is shown below.
 ![Answer selected for dilute question](https://laura10101.github.io/kitten-calculator/documentation/features/dilute-question-selection.png)
 
 Evidence that this button works as expected is provided as part of testing for the next user story.
 
-**As a British shorthair hobby breeder, I want the application to forget answers I gave to subsequent questions if I return to previous questions, so that I can reanswer the questions correctly based on my updated choices**
+**As a Shorthair hobby breeder, I want the application to forget answers I gave to subsequent questions if I return to previous questions, so that I can reanswer the questions correctly based on my updated choices**
 
 This user story is satisfied by the second part of the Previous Step feature as described in the Features section of [README.md](README.md). The following screenshot shows the internal state of the application when the user has selected the first answer for the second question (arrays are zero-indexed in JavaScript so the first question and answer each have an index of 0 and so on):
 
@@ -316,7 +316,7 @@ If the user changes their answer to the previous question (click back and then c
 
 ![The model state after changing answers to the previous base colour question](https://laura10101.github.io/kitten-calculator/documentation/features/model-state-after-answer-change.png)
 
-**As a British shorthair hobby breeder, I want to confirm once I have entered all information for both mum and dad, so that the kitten results can be calculated**
+**As a British Shorthair hobby breeder, I want to confirm once I have entered all information for both mum and dad, so that the kitten results can be calculated**
 
 To satisfy this user story, a calculate kittens button is shown to the user only once the application has all required information. The following screenshot shows the final question screen before an answer has been selected:
 
@@ -330,7 +330,7 @@ As discussed above, the final question may not be shown to users in all situatio
 
 ![Testing that the calculate kittens button is only displayed once enough information is provided](https://laura10101.github.io/kitten-calculator/documentation/testing/calculate-button-shown-penultimate.png)
 
-**As a British shorthair hobby breeder, I want the application to clearly indicate when it is calculating kitten results, so that I can be sure it hasn't crashed**
+**As a British Shorthair hobby breeder, I want the application to clearly indicate when it is calculating kitten results, so that I can be sure it hasn't crashed**
 
 This user story is satisfied by the Results Preloader feature as described in the Features section of [README.md](README.md). There is an animation and a countdown which confirms that the browser has not frozen. The following screenshots show the results preloader in action and confirms that it correctly counts down:
 
@@ -360,19 +360,19 @@ The following screenshot shows the results as displayed in the UI layer:
 
 This example confirms that the UI layer is correctly displaying the output as calculated by the logic layer. Automated testing confirmed that the logic layer was correctly calculating results (see below).
 
-**As a British shorthair hobby breeder, I want to see an image for each possible kitten phenotype, so that I know what that phenotype will look like**
+**As a Shorthair hobby breeder, I want to see an image for each possible kitten phenotype, so that I know what that phenotype will look like**
 
 This user story is satisfied by the Kitten Results Display feature as described in the Features section of [README.md](README.md). The following screenshot shows that, for a complex calculation, the correct image is displayed for each kitten phenotype:
 
 ![Example results](https://laura10101.github.io/kitten-calculator/documentation/testing/results.png)
 
-**As a British shorthair hobby breeder, I want to see the probability for each possible kitten phenotype, so that I know how likely it is that mum and dad will produce that type of kitten**
+**As a British Shorthair hobby breeder, I want to see the probability for each possible kitten phenotype, so that I know how likely it is that mum and dad will produce that type of kitten**
 
 This user story is satisfied by the Kitten Results Display feature as described in the Features section of [README.md](README.md). The following screenshot shows that, for a complex calculation, the correct probability is displayed for each kitten:
 
 ![Example results](https://laura10101.github.io/kitten-calculator/documentation/testing/results.png)
 
-**As a British shorthair hobby breeder, I want to be able to start the calculator again once I have reviewed my results, so that I can calculate the kittens for a different pairing**
+**As a British Shorthair hobby breeder, I want to be able to start the calculator again once I have reviewed my results, so that I can calculate the kittens for a different pairing**
 
 The following screenshots confirm that this user story is satisfied by the Start Again button as described in the Features section of [README.md](README.md).
 
@@ -384,7 +384,7 @@ The following screenshots confirm that this user story is satisfied by the Start
 
 The logic layer in logic.js provides a set of functions for calculating the possible phenotypes produced by a pairing between mum and dad. The application captures information for five sets of genes (colour, dilute, white spotting, tabby, colourpoint) for both mum and dad. Mum and dad have two alleles each for each gene. There are, therefore, four possible genetic combinations for each gene in the offspring (mum 1 x dad 1, mum 1 x dad 2, mum 2 x dad 1, mum 2 x dad 2), so the total number of possible genetic permutations exceeds one thousand with more than seventy different phenotypes.
 
-Comprehensively verifying the correctness of these logic layer calculations through manual testing would not, therefore, be feasible within a realistic timescale. I therefore opted to implement good test coverage of the logic layer. I adopted a bottom-up approach to testing, using comprehensive testing to check the validity of lower-level functions and a sample of automated tests to check that higher-level functions worked as expected based on the lower-level functions. The tests implemented were as follows:
+Comprehensively verifying the correctness of these logic layer calculations through manual testing would not, therefore, be feasible within a realistic timescale. I therefore opted to implement good automated test coverage of the logic layer. I adopted a bottom-up approach to testing, using comprehensive testing to check the validity of lower-level functions and a sample of automated tests to check that higher-level functions worked as expected based on the lower-level functions. The tests implemented were as follows:
 
 **Unit tests for getPhenotypeFrequency**
 
