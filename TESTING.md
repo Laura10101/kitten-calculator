@@ -49,6 +49,8 @@ On Chrome:
 
 ![Questions feature on Chrome](https://laura10101.github.io/kitten-calculator/documentation/compatibility/chrome-questions-three.png)
 
+The wording of questions has been changed since these screenshots were taken to more clearly indicate which parent is currently being entered. All tests were subsequently repeated to confirm the change did not break any functionality.
+
 ### Results Preloader
 - The following screenshots show that the result preloader works correctly in Edge, Chrome, and Firefox.
 - The animation works as expected.
@@ -175,6 +177,8 @@ On Safari (mobile):
 
 ![Questions section on a mobile device in Safari](https://laura10101.github.io/kitten-calculator/documentation/compatibility/mobile-questions-small.png)
 
+The wording of questions has been changed since these screenshots were taken to more clearly indicate which parent is currently being entered. All tests were subsequently repeated to confirm the change did not break any functionality.
+
 ### Results Page
 
   - The following screenshots demonstrate that the results stack properly on small desktop screens, and on mobile devices.
@@ -232,6 +236,8 @@ This user story is satisfied by both the Parent Genotype Questions and Answer Bu
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-ten.png)
 
 ![Question displayed with answer buttons to capture genetic traits of each parent](https://laura10101.github.io/kitten-calculator/documentation/journeys/questions-uj-eleven.png)
+
+The wording of questions has been changed since these screenshots were taken to more clearly indicate which parent is currently being entered. All tests were subsequently repeated to confirm the change did not break any functionality.
 
 
 **As a British Shorthair hobby breeder, I want to see an image of each parent's phenotype as I enter their traits, so that I know what I have input so far**
@@ -528,7 +534,7 @@ describe("Determine tabby", () => {
     test("true and false for tabby returns tabby", () => {
         expect(determineTabby(true, false)).toEqual("tabby");
     });
-    test("false and true for colourpoint returns tabby", () => {
+    test("false and true for tabby returns tabby", () => {
         expect(determineTabby(false, true)).toEqual("tabby");
     });
     test("false and false for tabby returns ''", () => {
@@ -703,7 +709,7 @@ describe("Calculate kittens", () => {
         );
     });
 
-    test("bb1 Dd aa WSws CSCS x bb dd aa wsws CSCS returns { 'black' : 100 }", () => {
+    test("bb1 Dd aa WSws CSCS x bb dd aa wsws CSCS returns { 'Chocolate' : 25, 'Chocolate bicolour': 25, 'Lilac': 25, 'Lilac bicolour': 25 }", () => {
         expect(calculateKittens(
             [
                 {"colour": "b", "dilute": true, "tabby": false, "whiteSpotting": true, "colourpoint": false},
@@ -750,4 +756,6 @@ The following bugs were fixed during the development process:
 - The answers from previous questions were displayed in addition to the new answers when moving to the next question. Logic was added to clear the existing answers when display a new question. 
 
 ### Unresolved Bugs
-I am not aware of any unresolved bugs at this time.
+There was one issue that I encountered that remains: 
+- The cursor appears on some of the buttons and images. 
+An investigation of this issues suggested that it only happens on my main PC and does not occur on other devices. I then tested other, unrelated websites and applications and discovered that the cursor appears on those in the same way. I am therefore of the opinion that this is an issue with my PC and not an issue with the application. Nevertheless, with more time I would investigate the exact cause of this issue on my PC so that I could be certain. 
