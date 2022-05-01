@@ -2,7 +2,7 @@
 
 British Shorthair cats are the most popular breed of cat in the UK. There is a large body of hobby breeders who enjoy raising kittens. However, feline genetics is a complicated area, and because the British Shorthair is available in a broad range of colours and patterns, it can be very difficult for breeders to predict what colour of kittens they will get from different parental pairings. 
 
-This kitten calculator is designed for hobby breeders, who have a basic knowledge of cat colours and feline genetics. It assumes, therefore, that its users will already know the basic terminology for feline colours: blue is grey, chocolate is brown, cinnamon is a warm brown, and so on. In order to make the application as accessible as possible, I have also opted to have images of each of the different variations of cats that is possible from the genes that have been used. The application has a visual representation of the parent cat that changes as the user enters each gene. 
+This kitten calculator is designed for hobby breeders who have a basic knowledge of cat colours and feline genetics. It assumes, therefore, that its users will already know the basic terminology for feline colours: blue is grey, chocolate is brown, cinnamon is a warm brown, and so on. In order to make the application as accessible as possible, I have also opted to have images of each of the different variations of cats that is possible from the genes that have been used. The application has a visual representation of the parent cat that changes as the user enters each gene. 
 
 This means that even where a user is not aware that blue means grey, the visual representaion will make the application accessible. I used a recommended freelancer on Fiver to create these images for the project, in the colours and patterns that I chose, and provided photographs for. I am the owner of the copyright of these images. The images were bought with rights for full commerical use.
 
@@ -19,9 +19,9 @@ The key in optimising user experience, therefore, is to try to gauge what level 
 
 A small number of breeders (10%), did not understand basic terminology or the hierarchy of colour dominance. 
 
-I therefore chose to optimise user experience for those with a basic understanding of genetics in practice, whilst including images to assist total novices. This combiantion should provide optimal customer experience for the greatest number of users, by catering to 95% of potential users. This approach should optimise the avhievement of one of the main objectives of the site: an increasing in web traffic. 
+I therefore chose to optimise user experience for those with a basic understanding of genetics in practice, whilst including images to assist total novices. This combination should provide optimal customer experience for the greatest number of users, by catering to 95% of potential users. This approach should optimise the achievement of one of the main objectives of the site: an increase in web traffic. 
 
-It may be that this site is not well suited to experienced breeders with expert knowledge of feline genetics. In future, I may create a second, ‘advanced’ version of this calculator that is aimed at experts and has a far more simple, ‘to the point’ user experience that simply allows a quick calculation to be performed without the fuss of images and where the more complex aspects of feline genetics are addressed through a more in-depth explanation. 
+It may be that this site is not well suited to experienced breeders with expert knowledge of feline genetics. In future, I may create a second, ‘advanced’ version of this calculator. That version would be aimed at experts and have a far more simple, ‘to the point’ user experience, allowing a quick calculation to be performed without the fuss of images. It could also address the more complex aspects of feline genetics through in-depth explanation. 
 
 ## User Stories 
 As a British Shorthair hobby breeder:
