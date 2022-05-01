@@ -219,7 +219,7 @@ An important consideration in the design of this feature was its inherently asyn
   - Primarily this serves a functional purpose, but it also has a psychological purpose. Psychological studies tell us that humans tend to have more trust in complex computer calculations where they have taken some time to 'process'. Having a small delay of a few seconds therefore increases users' perceived value of the process, and trust in it. Additionally, having the countdown helps to build a sense of excitement as people wait to find out what colour kittens they can expect. 
   ![The results preloader](https://laura10101.github.io/kitten-calculator/documentation/features/results-countdown.png)
 
-  The results preloader uses an asynchronous timeout process to control the global countdown variable. The timer is set to one second and when that second is up, the countdown variable is decremented by 1. To avoid any syncronisation issues, each timeout (other than the initial one) is only set within the lambda function that is passed to its predecessor timeout.
+  The results preloader uses an asynchronous timeout process to control the global countdown variable. A countdown variable is set to five and a timer is set to one second. When that second is up, the countdown variable is decremented by 1. If the countdown has reached zero, results are displayed otherwise the timer is set for a further second. To avoid any syncronisation issues, each timeout (other than the initial one) is only set within the lambda function that is passed to its predecessor timeout.
 
 - __Kitten Results Display__
   - Once the kitten results have been calculated, they are displayed to the user through the results display.
