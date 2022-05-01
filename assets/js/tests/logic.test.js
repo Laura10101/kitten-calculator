@@ -93,7 +93,7 @@ describe("Determining phenotypes", () => {
         test("true and false for tabby returns tabby", () => {
             expect(determineTabby(true, false)).toEqual("tabby");
         });
-        test("false and true for colourpoint returns tabby", () => {
+        test("false and true for tabby returns tabby", () => {
             expect(determineTabby(false, true)).toEqual("tabby");
         });
         test("false and false for tabby returns ''", () => {
@@ -291,7 +291,7 @@ describe("Calculate kittens", () => {
         );
     });
 
-    test("bb1 Dd aa WSws CSCS x bb dd aa wsws CSCS returns { 'black' : 100 }", () => {
+    test("bb1 Dd aa WSws CSCS x bb dd aa wsws CSCS returns { 'Chocolate' : 25, 'Chocolate bicolour': 25, 'Lilac': 25, 'Lilac bicolour': 25 }", () => {
         expect(calculateKittens(
             [
                 {"colour": "b", "dilute": true, "tabby": false, "whiteSpotting": true, "colourpoint": false},
