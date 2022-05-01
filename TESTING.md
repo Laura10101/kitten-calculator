@@ -757,5 +757,4 @@ The following bugs were fixed during the development process:
 
 ### Unresolved Bugs
 There was one issue that I encountered that remains: 
-- The cursor appears on some of the buttons and images. 
-An investigation of this issues suggested that it only happens on my main PC and does not occur on other devices. I then tested other, unrelated websites and applications and discovered that the cursor appears on those in the same way. I am therefore of the opinion that this is an issue with my PC and not an issue with the application. Nevertheless, with more time I would investigate the exact cause of this issue on my PC so that I could be certain. 
+- A cursor appears on some of the buttons and images. I have investigated this issue on a number of devices and have so far not been able to replicate the issue on any device other than my own PC. Further investigation continues to be underway in order to identify the cause of the problem and remediate this.
